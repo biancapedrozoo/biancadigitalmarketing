@@ -1,101 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serviços | Bianca Digital Marketing</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --roxo: #6c5ce7;
+      --dourado: #fdcb6e;
+      --bg: #f9f9f9;
+      --texto: #2d3436;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--texto);
+    }
+    header, footer {
+      background: var(--roxo);
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .grid-servicos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .card h3 {
+      color: var(--roxo);
+      margin-top: 0.5rem;
+    }
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .card ul {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+    .card ul li::marker {
+      content: "✓ ";
+      color: var(--dourado);
+    }
+  </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">Bianca Digital Marketing</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <h1>Bianca Digital Marketing</h1>
+    <nav>
+      <a href="index.html" style="color:white; margin: 0 10px;">Início</a>
+      <a href="sobre.html" style="color:white; margin: 0 10px;">Sobre</a>
+      <a href="servicos.html" style="color:white; margin: 0 10px; font-weight: bold;">Serviços</a>
+      <a href="contato.html" style="color:white; margin: 0 10px;">Contato</a>
+    </nav>
   </header>
 
   <main class="container">
-    <h2>Nossos Serviços</h2>
+    <h2>✨ Nossos Serviços</h2>
+    <div class="grid-servicos">
 
-    <section class="servico">
-      <h3>1. Gestão de Redes Sociais</h3>
-      <p><strong>O que oferecemos:</strong> Gerimos as tuas redes sociais com estratégia e foco em resultados. Criamos um plano de conteúdo personalizado para aumentar a visibilidade, engajamento e gerar conversões. Da criação de posts até à interação com seguidores, fazemos tudo para que a tua marca se destaque.</p>
-      <ul>
-        <li>✓ Conteúdo relevante e criativo</li>
-        <li>✓ Aumento de seguidores qualificados</li>
-        <li>✓ Respostas rápidas e engajamento com a comunidade</li>
-        <li>✓ Crescimento consistente e estratégico</li>
-      </ul>
-    </section>
+      <div class="card">
+        <h3>📱 Gestão de Redes Sociais</h3>
+        <p>Gerimos suas redes com estratégia e foco em resultados. Planejamento de conteúdo, engajamento e crescimento.</p>
+        <ul>
+          <li>Conteúdo criativo e relevante</li>
+          <li>Engajamento com seguidores</li>
+          <li>Crescimento estratégico</li>
+        </ul>
+      </div>
 
-    <section class="servico">
-      <h3>2. Criação de Conteúdo Estratégico</h3>
-      <p><strong>O que oferecemos:</strong> Criamos conteúdos envolventes e alinhados com os teus objetivos de marketing. Seja para posts, vídeos ou blogs, nossa missão é conectar com o público e incentivar a ação.</p>
-      <ul>
-        <li>✓ Conteúdos que geram identificação</li>
-        <li>✓ Diversificação de formatos</li>
-        <li>✓ Aumento de engajamento</li>
-        <li>✓ Personalização para o público certo</li>
-      </ul>
-    </section>
+      <div class="card">
+        <h3>✍️ Criação de Conteúdo Estratégico</h3>
+        <p>Textos e mídias para blogs, posts e vídeos, alinhados aos objetivos da sua marca.</p>
+        <ul>
+          <li>Conteúdo envolvente</li>
+          <li>Formatos diversos</li>
+          <li>Conexão com o público</li>
+        </ul>
+      </div>
 
-    <section class="servico">
-      <h3>3. Tráfego Pago</h3>
-      <p><strong>O que oferecemos:</strong> Desenvolvemos campanhas de tráfego pago nas plataformas ideais para o teu negócio, focando em resultados rápidos.</p>
-      <ul>
-        <li>✓ Aumento de visitas qualificadas</li>
-        <li>✓ Atração de novos clientes</li>
-        <li>✓ Resultados mensuráveis</li>
-        <li>✓ Estratégias com base em dados</li>
-      </ul>
-    </section>
+      <div class="card">
+        <h3>📈 Tráfego Pago</h3>
+        <p>Campanhas em redes sociais e Google para atrair clientes com foco em conversão e ROI.</p>
+        <ul>
+          <li>Segmentação precisa</li>
+          <li>Otimização constante</li>
+          <li>Resultados rápidos</li>
+        </ul>
+      </div>
 
-    <section class="servico">
-      <h3>4. Consultoria 1:1</h3>
-      <p><strong>O que oferecemos:</strong> Sessões de consultoria personalizadas para criar um plano de ação sob medida para seu marketing digital.</p>
-      <ul>
-        <li>✓ Aconselhamento estratégico</li>
-        <li>✓ Clareza nos próximos passos</li>
-        <li>✓ Crescimento alinhado com o mercado</li>
-        <li>✓ Orientações práticas</li>
-      </ul>
-    </section>
+      <div class="card">
+        <h3>🧠 Consultoria 1:1</h3>
+        <p>Planejamento personalizado para o seu marketing, com direcionamento estratégico.</p>
+        <ul>
+          <li>Orientação prática</li>
+          <li>Clareza e foco</li>
+          <li>Plano sob medida</li>
+        </ul>
+      </div>
 
-    <section class="servico">
-      <h3>5. Branding e Direção Criativa</h3>
-      <p><strong>O que oferecemos:</strong> Criamos e refinamos sua identidade visual para destacar sua marca de forma consistente e atrativa.</p>
-      <ul>
-        <li>✓ Marca memorável</li>
-        <li>✓ Identidade visual coerente</li>
-        <li>✓ Design de alta qualidade</li>
-        <li>✓ Estratégia criativa forte</li>
-      </ul>
-    </section>
+      <div class="card">
+        <h3>🎨 Branding & Direção Criativa</h3>
+        <p>Criação de identidade visual única e alinhada à essência da sua marca.</p>
+        <ul>
+          <li>Design elegante</li>
+          <li>Coerência visual</li>
+          <li>Impacto profissional</li>
+        </ul>
+      </div>
 
-    <section class="servico">
-      <h3>6. Criação de Conteúdo Gráfico</h3>
-      <p><strong>O que oferecemos:</strong> Designs gráficos personalizados e impactantes para todas as redes sociais e materiais visuais.</p>
-      <ul>
-        <li>✓ Design que chama atenção</li>
-        <li>✓ Alinhamento com sua identidade</li>
-        <li>✓ Conteúdos criativos e inovadores</li>
-        <li>✓ Otimização para cada plataforma</li>
-      </ul>
-    </section>
+      <div class="card">
+        <h3>🖼️ Conteúdo Gráfico</h3>
+        <p>Criação de peças visuais para redes e campanhas com alto poder de impacto.</p>
+        <ul>
+          <li>Posts atrativos</li>
+          <li>Identidade visual forte</li>
+          <li>Design para cada plataforma</li>
+        </ul>
+      </div>
+
+    </div>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Bianca Digital Marketing. Todos os direitos reservados.</p>
-    </div>
+  <footer>
+    <p>© 2025 Bianca Digital Marketing. Todos os direitos reservados.</p>
   </footer>
 
 </body>
