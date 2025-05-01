@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --pink: #CF3479;
+    --dark-grey: #25272C;
+    --light-beige: #EDEADD;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-beige);
+    color: var(--dark-grey);
+    line-height: 1.7;
+    font-weight: 400; /* Default weight */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Bold for headings */
+    color: var(--dark-grey); /* Dark grey default for headings */
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+a {
+    color: var(--pink);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--dark-grey);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--dark-grey);
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%; /* Use padding on nav instead of container for full-width background */
+}
+
+nav .nav-logo img {
+    max-height: 40px; /* Smaller logo in nav */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2em;
+}
+
+nav ul li a {
+    color: var(--light-beige);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+nav ul li a:hover {
+    color: var(--pink);
+}
+
+main {
+    /* padding removed, sections will handle their own padding */
+}
+
+section {
+    padding: 60px 0;
+}
+
+#hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: var(--dark-grey);
+    color: var(--light-beige);
+}
+
+#hero .logo-container #main-logo {
+    max-width: 350px; /* Increased logo size */
+    height: auto;
+    margin-bottom: 30px;
+}
+
+#hero .tagline {
+    font-size: 1.3em;
+    font-weight: 300; /* Lighter weight for tagline */
+    color: var(--light-beige);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--pink);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #a72a61; /* Darker pink on hover */
+    color: var(--white);
+    text-decoration: none;
+}
+
+#portfolio-preview {
+     background-color: var(--pink);
+     color: var(--light-beige);
+}
+
+#portfolio-preview h2 {
+    color: var(--light-beige);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.carousel-placeholder {
+    text-align: center;
+    padding: 50px;
+    border: 2px dashed var(--light-beige);
+    border-radius: 5px;
+}
+
+#about {
+    background-color: var(--white);
+}
+
+#about .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#about h2 {
+     text-align: left;
+     margin-bottom: 20px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-pic {
+    max-width: 250px;
+    border-radius: 50%;
+    border: 5px solid var(--pink);
+}
+
+#contact {
+    background-color: var(--dark-grey);
+    color: var(--light-beige);
+}
+
+#contact h2 {
+    color: var(--pink);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-placeholder {
+    text-align: center;
+    padding: 50px;
+    border: 2px dashed var(--pink);
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: var(--dark-grey);
+    color: var(--light-beige);
+    padding: 2em 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2em;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav .nav-logo {
+        margin-bottom: 1em;
+    }
+
+    nav ul {
+        padding-left: 0;
+    }
+
+    nav ul li {
+        margin: 0 0.8em;
+    }
+
+    #hero {
+        padding: 60px 20px;
+    }
+
+    #hero .logo-container #main-logo {
+        max-width: 250px;
+    }
+    #hero .tagline {
+        font-size: 1.1em;
+    }
+
+    #about .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about h2 {
+        text-align: center;
+    }
+
+    .about-pic {
+        margin-bottom: 30px;
+    }
+}
+
+/* Portfolio Item Page Specific Styles */
+.portfolio-item-page h1 {
+    color: var(--pink);
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.portfolio-image-placeholder,
+.portfolio-gallery {
+    text-align: center;
+}
+
+.portfolio-image-placeholder img,
+.portfolio-gallery img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.portfolio-text {
+    font-size: 1.1em;
+}
+
+.portfolio-back-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+    .portfolio-content {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Gallery layout */
+    }
+    .portfolio-text {
+        grid-column: 1 / -1; /* Text spans full width below images */
+    }
+}
+
+
+
+/* Add Swiper Carousel Styles */
+.portfolio-carousel {
+    width: 100%;
+    height: 350px; /* Adjust height as needed */
+    margin-bottom: 30px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack image and title */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 250px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area, might crop */
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover img {
+    transform: scale(1.05);
+}
+
+.swiper-slide h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: var(--dark-grey);
+}
+
+.swiper-slide a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--white); /* White arrows */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    --swiper-navigation-size: 20px; /* Size of the arrow icon */
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: var(--swiper-navigation-size);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--white);
+}
+
+/* Contact Form Styles */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--light-beige);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark-grey);
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    background-color: var(--white);
+    color: var(--dark-grey);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#contact-form button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+#form-status {
+    min-height: 1.5em; /* Reserve space for status message */
+}
+
+/* Adjustments for portfolio item gallery */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.portfolio-gallery img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .portfolio-text {
+        grid-column: 1 / -1; /* Text spans full width below images */
+        margin-top: 20px; /* Add space between gallery and text */
+    }
+}
+
+
+
+
+/* Contact Details Styles */
+.contact-details {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--light-beige);
+}
+
+.contact-details h3 {
+    margin-bottom: 15px;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.contact-details a {
+    color: var(--pink);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--white);
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-weight: 600;
+}
+

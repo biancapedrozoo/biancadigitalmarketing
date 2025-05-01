@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bianca Digital Marketing - Site Oficial</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Add Swiper CSS for Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <a href="index.html"><img src="images/logo_principal.png" alt="Bianca Digital Marketing Logo"></a>
+            </div>
+            <ul>
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#portfolio-preview">Portfólio</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="logo-container">
+                <img src="images/logo_principal.png" alt="Bianca Digital Marketing Logo" id="main-logo">
+            </div>
+            <p class="tagline">Estratégias digitais personalizadas que destacam sua marca e impulsionam seus resultados. Vamos conversar?</p>
+            <a href="https://wa.me/351913916546" class="btn" target="_blank">Quero um Orçamento</a>
+        </section>
+
+        <section id="portfolio-preview">
+            <div class="container">
+                <h2>Portfólio</h2>
+                <!-- Swiper Carousel -->
+                <div class="swiper portfolio-carousel">
+                    <div class="swiper-wrapper">
+                        <!-- Slides will be added dynamically or listed here -->
+                        <div class="swiper-slide">
+                            <a href="portfolio/remax-station.html">
+                                <img src="images/portfolio/remax_station_branding/IMG_6222.jpeg" alt="Remax Station Preview">
+                                <h3>Remax Station</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="portfolio/fabricozi.html">
+                                <img src="images/portfolio/fabricozi/IMG_6197.jpeg" alt="Fabricozi Preview">
+                                <h3>Fabricozi</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="portfolio/gabriel-soares-sensei.html">
+                                <img src="images/portfolio/sensei/IMG_6223.jpeg" alt="Gabriel Soares Sensei Preview">
+                                <h3>Gabriel Soares Sensei</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="portfolio/property-portfolio.html">
+                                <img src="images/portfolio/property_portfolio/IMG_6233.jpeg" alt="Property Portfolio Preview">
+                                <h3>Property Portfolio</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="portfolio/business-transfer-portfolio.html">
+                                <img src="images/portfolio/business_transfer_portfolio/IMG_6227.jpeg" alt="Business Transfer Portfolio Preview">
+                                <h3>Business Transfer Portfolio</h3>
+                            </a>
+                        </div>
+                         <div class="swiper-slide">
+                            <a href="portfolio/safetools-branding-social.html"> <!-- Need to create this page -->
+                                <img src="images/portfolio/safetools_branding_social/IMG_6205.jpeg" alt="Safetools Branding Preview">
+                                <h3>Safetools Branding</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="portfolio/safetools-photo-opening.html">
+                                <img src="images/portfolio/safetools_photo_opening/IMG_6193.jpeg" alt="Safetools Photo Opening Preview">
+                                <h3>Safetools Inauguração</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="portfolio/julia-monteiro-photo.html">
+                                <img src="images/portfolio/julia_monteiro_photo/IMG_6239.jpeg" alt="Júlia Monteiro Photo Preview">
+                                <h3>Júlia Monteiro Inauguração</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- Link to a dedicated portfolio page (optional) -->
+                <!-- <div style="text-align: center; margin-top: 30px;">
+                    <a href="portfolio.html" class="btn">Ver Todos os Projetos</a> 
+                </div> -->
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                 <img src="images/bianca_perfil.jpeg" alt="Bianca - Foto de Perfil" class="about-pic">
+                 <div class="about-content">
+                    <h2>Sobre Mim</h2>
+                    <p>Olá! Sou Bianca Pedrozo, especialista em Marketing Digital focada em conectar marcas aos seus públicos e converter interações em resultados concretos. Com sede em Vila Nova de Gaia / Porto e atendimento online para todo o país, ofereço estratégias personalizadas que combinam criatividade, análise de dados e performance.</p>
+                    <p>Minha paixão é transformar desafios em oportunidades, criando campanhas que não apenas engajam, mas também impulsionam o crescimento do seu negócio. Vamos trabalhar juntos para destacar sua marca no universo digital?</p>
+                 </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p style="text-align: center; margin-bottom: 30px; color: var(--light-beige);">Pronto para levar sua marca ao próximo nível? Preencha o formulário abaixo!</p>
+                
+                <!-- Formspree Contact Form -->
+                <form id="contact-form" action="https://formspree.io/f/mqaqevzz" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="region">Região:</label>
+                        <input type="text" id="region" name="region" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="message">Mensagem (Opcional):</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+                <p id="form-status" style="text-align: center; margin-top: 20px; color: var(--pink);"></p>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bianca Digital Marketing. Todos os direitos reservados.</p>
+            <p>Sede: Vila Nova de Gaia / Porto | Atendimento Online Nacional</p>
+        </div>
+    </footer>
+
+    <!-- Add Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+                <p id="form-status" style="text-align: center; margin-top: 20px; color: var(--pink);"></p>
+
+                <div class="contact-details">
+                    <h3>Outras formas de contato:</h3>
+                    <p><strong>E-mail:</strong> <a href="mailto:bianca.digitalmarketing@outlook.com">bianca.digitalmarketing@outlook.com</a></p>
+                    <p><strong>Telefone:</strong> <a href="tel:+351913916546">+351 913 916 546</a></p>
+                    <div class="social-links">
+                        <a href="https://www.behance.net/biancapedrozo2" target="_blank" rel="noopener noreferrer">Behance</a>
+                        <a href="https://www.linkedin.com/in/biancapedrozoo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                </div>
