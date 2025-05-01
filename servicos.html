@@ -1,85 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Serviços | Bianca Digital Marketing</title>
   <style>
     :root {
-      --roxo: #6c5ce7;
-      --dourado: #fdcb6e;
-      --bg: #f9f9f9;
-      --texto: #2d3436;
+      --fundo: #EDEADE;
+      --rosa: #CF3479;
+      --texto: #26292E;
+      --branco: #ffffff;
     }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: var(--bg);
+      background-color: var(--fundo);
       color: var(--texto);
     }
-    header, footer {
-      background: var(--roxo);
-      color: white;
-      padding: 1rem 0;
-      text-align: center;
-    }
+
     .container {
       max-width: 1200px;
       margin: auto;
       padding: 2rem;
     }
+
     h2 {
       text-align: center;
+      color: var(--rosa);
       margin-bottom: 2rem;
+      font-weight: 600;
     }
+
     .grid-servicos {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
     }
+
     .card {
-      background: white;
+      background: var(--branco);
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       padding: 1.5rem;
+      border-left: 5px solid var(--rosa);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
+
     .card h3 {
-      color: var(--roxo);
-      margin-top: 0.5rem;
+      color: var(--rosa);
+      margin-top: 0;
     }
+
     .card p {
       font-size: 0.95rem;
       line-height: 1.6;
     }
+
     .card ul {
       margin-top: 1rem;
       padding-left: 1.2rem;
     }
+
     .card ul li::marker {
       content: "✓ ";
-      color: var(--dourado);
+      color: var(--rosa);
+    }
+
+    footer {
+      background-color: var(--rosa);
+      color: var(--branco);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Bianca Digital Marketing</h1>
-    <nav>
-      <a href="index.html" style="color:white; margin: 0 10px;">Início</a>
-      <a href="sobre.html" style="color:white; margin: 0 10px;">Sobre</a>
-      <a href="servicos.html" style="color:white; margin: 0 10px; font-weight: bold;">Serviços</a>
-      <a href="contato.html" style="color:white; margin: 0 10px;">Contato</a>
-    </nav>
-  </header>
-
   <main class="container">
     <h2>✨ Nossos Serviços</h2>
+
     <div class="grid-servicos">
 
       <div class="card">
