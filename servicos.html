@@ -117,29 +117,30 @@
       background-color: #b72f68;
     }
 
-    /* Botão flutuante WhatsApp */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
       z-index: 999;
       background-color: #25D366;
-      color: white;
       border-radius: 50%;
       width: 60px;
       height: 60px;
-      text-align: center;
-      font-size: 28px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       display: flex;
       justify-content: center;
       align-items: center;
       text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
     }
 
     .whatsapp-float:hover {
       transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
     }
 
     footer {
@@ -157,7 +158,6 @@
   <main class="container">
     <h2>Nossos Serviços</h2>
 
-    <!-- Aqui estão os serviços com animações leves -->
     <section class="servico">
       <h3>1. Gestão de Redes Sociais</h3>
       <p>Gerimos as tuas redes sociais com estratégia, criatividade e foco em resultados reais.</p>
@@ -188,15 +188,43 @@
       </ul>
     </section>
 
-    <!-- Botão central para orçamento -->
+    <section class="servico">
+      <h3>4. Consultoria 1:1</h3>
+      <p>Sessões personalizadas para definir estratégias claras e objetivas no marketing digital.</p>
+      <ul>
+        <li>Plano de ação exclusivo</li>
+        <li>Orientação estratégica</li>
+        <li>Resultados mais rápidos e alinhados</li>
+      </ul>
+    </section>
+
+    <section class="servico">
+      <h3>5. Branding e Direção Criativa</h3>
+      <p>Construímos identidades visuais que destacam e posicionam sua marca de forma marcante.</p>
+      <ul>
+        <li>Design profissional e autêntico</li>
+        <li>Identidade visual coerente</li>
+        <li>Marca memorável</li>
+      </ul>
+    </section>
+
+    <section class="servico">
+      <h3>6. Criação de Conteúdo Gráfico</h3>
+      <p>Designs gráficos impactantes para redes sociais, anúncios e materiais digitais.</p>
+      <ul>
+        <li>Posts e banners criativos</li>
+        <li>Conteúdo que gera engajamento</li>
+        <li>Adaptado para todas as plataformas</li>
+      </ul>
+    </section>
+
     <a href="https://wa.me/351913916546" class="btn-orcamento" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
       Solicitar Orçamento pelo WhatsApp
     </a>
   </main>
 
-  <!-- Botão flutuante de WhatsApp -->
   <a href="https://wa.me/351913916546" class="whatsapp-float" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
-    💬
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
 
   <footer>
