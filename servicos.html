@@ -2,38 +2,38 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '24317743214480115');
-  fbq('track', 'PageView');
-</script>
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=24317743214480115&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GBFNHZB55X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GBFNHZB55X');
-</script>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Serviços | Bianca Digital Marketing</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '24317743214480115');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=24317743214480115&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBFNHZB55X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GBFNHZB55X');
+  </script>
+
   <style>
     :root {
       --cinza: #26292E;
@@ -47,6 +47,7 @@
       margin: 0;
       background-color: var(--cinza);
       color: var(--branco);
+      overflow-x: hidden;
     }
 
     .container {
@@ -69,6 +70,13 @@
       padding: 1.5rem;
       margin-bottom: 2rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transform: translateY(0px);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .servico:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
     .servico h3 {
@@ -109,6 +117,31 @@
       background-color: #b72f68;
     }
 
+    /* Botão flutuante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 28px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
     footer {
       background-color: var(--rosa);
       color: var(--branco);
@@ -118,81 +151,53 @@
     }
   </style>
 </head>
+
 <body>
 
   <main class="container">
     <h2>Nossos Serviços</h2>
 
+    <!-- Aqui estão os serviços com animações leves -->
     <section class="servico">
       <h3>1. Gestão de Redes Sociais</h3>
-      <p>Gerimos as tuas redes sociais com estratégia, criatividade e foco em resultados reais. Com um plano de conteúdo personalizado, aumentamos a visibilidade da tua marca nas redes, melhoramos o engajamento e estimulamos conversões. Atuamos desde a criação de posts até à interação com seguidores. Uma gestão de redes sociais completa, feita para negócios em crescimento em Portugal e além.</p>
+      <p>Gerimos as tuas redes sociais com estratégia, criatividade e foco em resultados reais.</p>
       <ul>
-        <li>Conteúdo relevante e criativo</li>
-        <li>Aumento de seguidores qualificados</li>
-        <li>Respostas rápidas e engajamento com a comunidade</li>
-        <li>Crescimento consistente nas redes sociais</li>
+        <li>Conteúdo criativo e estratégico</li>
+        <li>Engajamento com seguidores</li>
+        <li>Crescimento orgânico</li>
       </ul>
     </section>
 
     <section class="servico">
       <h3>2. Criação de Conteúdo Estratégico</h3>
-      <p>Criamos conteúdos digitais envolventes e alinhados com os teus objetivos de marketing digital. Seja para Instagram, vídeos curtos, carrosséis ou blogs, produzimos materiais que conectam com o público ideal. Valorizamos o conteúdo original e autêntico que representa a tua marca e gera resultados concretos, fortalecendo o posicionamento no mercado português.</p>
+      <p>Conteúdos digitais envolventes alinhados com os objetivos do seu negócio.</p>
       <ul>
-        <li>Conteúdos que geram identificação com a audiência</li>
-        <li>Diversificação de formatos (imagem, vídeo, carrossel)</li>
-        <li>Aumento de engajamento com publicações criativas</li>
-        <li>Personalização para atingir o público certo</li>
+        <li>Conteúdo que conecta</li>
+        <li>Formatos criativos</li>
+        <li>Foco em conversão</li>
       </ul>
     </section>
 
     <section class="servico">
-      <h3>3. Tráfego Pago (Anúncios Online)</h3>
-      <p>Desenvolvemos campanhas de tráfego pago em Portugal e no exterior, altamente segmentadas e focadas em resultados. Anunciamos nas plataformas certas — como Facebook, Instagram e Google — para atrair leads, visitantes e clientes reais. Nossa estratégia em tráfego pago maximiza o retorno sobre cada investimento com otimização contínua.</p>
+      <h3>3. Tráfego Pago</h3>
+      <p>Campanhas segmentadas no Facebook, Instagram e Google para atrair clientes reais.</p>
       <ul>
-        <li>Aumento de visitas qualificadas</li>
-        <li>Captação de leads e novos clientes</li>
-        <li>Resultados mensuráveis (ROI)</li>
-        <li>Estratégias com base em dados reais</li>
+        <li>Mais leads e vendas</li>
+        <li>Resultados mensuráveis</li>
+        <li>ROI otimizado</li>
       </ul>
     </section>
 
-    <section class="servico">
-      <h3>4. Consultoria 1:1 em Marketing Digital</h3>
-      <p>Sessões personalizadas de consultoria estratégica em marketing digital. Analisamos teu negócio, objetivos e presença online para criar um plano de ação com foco em crescimento e autoridade digital. Ideal para empreendedoras que desejam mais clareza sobre posicionamento, branding e redes sociais em Portugal.</p>
-      <ul>
-        <li>Aconselhamento estratégico sob medida</li>
-        <li>Clareza nos próximos passos do marketing digital</li>
-        <li>Alinhamento com o mercado e público-alvo</li>
-        <li>Otimização de resultados com orientação profissional</li>
-      </ul>
-    </section>
-
-    <section class="servico">
-      <h3>5. Branding e Direção Criativa</h3>
-      <p>Construímos ou refinamos a tua identidade visual com criatividade e profissionalismo. Branding vai além do logotipo: criamos marcas completas, com essência, voz e estética única. Trabalhamos para que tua imagem comunique valor, confiança e se destaque no mercado digital português.</p>
-      <ul>
-        <li>Marca memorável e com personalidade</li>
-        <li>Identidade visual coerente e alinhada com o posicionamento</li>
-        <li>Materiais gráficos com design de alto nível</li>
-        <li>Estratégia criativa focada no teu público</li>
-      </ul>
-    </section>
-
-    <section class="servico">
-      <h3>6. Criação de Conteúdo Gráfico (Design Digital)</h3>
-      <p>Design gráfico criativo e profissional para redes sociais, anúncios, stories e materiais de divulgação. Desenvolvemos peças visuais que captam atenção, seguem tua identidade de marca e têm impacto direto no engajamento. Tudo pensado para as principais plataformas: Instagram, Facebook, Pinterest, etc.</p>
-      <ul>
-        <li>Design impactante para redes sociais</li>
-        <li>Consistência visual em todas as plataformas</li>
-        <li>Conteúdo visual inovador e alinhado com tua marca</li>
-        <li>Otimização para diferentes formatos (stories, posts, banners, etc.)</li>
-      </ul>
-    </section>
-
-   <a href="https://wa.me/351913916546" class="btn" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
-  Quero um Orçamento
-</a>
+    <!-- Botão central para orçamento -->
+    <a href="https://wa.me/351913916546" class="btn-orcamento" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
+      Solicitar Orçamento pelo WhatsApp
+    </a>
   </main>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <a href="https://wa.me/351913916546" class="whatsapp-float" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
+    💬
+  </a>
 
   <footer>
     <p>© 2025 Bianca Digital Marketing. Todos os direitos reservados.</p>
