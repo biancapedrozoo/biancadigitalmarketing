@@ -203,7 +203,7 @@ Quero um Orçamento </a> </section>
     box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;"
     onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';"
     onmouseout="this.style.transform='';this.style.boxShadow='';">
-    <h3 style="color: #CF3479;">Consultoria 1:1</h3>
+    <h3 style="color: #CF3479;">Consultoria</h3>
     <p>Atendimento individual com plano estratégico para o marketing da sua marca.</p>
   </div>
 
@@ -305,6 +305,39 @@ Quero um Orçamento </a> </section>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script> <!-- JS direto se estiver na raiz -->
 ```
+<!-- Botão flutuante de WhatsApp -->
+<a href="https://wa.me/351913916546" class="whatsapp-float" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
 
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+  .whatsapp-float img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+    
 </body>
 </html>
