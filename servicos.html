@@ -20,6 +20,37 @@
       color: var(--branco);
     }
 
+    /* Cabeçalho */
+    header {
+      background-color: var(--cinza);
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+
+    header .logo {
+      font-size: 1.8rem;
+      color: var(--branco);
+      font-weight: 600;
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: var(--branco);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--rosa);
+    }
+
+    /* Conteúdo principal */
     .container {
       max-width: 1200px;
       margin: auto;
@@ -75,6 +106,27 @@
       color: var(--rosa);
     }
 
+    /* Botão orçamento */
+    .btn-orcamento {
+      display: block;
+      width: fit-content;
+      margin: 3rem auto 0 auto;
+      padding: 1rem 2rem;
+      background-color: var(--rosa);
+      color: var(--branco);
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-orcamento:hover {
+      background-color: #b72f68;
+    }
+
+    /* Rodapé */
     footer {
       background-color: var(--rosa);
       color: var(--branco);
@@ -85,6 +137,16 @@
   </style>
 </head>
 <body>
+
+  <header>
+    <h1 class="logo">Bianca Digital Marketing</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="servicos.html"><strong>Serviços</strong></a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
 
   <main class="container">
     <h2>Nossos Serviços</h2>
@@ -152,6 +214,10 @@
       </div>
 
     </div>
+
+    <!-- Botão orçamento -->
+    <a href="contato.html" class="btn-orcamento">Quero um orçamento</a>
+
   </main>
 
   <footer>
