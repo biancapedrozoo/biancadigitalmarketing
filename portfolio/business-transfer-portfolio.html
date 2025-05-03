@@ -19,7 +19,7 @@
     main {
       max-width: 900px;
       margin: auto;
-      padding: 30px 20px;
+      padding: 30px 20px 60px;
     }
     h1 {
       color: var(--detalhe);
@@ -54,41 +54,20 @@
       box-shadow: 0 5px 20px rgba(207, 52, 121, 0.4);
     }
     .btn {
-      background-color: var(--detalhe);
+      background-color: #CF3479;
       color: white;
-      padding: 12px 24px;
-      border-radius: 5px;
+      padding: 14px 32px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 16px;
       display: inline-block;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
+      margin-top: 40px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
     .btn:hover {
-      background-color: #b82d67;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-      background-color: #25D366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-    .whatsapp-float img {
-      width: 30px;
-      height: 30px;
+      background-color: #b42d69;
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -110,16 +89,11 @@
     <img src="../images/portfolio/business_transfer_portfolio/IMG_6232.jpeg" />
   </div>
 
-  <p style="margin-top: 40px;">Vamos conversar?</p>
+  <p>Vamos conversar?</p>
   <a href="https://wa.me/351913916546" class="btn" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
     Quero um Orçamento
   </a>
 </main>
-
-<!-- BOTÃO FLUTUANTE WHATSAPP -->
-<a href="https://wa.me/351913916546" class="whatsapp-float" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-</a>
 
 </body>
 </html>
