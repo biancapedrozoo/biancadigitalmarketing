@@ -10,31 +10,37 @@
       --texto: #EEEADE;
       --detalhe: #CF3479;
     }
+
     body {
       background-color: var(--fundo);
       color: var(--texto);
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
     }
+
     main {
       max-width: 900px;
       margin: auto;
       padding: 30px 20px;
     }
+
     h1 {
       color: var(--detalhe);
       border-bottom: 2px solid var(--detalhe);
       padding-bottom: 10px;
     }
+
     a.back-link {
       color: var(--detalhe);
       text-decoration: none;
       display: inline-block;
       margin-bottom: 20px;
     }
+
     a.back-link:hover {
       text-decoration: underline;
     }
+
     .project-images {
       display: flex;
       flex-wrap: wrap;
@@ -42,6 +48,7 @@
       margin-top: 20px;
       justify-content: center;
     }
+
     .project-images img {
       width: 100%;
       max-width: 400px;
@@ -49,15 +56,60 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.4);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .project-images img:hover {
       transform: scale(1.03);
       box-shadow: 0 5px 20px rgba(207, 52, 121, 0.4);
     }
+
+    .btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 25px;
+      background-color: var(--detalhe);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #a5295e;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+    }
   </style>
 </head>
 <body>
+
 <main>
   <a class="back-link" href="../index.html">← Voltar ao portfólio</a>
+
   <h1>Safetools – Branding e Social Media</h1>
   <p>
     A Safetools é uma marca portuguesa de equipamentos de proteção individual, fundada em 2024, com o objetivo de oferecer soluções seguras e inovadoras.
@@ -65,19 +117,24 @@
     A identidade visual posiciona a Safetools como referência no mercado, enquanto a estratégia de social media reforça sua presença digital,
     conectando a marca ao seu público de forma autêntica e impactante.
   </p>
+
   <div class="project-images">
-    <img src="../images/portfolio/safetools_branding_social/IMG_6205.jpeg" />
-    <img src="../images/portfolio/safetools_branding_social/IMG_6206.jpeg" />
-    <img src="../images/portfolio/safetools_branding_social/IMG_6207.jpeg" />
-    <img src="../images/portfolio/safetools_branding_social/IMG_6208.jpeg" />
-    <img src="../images/portfolio/safetools_branding_social/IMG_6209.jpeg" />
-    <img src="../images/portfolio/safetools_branding_social/IMG_6210.jpeg" />
+    <img src="../images/portfolio/safetools_branding_social/IMG_6205.jpeg" alt="Imagem 1" />
+    <img src="../images/portfolio/safetools_branding_social/IMG_6206.jpeg" alt="Imagem 2" />
+    <img src="../images/portfolio/safetools_branding_social/IMG_6207.jpeg" alt="Imagem 3" />
+    <img src="../images/portfolio/safetools_branding_social/IMG_6208.jpeg" alt="Imagem 4" />
+    <img src="../images/portfolio/safetools_branding_social/IMG_6209.jpeg" alt="Imagem 5" />
+    <img src="../images/portfolio/safetools_branding_social/IMG_6210.jpeg" alt="Imagem 6" />
   </div>
-   
-  <p>Vamos conversar?</p>
+
   <a href="https://wa.me/351913916546" class="btn" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
     Quero um Orçamento
   </a>
 </main>
+
+<a href="https://wa.me/351913916546" class="whatsapp-float" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
 </body>
 </html>
