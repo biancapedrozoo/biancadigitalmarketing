@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio | Bianca Digital Marketing</title>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .portfolio-item {
+      background-color: #EDEADE;
+      color: #26292E;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .portfolio-item h3 {
+      padding: 15px;
+      color: #CF3479;
+    }
+    main h1 {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #CF3479;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/logo_principal.png" alt="Bianca Digital Marketing Logo" /></a>
+      </div>
+      <ul>
+        <li><a href="index.html#hero">Início</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="index.html#about">Sobre</a></li>
+        <li><a href="index.html#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Portfólio</h1>
+    <section class="portfolio-grid">
+
+      <a class="portfolio-item" href="portfolio/remax-station.html">
+        <img src="images/portfolio/remax_station_branding/IMG_6222.jpeg" alt="Remax Station">
+        <h3>Remax Station</h3>
+      </a>
+
+      <a class="portfolio-item" href="portfolio/fabricozi.html">
+        <img src="images/portfolio/fabricozi/IMG_6197.jpeg" alt="Fabricozi">
+        <h3>Fabricozi</h3>
+      </a>
+
+      <a class="portfolio-item" href="portfolio/sensei.html">
+        <img src="images/portfolio/sensei/IMG_6223.jpeg" alt="Gabriel Soares Sensei">
+        <h3>Gabriel Soares Sensei</h3>
+      </a>
+
+      <a class="portfolio-item" href="portfolio/property-portfolio.html">
+        <img src="images/portfolio/property_portfolio/IMG_6233.jpeg" alt="Property Portfolio">
+        <h3>Property Portfolio</h3>
+      </a>
+
+      <a class="portfolio-item" href="portfolio/business-transfer-portfolio.html">
+        <img src="images/portfolio/business_transfer_portfolio/IMG_6227.jpeg" alt="Business Transfer Portfolio">
+        <h3>Business Transfer</h3>
+      </a>
+
+      <a class="portfolio-item" href="portfolio/safetools-branding-social.html">
+        <img src="images/portfolio/safetools_branding_social/IMG_6205.jpeg" alt="Safetools Branding">
+        <h3>Safetools Branding</h3>
+      </a>
+
+      <a class="portfolio-item" href="portfolio/safetools-photo-opening.html">
+        <img src="images/portfolio/safetools_photo_opening/IMG_6193.jpeg" alt="Safetools Inauguração">
+        <h3>Safetools Inauguração</h3>
+      </a>
+
+      <a class="portfolio-item" href="portfolio/julia-monteiro-photo.html">
+        <img src="images/portfolio/julia_monteiro_photo/IMG_6239.jpeg" alt="Júlia Monteiro Photo">
+        <h3>Júlia Monteiro Inauguração</h3>
+      </a>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bianca Digital Marketing. Todos os direitos reservados.</p>
+      <p>Sede: Vila Nova de Gaia / Porto | Atendimento Online Nacional</p>
+    </div>
+  </footer>
+
+  <!-- BOTÃO WHATSAPP -->
+  <a href="https://wa.me/351913916546" class="whatsapp-float" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+
+</body>
+</html>
