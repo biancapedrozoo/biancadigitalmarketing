@@ -7,17 +7,16 @@
   <link rel="stylesheet" href="../style.css" />
   <style>
     :root {
-      --rosa: #CF337B;
-      --azul: #243148;
-      --bege: #F1EDC6;
+      --fundo: #2F2E47;
+      --texto: #F2EBC4;
+      --detalhe: #CE377A;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bege);
-      color: var(--azul);
+      background-color: var(--fundo);
+      color: var(--texto);
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     main {
@@ -28,15 +27,19 @@
 
     h1 {
       font-size: 2rem;
-      color: var(--rosa);
-      border-bottom: 2px solid var(--azul);
+      color: var(--detalhe);
+      border-bottom: 2px solid var(--detalhe);
       padding-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
     }
 
     a.back-link {
       display: inline-block;
       margin-bottom: 20px;
-      color: var(--rosa);
+      color: var(--detalhe);
       text-decoration: none;
       font-weight: bold;
     }
@@ -57,18 +60,13 @@
       width: 100%;
       max-width: 400px;
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .project-images img:hover {
       transform: scale(1.03);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    p {
-      line-height: 1.6;
-      color: var(--azul);
+      box-shadow: 0 5px 20px rgba(206, 55, 122, 0.4);
     }
   </style>
 </head>
