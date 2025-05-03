@@ -53,6 +53,7 @@
       transform: scale(1.03);
       box-shadow: 0 5px 20px rgba(207, 52, 121, 0.4);
     }
+
     .btn {
       background-color: #CF3479;
       color: white;
@@ -68,6 +69,32 @@
     .btn:hover {
       background-color: #b42d69;
       transform: scale(1.05);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
     }
   </style>
 </head>
@@ -89,11 +116,15 @@
     <img src="../images/portfolio/business_transfer_portfolio/IMG_6232.jpeg" />
   </div>
 
-  <p>Vamos conversar?</p>
   <a href="https://wa.me/351913916546" class="btn" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
     Quero um Orçamento
   </a>
 </main>
+
+<!-- Botão flutuante do WhatsApp -->
+<a href="https://wa.me/351913916546" class="whatsapp-float" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
 
 </body>
 </html>
