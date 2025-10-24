@@ -490,10 +490,15 @@ footer {
 
 /* Logo centralizado com tamanho intermediário */
 .logo {
-  width: 360px; /* Tamanho intermediário */
+  width: 300px;              /* Tamanho intermediário */
   max-width: 100%;
   margin-bottom: 1.5rem;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(-10px); /* Move 5px pra esquerda (ajuste fino) */
+}
+
 }
 
 /* Texto centralizado */
@@ -525,13 +530,13 @@ footer {
 .hero-image {
   position: absolute;
   bottom: 0;
-  right: 20px; /* Aproxima a imagem do conteúdo */
+  right: 100px; /* Aproxima a imagem do conteúdo */
   z-index: 1;
   pointer-events: none; /* Evita que clique bloqueie elementos */
 }
 
 .foto-bianca {
-  height: 480px;
+  height: 440px;
   max-height: 90vh;
   width: auto;
   object-fit: contain;
