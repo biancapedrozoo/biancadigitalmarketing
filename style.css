@@ -476,4 +476,28 @@ footer {
     margin: 0 10px;
     font-weight: 600;
 }
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
+}
 
+.hero-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-foto {
+  flex: 1;
+  text-align: center;
+}
+
+.foto-bianca {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
