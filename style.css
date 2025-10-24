@@ -528,7 +528,7 @@ footer {
 .hero-image {
   position: absolute;
   bottom: 0;
-  right: 100px; /* Ajuste milimétrico pra aproximar da logo */
+  right: 500px; /* Ajuste milimétrico pra aproximar da logo */
   z-index: 1;
   pointer-events: none;
 }
