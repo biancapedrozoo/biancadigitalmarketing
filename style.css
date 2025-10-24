@@ -490,7 +490,7 @@ footer {
 
 /* Logo centralizado com tamanho intermediário */
 .logo {
-  width: 260px; /* Tamanho intermediário */
+  width: 360px; /* Tamanho intermediário */
   max-width: 100%;
   margin-bottom: 1.5rem;
   display: block;
@@ -525,7 +525,7 @@ footer {
 .hero-image {
   position: absolute;
   bottom: 0;
-  right: 40px; /* Aproxima a imagem do conteúdo */
+  right: 20px; /* Aproxima a imagem do conteúdo */
   z-index: 1;
   pointer-events: none; /* Evita que clique bloqueie elementos */
 }
