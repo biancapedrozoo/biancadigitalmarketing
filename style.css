@@ -527,38 +527,106 @@ footer {
   bottom: 0;
   right: 2rem;
 }
+/* === HERO (TOPO) === */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 4rem 2rem;
+  background-color: #121212;
+  flex-wrap: wrap;
+  gap: 2rem;
+  min-height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
 
-.hero-image img {
-  max-height: 500px;
-  height: auto;
-  object-fit: contain;
-  box-shadow: none;
-  background: transparent;
-  margin: 0;
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.logo {
+  width: 220px;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
   display: block;
 }
 
-/* Remove sombra ou borda estranha */
-.hero-image img {
-  box-shadow: none !important;
-  background: transparent !important;
+.hero-text {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
-/* === MOBILE RESPONSIVO === */
+.hero-button {
+  display: inline-block;
+  background-color: #e72d80;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #c91d6b;
+}
+
+/* === FOTO DA BIANCA === */
+.hero-image {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.foto-bianca {
+  max-height: 500px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  box-shadow: none;
+  background: transparent;
+  margin: 0;
+  pointer-events: none;
+}
+
+/* === RESPONSIVO === */
 @media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
   .hero-content {
-    padding: 2rem;
+    z-index: 2;
   }
 
   .hero-image {
     position: static;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    width: 100%;
   }
 
-  .hero-image img {
-    max-width: 80%;
+  .foto-bianca {
     max-height: 400px;
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
