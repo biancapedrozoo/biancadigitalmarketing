@@ -528,13 +528,13 @@ footer {
 .hero-image {
   position: absolute;
   bottom: 0;
-  right: 500px; /* Ajuste milimétrico pra aproximar da logo */
+  right: 600px; /* Ajuste milimétrico pra aproximar da logo */
   z-index: 1;
   pointer-events: none;
 }
 
 .foto-bianca {
-  height: 400px;
+  height: 420px;
   max-height: 90vh;
   width: auto;
   object-fit: contain;
