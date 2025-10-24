@@ -481,31 +481,84 @@ footer {
   color: white;
   padding: 4rem 2rem;
 }
+/* === AJUSTES DA SEÇÃO DE TOPO === */
 
+/* Centraliza logo e texto */
 .hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2rem;
-}
-
-.hero-texto {
-  flex: 1;
-  min-width: 280px;
-}
-
-.hero-foto {
-  flex: 1;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.foto-bianca {
-  max-width: 260px;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+/* Tamanho intermediário do logo */
+.hero-content img.logo {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
 }
 
+/* Deixa o botão e o texto certinho */
+.hero-content p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hero-content a {
+  display: inline-block;
+  background-color: #e72d80;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.hero-content a:hover {
+  background-color: #c91d6b;
+}
+
+/* Foto da Bianca no canto */
+.hero-image {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+}
+
+.hero-image img {
+  max-height: 500px;
+  height: auto;
+  object-fit: contain;
+  box-shadow: none;
+  background: transparent;
+  margin: 0;
+  display: block;
+}
+
+/* Remove sombra ou borda estranha */
+.hero-image img {
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* === MOBILE RESPONSIVO === */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 2rem;
+  }
+
+  .hero-image {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+    max-height: 400px;
+  }
+}
