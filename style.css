@@ -496,7 +496,7 @@ footer {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  transform: translateX(-10px); /* Move 5px pra esquerda (ajuste fino) */
+  transform: translateX(-30px); /* Move 5px pra esquerda (ajuste fino) */
 }
 
 }
@@ -530,7 +530,7 @@ footer {
 .hero-image {
   position: absolute;
   bottom: 0;
-  right: 100px; /* Aproxima a imagem do conteúdo */
+  right: 300px; /* Aproxima a imagem do conteúdo */
   z-index: 1;
   pointer-events: none; /* Evita que clique bloqueie elementos */
 }
