@@ -476,69 +476,16 @@ footer {
     margin: 0 10px;
     font-weight: 600;
 }
-.hero {
-  background-color: #1e1e1e; /* fundo escuro bonito */
-  color: white;
-  padding: 4rem 2rem;
-}
-/* === AJUSTES DA SEÇÃO DE TOPO === */
-
-/* Centraliza logo e texto */
-.hero-content {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Tamanho intermediário do logo */
-.hero-content img.logo {
-  max-width: 300px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px auto;
-}
-
-/* Deixa o botão e o texto certinho */
-.hero-content p {
-  font-size: 1.2rem;
-  color: #ffffff;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.hero-content a {
-  display: inline-block;
-  background-color: #e72d80;
-  color: #fff;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-.hero-content a:hover {
-  background-color: #c91d6b;
-}
-
-/* Foto da Bianca no canto */
-.hero-image {
-  position: absolute;
-  bottom: 0;
-  right: 2rem;
-}
 /* === HERO (TOPO) === */
 .hero {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
   padding: 4rem 2rem;
   background-color: #121212;
-  flex-wrap: wrap;
-  gap: 2rem;
-  min-height: 85vh;
   position: relative;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .hero-content {
@@ -546,10 +493,6 @@ footer {
   max-width: 600px;
   text-align: center;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   z-index: 2;
 }
 
@@ -600,7 +543,6 @@ footer {
   box-shadow: none;
   background: transparent;
   margin: 0;
-  pointer-events: none;
 }
 
 /* === RESPONSIVO === */
