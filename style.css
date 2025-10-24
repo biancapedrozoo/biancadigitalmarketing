@@ -490,15 +490,13 @@ footer {
 
 /* Logo centralizado com tamanho intermediário */
 .logo {
-  width: 290px;              /* Tamanho intermediário */
+  width: 290px;
   max-width: 100%;
   margin-bottom: 1.5rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  transform: translateX(-40px); /* Move 5px pra esquerda (ajuste fino) */
-}
-
+  transform: translateX(-10px); /* Ajuste fino — mexa aqui se quiser */
 }
 
 /* Texto centralizado */
@@ -530,9 +528,9 @@ footer {
 .hero-image {
   position: absolute;
   bottom: 0;
-  right: 400px; /* Aproxima a imagem do conteúdo */
+  right: 100px; /* Ajuste milimétrico pra aproximar da logo */
   z-index: 1;
-  pointer-events: none; /* Evita que clique bloqueie elementos */
+  pointer-events: none;
 }
 
 .foto-bianca {
@@ -549,11 +547,12 @@ footer {
 /* === RESPONSIVO (MOBILE) === */
 @media (max-width: 768px) {
   .hero {
-    padding: 3rem 1rem 6rem; /* espaço extra no fim pro mobile */
+    padding: 3rem 1rem 6rem;
   }
 
   .logo {
     width: 220px;
+    transform: none;
   }
 
   .hero-text {
