@@ -1,88 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio | Bianca Digital Marketing</title>
 
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
 
-  <style>
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .portfolio-item {
-      background-color: #EDEADE;
-      color: #26292E;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
-    }
-    .portfolio-item:hover {
-      transform: translateY(-5px);
-    }
-    .portfolio-item img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .portfolio-item h3 {
-      padding: 15px;
-      color: #CF3479;
-    }
-    main h1 {
-      text-align: center;
-      margin: 40px 0 20px;
-      color: #CF3479;
-    }
-    .btn {
-      background-color: #CF3479;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      margin-top: 10px;
-      transition: background-color 0.3s ease;
-    }
-    .btn:hover {
-      background-color: #b82d67;
-    }
-  </style>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '24317743214480115');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=24317743214480115&ev=PageView&noscript=1"/>
+  </noscript>
 </head>
 <body>
+  <div class="cursor"></div>
+  <div class="cursor-dot"></div>
 
+  <!-- Header -->
   <header>
     <nav>
       <div class="nav-logo">
-        <a href="index.html"><img src="images/logo_principal.png" alt="Bianca Digital Marketing Logo" /></a>
+        <a href="index.html"><img src="images/logo_principal.png" alt="Bianca Digital Marketing Logo"></a>
       </div>
       <ul>
         <li><a href="index.html#hero">Início</a></li>
         <li><a href="servicos.html">Serviços</a></li>
         <li><a href="portfolio.html">Portfólio</a></li>
         <li><a href="index.html#about">Sobre</a></li>
-        <li><a href="index.html#contact">Contato</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Fale Connosco</a></li>
       </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
 
   <main>
-    <h1>Portfólio</h1>
-    <section class="portfolio-grid">
+    <!-- Header da Página -->
+    <div class="page-header">
+      <h1>Nosso <em>Portfólio</em></h1>
+    </div>
 
+    <!-- Grid de Portfólio -->
+    <section class="portfolio-page-grid">
       <a class="portfolio-item" href="portfolio/remax-station.html">
         <img src="images/portfolio/remax_station_branding/IMG_6222.jpeg" alt="Remax Station">
         <h3>RE/MAX Station</h3>
@@ -93,7 +69,7 @@
         <h3>Fabricozi</h3>
       </a>
 
-      <a class="portfolio-item" href="portfolio/sensei.html">
+      <a class="portfolio-item" href="portfolio/gabriel-soares-sensei.html">
         <img src="images/portfolio/sensei/IMG_6223.jpeg" alt="Gabriel Soares Sensei">
         <h3>Gabriel Soares Sensei</h3>
       </a>
@@ -122,18 +98,18 @@
         <img src="images/portfolio/julia_monteiro_photo/IMG_6239.jpeg" alt="Júlia Monteiro Photo">
         <h3>Júlia Monteiro Inauguração</h3>
       </a>
-
     </section>
 
-    <div style="text-align:center; margin: 40px 0;">
-      <p style="font-size: 1.2rem; color: #26292E;">Vamos conversar?</p>
+    <!-- CTA -->
+    <div style="text-align:center; padding: 3rem 5%;">
+      <p style="font-size: 1.2rem; color: #26292E; margin-bottom: 1.5rem;">Vamos conversar?</p>
       <a href="https://wa.me/351913916546" class="btn" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
         Quero um Orçamento
       </a>
     </div>
-
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Bianca Digital Marketing. Todos os direitos reservados.</p>
@@ -141,38 +117,11 @@
     </div>
   </footer>
 
-  <!-- BOTÃO WHATSAPP -->
+  <!-- WhatsApp -->
   <a href="https://wa.me/351913916546" class="whatsapp-float" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
 
-  <style>
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-      background-color: #25D366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-
-    .whatsapp-float img {
-      width: 30px;
-      height: 30px;
-    }
-  </style>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
