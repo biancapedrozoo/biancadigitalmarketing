@@ -4,120 +4,204 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio | Bianca Digital Marketing</title>
+  
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '24317743214480115');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=24317743214480115&ev=PageView&noscript=1"/></noscript>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBFNHZB55X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GBFNHZB55X');
+  </script>
+
+  <style>
+    :root {
+      --rosa: #CC3479;
+      --rosa-dark: #a82a63;
+      --rosa-soft: rgba(204, 52, 121, 0.1);
+      --rosa-glow: rgba(204, 52, 121, 0.25);
+      --dark: #26292E;
+      --gray: #6b7280;
+      --gray-light: #9ca3af;
+      --light: #F8F8F8;
+      --white: #FFFFFF;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: var(--white); color: var(--dark); line-height: 1.7; }
+    ::selection { background: var(--rosa); color: var(--white); }
+    
+    .cursor { width: 35px; height: 35px; border: 1.5px solid var(--rosa); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: all 0.15s ease; transform: translate(-50%, -50%); }
+    .cursor-dot { width: 6px; height: 6px; background: var(--rosa); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); }
+    .cursor.hover { transform: translate(-50%, -50%) scale(1.4); background: var(--rosa-soft); }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 50px; width: auto; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--dark); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--rosa); }
+    .nav-cta { background: var(--rosa); color: var(--white) !important; padding: 0.6rem 1.5rem; border-radius: 50px; font-size: 0.75rem !important; }
+    .nav-cta:hover { background: var(--rosa-dark) !important; }
+
+    .page-header { padding: 8rem 5% 4rem; background: linear-gradient(135deg, var(--white) 0%, var(--light) 100%); text-align: center; }
+    .page-header h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: var(--dark); margin-bottom: 1rem; }
+    .page-header h1 em { color: var(--rosa); font-style: normal; }
+    .page-header p { color: var(--gray); font-size: 1rem; max-width: 600px; margin: 0 auto; }
+
+    .portfolio-page { padding: 4rem 5%; }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+    .portfolio-card { position: relative; overflow: hidden; border-radius: 12px; aspect-ratio: 4/3; cursor: pointer; background: var(--light); display: block; text-decoration: none; }
+    .portfolio-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .portfolio-card:hover img { transform: scale(1.08); }
+    .portfolio-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--rosa) 0%, rgba(204, 52, 121, 0.8) 40%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; opacity: 0; transition: opacity 0.4s; }
+    .portfolio-card:hover .portfolio-card-overlay { opacity: 1; }
+    .portfolio-card-overlay h3 { font-size: 1.1rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
+    .portfolio-card-overlay span { color: rgba(255,255,255,0.85); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; }
+
+    .cta-section { padding: 4rem 5%; background: var(--rosa); text-align: center; }
+    .cta-section h2 { color: var(--white); font-size: 1.8rem; margin-bottom: 1rem; }
+    .cta-section p { color: rgba(255,255,255,0.9); margin-bottom: 2rem; }
+    .btn-white { background: var(--white); color: var(--rosa); padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.85rem; display: inline-block; transition: all 0.3s; }
+    .btn-white:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+    footer { padding: 3rem 5% 1.5rem; background: var(--dark); }
+    .footer-main { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-logo { text-decoration: none; }
+    .footer-logo img { height: 40px; }
+    .footer-social { display: flex; gap: 0.75rem; }
+    .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); text-decoration: none; font-size: 0.8rem; transition: all 0.3s; }
+    .footer-social a:hover { background: var(--rosa); border-color: var(--rosa); }
+    .footer-bottom { text-align: center; padding-top: 1.5rem; color: var(--gray); font-size: 0.75rem; }
+
+    .whatsapp-float { position: fixed; bottom: 25px; right: 25px; width: 55px; height: 55px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 99; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); transition: all 0.3s; }
+    .whatsapp-float:hover { transform: scale(1.1) translateY(-3px); }
+    .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+
+    @media (max-width: 1024px) { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { 
+      .nav-links { display: none; } 
+      .cursor, .cursor-dot { display: none; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .footer-main { flex-direction: column; gap: 1.5rem; }
+    }
+  </style>
 </head>
 <body>
   <div class="cursor"></div>
   <div class="cursor-dot"></div>
 
-  <!-- Navegação -->
   <nav>
-    <a href="index.html" class="nav-logo">
-      <img src="images/logo_principal.png" alt="Bianca Digital Marketing">
-    </a>
+    <a href="index.html" class="nav-logo"><img src="images/logo_principal.png" alt="Bianca Digital Marketing"></a>
     <ul class="nav-links">
       <li><a href="index.html">Início</a></li>
-      <li><a href="index.html#services">Serviços</a></li>
+      <li><a href="portfolio.html">Portfólio</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
       <li><a href="index.html#about">Sobre</a></li>
       <li><a href="index.html#contact" class="nav-cta">Fale Connosco</a></li>
     </ul>
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
   </nav>
 
-  <!-- Header da Página -->
   <div class="page-header">
     <h1>Nosso <em>Portfólio</em></h1>
+    <p>Conheça alguns dos projetos que desenvolvemos para nossos clientes.</p>
   </div>
 
-  <!-- Grid de Portfólio -->
-  <div class="portfolio-page-grid">
-    <a href="portfolio/remax-station.html" class="portfolio-card">
-      <img src="images/portfolio/remax_station/IMG_6213.jpeg" alt="RE/MAX Station">
-      <div class="portfolio-card-overlay">
-        <h3>RE/MAX Station</h3>
-        <span>Branding & Social Media</span>
-      </div>
-    </a>
-    <a href="portfolio/fabricozi.html" class="portfolio-card">
-      <img src="images/portfolio/fabricozi/IMG_6197.jpeg" alt="Fabricozi">
-      <div class="portfolio-card-overlay">
-        <h3>Fabricozi</h3>
-        <span>Identidade Visual</span>
-      </div>
-    </a>
-    <a href="portfolio/sensei.html" class="portfolio-card">
-      <img src="images/portfolio/sensei/IMG_6223.jpeg" alt="Gabriel Soares Sensei">
-      <div class="portfolio-card-overlay">
-        <h3>Gabriel Soares Sensei</h3>
-        <span>Logo Design</span>
-      </div>
-    </a>
-    <a href="portfolio/property-portfolio.html" class="portfolio-card">
-      <img src="images/portfolio/property_portfolio/IMG_6233.jpeg" alt="Property Portfolio">
-      <div class="portfolio-card-overlay">
-        <h3>Property Portfolio</h3>
-        <span>Design Editorial</span>
-      </div>
-    </a>
-    <a href="portfolio/business-transfer-portfolio.html" class="portfolio-card">
-      <img src="images/portfolio/business_transfer_portfolio/IMG_6227.jpeg" alt="Business Transfer Portfolio">
-      <div class="portfolio-card-overlay">
-        <h3>Business Transfer Portfolio</h3>
-        <span>Design Editorial</span>
-      </div>
-    </a>
-    <a href="portfolio/safetools-branding-social.html" class="portfolio-card">
-      <img src="images/portfolio/safetools_branding_social/IMG_6205.jpeg" alt="Safetools Branding">
-      <div class="portfolio-card-overlay">
-        <h3>Safetools</h3>
-        <span>Branding & Social Media</span>
-      </div>
-    </a>
-    <a href="portfolio/safetools-photo-opening.html" class="portfolio-card">
-      <img src="images/portfolio/safetools_photo_opening/IMG_6193.jpeg" alt="Safetools Inauguração">
-      <div class="portfolio-card-overlay">
-        <h3>Safetools Inauguração</h3>
-        <span>Fotografia</span>
-      </div>
-    </a>
-    <a href="portfolio/julia-monteiro-photo.html" class="portfolio-card">
-      <img src="images/portfolio/julia_monteiro_photo/IMG_6239.jpeg" alt="Júlia Monteiro">
-      <div class="portfolio-card-overlay">
-        <h3>Júlia Monteiro</h3>
-        <span>Fotografia</span>
-      </div>
-    </a>
-  </div>
+  <section class="portfolio-page">
+    <div class="portfolio-grid">
+      <a href="portfolio/remax-station.html" class="portfolio-card">
+        <img src="images/portfolio/remax_station_branding/IMG_6222.jpeg" alt="RE/MAX Station">
+        <div class="portfolio-card-overlay"><h3>RE/MAX Station</h3><span>Branding & Social Media</span></div>
+      </a>
+      <a href="portfolio/fabricozi.html" class="portfolio-card">
+        <img src="images/portfolio/fabricozi/IMG_6197.jpeg" alt="Fabricozi">
+        <div class="portfolio-card-overlay"><h3>Fabricozi</h3><span>Identidade Visual</span></div>
+      </a>
+      <a href="portfolio/gabriel-soares-sensei.html" class="portfolio-card">
+        <img src="images/portfolio/sensei/IMG_6223.jpeg" alt="Gabriel Soares Sensei">
+        <div class="portfolio-card-overlay"><h3>Gabriel Soares Sensei</h3><span>Logo Design</span></div>
+      </a>
+      <a href="portfolio/property-portfolio.html" class="portfolio-card">
+        <img src="images/portfolio/property_portfolio/IMG_6233.jpeg" alt="Property Portfolio">
+        <div class="portfolio-card-overlay"><h3>Property Portfolio</h3><span>Design Editorial</span></div>
+      </a>
+      <a href="portfolio/business-transfer-portfolio.html" class="portfolio-card">
+        <img src="images/portfolio/business_transfer_portfolio/IMG_6227.jpeg" alt="Business Transfer">
+        <div class="portfolio-card-overlay"><h3>Business Transfer</h3><span>Design Editorial</span></div>
+      </a>
+      <a href="portfolio/safetools-branding-social.html" class="portfolio-card">
+        <img src="images/portfolio/safetools_branding_social/IMG_6205.jpeg" alt="Safetools Branding">
+        <div class="portfolio-card-overlay"><h3>Safetools</h3><span>Branding & Social Media</span></div>
+      </a>
+      <a href="portfolio/safetools-photo-opening.html" class="portfolio-card">
+        <img src="images/portfolio/safetools_photo_opening/IMG_6193.jpeg" alt="Safetools Inauguração">
+        <div class="portfolio-card-overlay"><h3>Safetools Inauguração</h3><span>Fotografia</span></div>
+      </a>
+      <a href="portfolio/julia-monteiro-photo.html" class="portfolio-card">
+        <img src="images/portfolio/julia_monteiro_photo/IMG_6239.jpeg" alt="Júlia Monteiro">
+        <div class="portfolio-card-overlay"><h3>Júlia Monteiro</h3><span>Fotografia</span></div>
+      </a>
+    </div>
+  </section>
 
-  <!-- Footer -->
+  <section class="cta-section">
+    <h2>Quer ver o seu projeto aqui?</h2>
+    <p>Vamos conversar sobre como posso ajudar a destacar a sua marca.</p>
+    <a href="https://wa.me/351913916546" class="btn-white" onclick="fbq('track', 'CliqueWhatsApp')">Falar pelo WhatsApp</a>
+  </section>
+
   <footer>
     <div class="footer-main">
-      <a href="index.html" class="footer-logo">
-        <img src="images/logo_principal.png" alt="Bianca Digital Marketing">
-      </a>
+      <a href="index.html" class="footer-logo"><img src="images/logo_principal.png" alt="Bianca Digital Marketing"></a>
       <div class="footer-social">
-        <a href="https://instagram.com/biancadigitalmarketing" target="_blank">IG</a>
-        <a href="https://behance.net/biancadigitalmarketing" target="_blank">Be</a>
-        <a href="https://linkedin.com/company/biancadigitalmarketing" target="_blank">In</a>
+        <a href="https://www.instagram.com/biancadigitalmarketing" target="_blank">IG</a>
+        <a href="https://www.behance.net/biancapedrozo2" target="_blank">Be</a>
+        <a href="https://www.linkedin.com/in/biancapedrozoo" target="_blank">In</a>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2025 Bianca Digital Marketing. Todos os direitos reservados.</p>
+      <p>Sede: Vila Nova de Gaia / Porto | Atendimento Online Nacional</p>
     </div>
   </footer>
 
-  <a href="https://wa.me/351913916546" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <a href="https://wa.me/351913916546" class="whatsapp-float" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <script src="js/script.js"></script>
+  <script>
+    const cursor = document.querySelector('.cursor');
+    const cursorDot = document.querySelector('.cursor-dot');
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+      cursorDot.style.left = e.clientX + 'px';
+      cursorDot.style.top = e.clientY + 'px';
+    });
+    document.querySelectorAll('a, button, .portfolio-card').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+  </script>
 </body>
 </html>
