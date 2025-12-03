@@ -3,39 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bianca Digital Marketing | Estratégia, Propósito e Resultado</title>
+  <title>Bianca Digital Marketing | Agência de Marketing Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-
-  <meta name="description" content="Marketing Digital personalizado para destacar sua marca nas redes sociais. Serviços como tráfego pago, branding, consultoria e criação de conteúdo.">
-  <meta name="keywords" content="marketing digital, redes sociais, tráfego pago, branding, conteúdo, consultoria, Bianca Digital Marketing">
-  <meta name="author" content="Bianca Digital Marketing">
-  <meta property="og:title" content="Bianca Digital Marketing">
-  <meta property="og:description" content="Destaque sua marca com nossos serviços criativos e estratégicos de marketing digital.">
-  <meta property="og:url" content="https://www.biancadigitalmarketing.com">
-  <meta property="og:type" content="website">
-
   <!-- Meta Pixel Code -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '24317743214480115');
-    fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '24317743214480115');
+  fbq('track', 'PageView');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=24317743214480115&ev=PageView&noscript=1"/>
-  </noscript>
-
+  
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBFNHZB55X"></script>
   <script>
@@ -46,11 +30,16 @@
   </script>
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     :root {
       --rosa: #CC3479;
       --rosa-dark: #a82a63;
       --rosa-soft: rgba(204, 52, 121, 0.1);
-      --rosa-glow: rgba(204, 52, 121, 0.25);
       --dark: #26292E;
       --dark-soft: #3a3f47;
       --gray: #6b7280;
@@ -59,61 +48,25 @@
       --white: #FFFFFF;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: 'Poppins', sans-serif;
-      font-weight: 400;
       background: var(--white);
       color: var(--dark);
-      overflow-x: hidden;
       line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    ::selection {
-      background: var(--rosa);
-      color: var(--white);
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    /* Cursor */
-    .cursor {
-      width: 35px;
-      height: 35px;
-      border: 1.5px solid var(--rosa);
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 9999;
-      transition: all 0.15s ease;
-      transform: translate(-50%, -50%);
+    img {
+      max-width: 100%;
+      height: auto;
     }
 
-    .cursor-dot {
-      width: 6px;
-      height: 6px;
-      background: var(--rosa);
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-    }
-
-    .cursor.hover {
-      transform: translate(-50%, -50%) scale(1.4);
-      background: var(--rosa-soft);
-      border-color: var(--rosa);
-    }
-
-    /* Navigation */
+    /* NAV - CINZA ESCURO */
     nav {
       position: fixed;
       top: 0;
@@ -124,57 +77,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
+      background: #26292E;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .nav-logo img {
       height: 50px;
-      width: auto;
-    }
-
-    /* Placeholder para preview - remover quando tiver o logo real */
-    .nav-logo-placeholder {
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: var(--dark);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .nav-logo-placeholder::before {
-      content: '';
-      width: 10px;
-      height: 10px;
-      background: var(--rosa);
-      border-radius: 50%;
     }
 
     .nav-links {
       display: flex;
       gap: 2.5rem;
       list-style: none;
-      align-items: center;
-    }
-
-    .nav-links li {
-      list-style: none;
     }
 
     .nav-links a {
-      color: var(--dark);
-      text-decoration: none;
+      color: #FFFFFF;
       font-size: 0.85rem;
       font-weight: 500;
-      letter-spacing: 0.02em;
       transition: color 0.3s;
     }
 
@@ -188,171 +108,127 @@
       padding: 0.6rem 1.5rem;
       border-radius: 50px;
       font-size: 0.75rem !important;
-      letter-spacing: 0.08em;
-      transition: all 0.3s !important;
     }
 
     .nav-cta:hover {
-      background: var(--rosa-dark) !important;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px var(--rosa-glow);
+      background: var(--rosa-dark);
     }
 
-    /* Hero Section */
+    /* HERO */
     .hero {
       min-height: 100vh;
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
-      background: linear-gradient(135deg, var(--white) 0%, var(--light) 100%);
+      padding: 100px 5% 60px;
+      background: var(--white);
       position: relative;
       overflow: hidden;
     }
 
-    .hero-bg-shape {
+    .hero::before {
+      content: '';
       position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 70%;
+      height: 140%;
+      background: var(--rosa-soft);
       border-radius: 50%;
-      background: var(--rosa);
-      opacity: 0.05;
+      z-index: 0;
     }
 
-    .hero-bg-shape.one {
-      width: 600px;
-      height: 600px;
-      top: -200px;
-      right: -100px;
-    }
-
-    .hero-bg-shape.two {
-      width: 400px;
-      height: 400px;
-      bottom: -150px;
-      left: -100px;
-    }
-
-    .hero-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 7rem 5% 4rem;
-      width: 100%;
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 40%;
+      height: 80%;
+      background: var(--rosa-soft);
+      border-radius: 50%;
+      z-index: 0;
     }
 
     .hero-content {
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
 
-    .hero-tag {
+    .hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.5rem;
       background: var(--rosa-soft);
+      color: var(--rosa);
       padding: 0.5rem 1rem;
       border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
       margin-bottom: 1.5rem;
-      opacity: 0;
-      animation: fadeUp 0.6s 0.2s forwards;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .hero-tag-dot {
+    .hero-badge::before {
+      content: '';
       width: 8px;
       height: 8px;
       background: var(--rosa);
       border-radius: 50%;
-      animation: pulse 2s infinite;
     }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.6; transform: scale(1.2); }
-    }
-
-    .hero-tag span {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--rosa);
-    }
-
-    .hero-title {
-      font-size: clamp(2.2rem, 4vw, 3.2rem);
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
       font-weight: 600;
       line-height: 1.2;
       margin-bottom: 1.5rem;
       color: var(--dark);
-      opacity: 0;
-      animation: fadeUp 0.6s 0.4s forwards;
     }
 
-    .hero-title em {
+    .hero h1 span {
       color: var(--rosa);
-      font-style: italic;
-      font-weight: 500;
+      display: block;
     }
 
-    .hero-description {
+    .hero-text {
       font-size: 1rem;
-      font-weight: 300;
       color: var(--gray);
-      max-width: 450px;
-      line-height: 1.8;
       margin-bottom: 2rem;
-      opacity: 0;
-      animation: fadeUp 0.6s 0.6s forwards;
+      max-width: 450px;
     }
 
     .hero-buttons {
       display: flex;
       gap: 1rem;
       align-items: center;
-      opacity: 0;
-      animation: fadeUp 0.6s 0.8s forwards;
     }
 
     .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
       background: var(--rosa);
       color: var(--white);
       padding: 1rem 2rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-decoration: none;
       border-radius: 50px;
-      transition: all 0.3s ease;
+      font-weight: 500;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s;
     }
 
     .btn-primary:hover {
       background: var(--rosa-dark);
       transform: translateY(-3px);
-      box-shadow: 0 15px 35px var(--rosa-glow);
-    }
-
-    .btn-primary svg {
-      width: 16px;
-      height: 16px;
-      transition: transform 0.3s;
-    }
-
-    .btn-primary:hover svg {
-      transform: translateX(4px);
     }
 
     .btn-secondary {
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 0.9rem;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: var(--dark);
-      font-size: 0.8rem;
-      font-weight: 500;
-      text-decoration: none;
-      padding: 1rem;
       transition: color 0.3s;
     }
 
@@ -362,117 +238,82 @@
 
     .hero-image {
       position: relative;
-      opacity: 0;
-      animation: fadeIn 0.8s 0.5s forwards;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .hero-image-wrapper {
       position: relative;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
       border-radius: 20px;
-      overflow: hidden;
       box-shadow: 0 30px 60px rgba(0,0,0,0.1);
     }
 
-    .hero-image-wrapper::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border: 3px solid var(--rosa);
-      border-radius: 20px;
-      z-index: 2;
-      opacity: 0.3;
-    }
-
-    .hero-image-wrapper img,
-    .hero-image-wrapper .placeholder {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .hero-image-wrapper .placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--light) 0%, #eee 100%);
-      color: var(--gray);
-      font-size: 0.9rem;
-    }
-
-    .hero-badge {
+    .hero-float-badge {
       position: absolute;
       background: var(--white);
-      padding: 1rem 1.25rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      z-index: 3;
+      padding: 1rem 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
 
-    .hero-badge.top {
-      top: 30px;
+    .hero-float-badge.top {
+      top: 10%;
       right: -20px;
-      animation: float 4s ease-in-out infinite;
     }
 
-    .hero-badge.bottom {
-      bottom: 40px;
+    .hero-float-badge.bottom {
+      bottom: 15%;
       left: -20px;
-      animation: float 4s ease-in-out infinite 1s;
     }
 
-    .hero-badge strong {
-      display: block;
+    .hero-float-badge .number {
       font-size: 1.5rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--rosa);
-      line-height: 1;
     }
 
-    .hero-badge span {
+    .hero-float-badge .text {
       font-size: 0.7rem;
       color: var(--gray);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.5px;
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
-    /* Marquee */
+    /* MARQUEE */
     .marquee-section {
-      padding: 1.25rem 0;
       background: var(--rosa);
+      padding: 1rem 0;
       overflow: hidden;
-    }
-
-    .marquee {
-      display: flex;
-      animation: marquee 20s linear infinite;
     }
 
     .marquee-content {
       display: flex;
-      align-items: center;
-      gap: 2.5rem;
-      padding-right: 2.5rem;
-      white-space: nowrap;
+      animation: marquee 20s linear infinite;
     }
 
-    .marquee-content span {
+    .marquee-item {
+      color: var(--white);
       font-size: 0.85rem;
       font-weight: 500;
-      color: var(--white);
-      letter-spacing: 0.05em;
+      white-space: nowrap;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
     }
 
-    .marquee-content .dot {
-      width: 6px;
-      height: 6px;
-      background: var(--white);
-      border-radius: 50%;
+    .marquee-item span {
       opacity: 0.5;
     }
 
@@ -481,135 +322,94 @@
       100% { transform: translateX(-50%); }
     }
 
-    /* Section Header */
+    /* PORTFOLIO SECTION */
+    .portfolio-section {
+      padding: 100px 5%;
+      background: var(--white);
+    }
+
     .section-header {
       text-align: center;
       margin-bottom: 4rem;
     }
 
     .section-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
       color: var(--rosa);
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      letter-spacing: 0.15em;
       text-transform: uppercase;
+      letter-spacing: 2px;
       margin-bottom: 1rem;
-    }
-
-    .section-tag::before,
-    .section-tag::after {
-      content: '';
-      width: 30px;
-      height: 1px;
-      background: var(--rosa);
-      opacity: 0.5;
+      display: block;
     }
 
     .section-title {
-      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-size: clamp(2rem, 4vw, 2.8rem);
       font-weight: 600;
       color: var(--dark);
     }
 
-    .section-title em {
+    .section-title span {
       color: var(--rosa);
-      font-style: normal;
-    }
-
-    /* Portfolio Section */
-    .portfolio-section {
-      padding: 6rem 5%;
-      background: var(--white);
     }
 
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1.25rem;
-      max-width: 1300px;
+      grid-template-rows: repeat(2, 300px);
+      gap: 1.5rem;
+      max-width: 1400px;
       margin: 0 auto;
     }
 
-    .portfolio-card {
+    .portfolio-item {
       position: relative;
+      border-radius: 20px;
       overflow: hidden;
-      border-radius: 12px;
-      aspect-ratio: 1;
       cursor: pointer;
-      background: var(--light);
     }
 
-    .portfolio-card:nth-child(1) {
+    .portfolio-item:first-child {
       grid-column: span 2;
       grid-row: span 2;
-      aspect-ratio: auto;
     }
 
-    .portfolio-card img,
-    .portfolio-card .placeholder {
+    .portfolio-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.5s;
     }
 
-    .portfolio-card .placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--light) 0%, #e5e5e5 100%);
-      color: var(--gray);
-      font-size: 0.85rem;
+    .portfolio-item:hover img {
+      transform: scale(1.05);
     }
 
-    .portfolio-card:hover img,
-    .portfolio-card:hover .placeholder {
-      transform: scale(1.08);
-    }
-
-    .portfolio-card-overlay {
+    .portfolio-overlay {
       position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, var(--rosa) 0%, rgba(204, 52, 121, 0.8) 40%, transparent 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 1.5rem;
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-
-    .portfolio-card:hover .portfolio-card-overlay {
-      opacity: 1;
-    }
-
-    .portfolio-card-overlay h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      background: linear-gradient(to top, rgba(204,52,121,0.95), transparent);
       color: var(--white);
+      transform: translateY(100%);
+      transition: transform 0.4s;
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      transform: translateY(0);
+    }
+
+    .portfolio-overlay h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
       margin-bottom: 0.25rem;
-      transform: translateY(10px);
-      transition: transform 0.3s;
     }
 
-    .portfolio-card:hover .portfolio-card-overlay h3 {
-      transform: translateY(0);
-    }
-
-    .portfolio-card-overlay span {
-      color: rgba(255,255,255,0.85);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      transform: translateY(10px);
-      transition: transform 0.3s 0.05s;
-    }
-
-    .portfolio-card:hover .portfolio-card-overlay span {
-      transform: translateY(0);
+    .portfolio-overlay p {
+      font-size: 0.8rem;
+      opacity: 0.9;
     }
 
     .portfolio-cta {
@@ -617,15 +417,14 @@
       margin-top: 3rem;
     }
 
-    /* Services Section */
+    /* SERVICES SECTION */
     .services-section {
-      padding: 6rem 5%;
+      padding: 100px 5%;
       background: var(--dark);
     }
 
-    .services-section .section-tag::before,
-    .services-section .section-tag::after {
-      background: var(--rosa);
+    .services-section .section-tag {
+      color: var(--rosa);
     }
 
     .services-section .section-title {
@@ -635,74 +434,46 @@
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .service-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: var(--rosa);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s;
+      background: var(--dark-soft);
+      padding: 2.5rem;
+      border-radius: 20px;
+      border-top: 3px solid transparent;
+      transition: all 0.4s;
     }
 
     .service-card:hover {
-      background: rgba(255,255,255,0.06);
-      border-color: rgba(204, 52, 121, 0.3);
+      border-top-color: var(--rosa);
       transform: translateY(-5px);
     }
 
-    .service-card:hover::before {
-      transform: scaleX(1);
-    }
-
     .service-icon {
-      width: 50px;
-      height: 50px;
-      background: var(--rosa-soft);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      margin-bottom: 1.25rem;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
     }
 
     .service-card h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
       color: var(--white);
-      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
     }
 
     .service-card p {
       color: var(--gray-light);
-      font-size: 0.85rem;
-      font-weight: 300;
+      font-size: 0.9rem;
       line-height: 1.7;
     }
 
-    /* About Section */
+    /* ABOUT SECTION */
     .about-section {
-      padding: 6rem 5%;
-      background: var(--light);
+      padding: 100px 5%;
+      background: var(--white);
     }
 
     .about-grid {
@@ -710,7 +481,7 @@
       grid-template-columns: 1fr 1.3fr;
       gap: 5rem;
       align-items: center;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -718,98 +489,49 @@
       position: relative;
     }
 
-    .about-image-wrapper {
-      position: relative;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.1);
-    }
-
-    .about-image-wrapper::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 50%;
-      background: linear-gradient(to top, var(--rosa), transparent);
-      opacity: 0.2;
-    }
-
-    .about-image img,
-    .about-image .placeholder {
+    .about-image img {
       width: 100%;
-      height: 400px;
-      object-fit: cover;
-    }
-
-    .about-image .placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--white) 0%, #eee 100%);
-      color: var(--gray);
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.1);
     }
 
     .about-content .section-tag {
-      justify-content: flex-start;
+      text-align: left;
     }
 
-    .about-content .section-tag::before {
-      display: none;
-    }
-
-    .about-content h2 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 600;
-      color: var(--dark);
+    .about-content .section-title {
+      text-align: left;
       margin-bottom: 1.5rem;
     }
 
-    .about-content h2 em {
-      color: var(--rosa);
-      font-style: normal;
-    }
-
-    .about-content p {
+    .about-text {
       color: var(--gray);
-      font-size: 0.95rem;
-      font-weight: 300;
-      line-height: 1.85;
-      margin-bottom: 1rem;
+      font-size: 1rem;
+      margin-bottom: 2rem;
     }
 
     .about-stats {
       display: flex;
-      gap: 2.5rem;
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(0,0,0,0.08);
+      gap: 3rem;
+      margin-bottom: 2rem;
     }
 
-    .stat-item {
-      text-align: left;
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 600;
+    .stat-item .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
       color: var(--rosa);
-      line-height: 1;
     }
 
-    .stat-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+    .stat-item .stat-label {
+      font-size: 0.85rem;
       color: var(--gray);
-      margin-top: 0.3rem;
     }
 
-    /* Contact Section */
+    /* CONTACT SECTION */
     .contact-section {
-      padding: 6rem 5%;
-      background: var(--white);
+      padding: 100px 5%;
+      background: var(--light);
     }
 
     .contact-grid {
@@ -820,34 +542,19 @@
       margin: 0 auto;
     }
 
-    .contact-content .section-tag {
-      justify-content: flex-start;
-    }
-
-    .contact-content .section-tag::before {
-      display: none;
-    }
-
-    .contact-content h2 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
+    .contact-info h3 {
+      font-size: 1.8rem;
       font-weight: 600;
       color: var(--dark);
       margin-bottom: 1rem;
     }
 
-    .contact-content h2 em {
-      color: var(--rosa);
-      font-style: normal;
-    }
-
-    .contact-content > p {
+    .contact-info p {
       color: var(--gray);
-      font-size: 0.95rem;
-      line-height: 1.7;
       margin-bottom: 2rem;
     }
 
-    .contact-info {
+    .contact-details {
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -857,46 +564,30 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      font-size: 0.9rem;
       color: var(--dark);
+      font-size: 0.95rem;
     }
 
-    .contact-item-icon {
-      width: 45px;
-      height: 45px;
-      background: var(--rosa);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-size: 1rem;
-      flex-shrink: 0;
-    }
-
-    .contact-item a {
-      color: var(--dark);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .contact-item a:hover {
+    .contact-item svg {
+      width: 20px;
+      height: 20px;
       color: var(--rosa);
     }
 
     .contact-form {
-      background: var(--light);
+      background: var(--white);
       padding: 2.5rem;
       border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.05);
     }
 
     .form-group {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
 
     .form-group label {
       display: block;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       font-weight: 500;
       color: var(--dark);
       margin-bottom: 0.5rem;
@@ -905,52 +596,46 @@
     .form-group input,
     .form-group textarea {
       width: 100%;
-      padding: 0.9rem 1rem;
-      background: var(--white);
-      border: 1px solid #e5e5e5;
+      padding: 1rem;
+      border: 1px solid #e5e7eb;
       border-radius: 10px;
       font-family: inherit;
       font-size: 0.9rem;
-      color: var(--dark);
-      transition: all 0.3s;
+      transition: border-color 0.3s;
     }
 
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
       border-color: var(--rosa);
-      box-shadow: 0 0 0 3px var(--rosa-soft);
     }
 
     .form-group textarea {
-      min-height: 100px;
+      min-height: 120px;
       resize: vertical;
     }
 
-    .form-submit {
+    .btn-submit {
       width: 100%;
-      padding: 1rem;
       background: var(--rosa);
       color: var(--white);
+      padding: 1rem;
       border: none;
       border-radius: 50px;
       font-family: inherit;
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       font-weight: 500;
-      letter-spacing: 0.05em;
       cursor: pointer;
       transition: all 0.3s;
     }
 
-    .form-submit:hover {
+    .btn-submit:hover {
       background: var(--rosa-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px var(--rosa-glow);
     }
 
-    /* Footer */
+    /* FOOTER */
     footer {
-      padding: 3rem 5% 1.5rem;
+      padding: 4rem 5% 2rem;
       background: var(--dark);
     }
 
@@ -964,22 +649,13 @@
       border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
-    .footer-logo {
-      text-decoration: none;
-    }
-
     .footer-logo img {
       height: 40px;
-      width: auto;
-    }
-
-    .footer-logo .nav-logo-placeholder {
-      color: var(--white);
     }
 
     .footer-social {
       display: flex;
-      gap: 0.75rem;
+      gap: 1rem;
     }
 
     .footer-social a {
@@ -992,26 +668,23 @@
       align-items: center;
       justify-content: center;
       color: var(--white);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 500;
+      font-size: 0.85rem;
       transition: all 0.3s;
     }
 
     .footer-social a:hover {
       background: var(--rosa);
       border-color: var(--rosa);
-      transform: translateY(-3px);
     }
 
     .footer-bottom {
       text-align: center;
-      padding-top: 1.5rem;
+      padding-top: 2rem;
       color: var(--gray);
-      font-size: 0.75rem;
+      font-size: 0.8rem;
     }
 
-    /* WhatsApp Float */
+    /* WHATSAPP FLOAT */
     .whatsapp-float {
       position: fixed;
       bottom: 25px;
@@ -1024,14 +697,12 @@
       align-items: center;
       justify-content: center;
       z-index: 99;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
       transition: all 0.3s;
-      text-decoration: none;
     }
 
     .whatsapp-float:hover {
-      transform: scale(1.1) translateY(-3px);
-      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+      transform: scale(1.1);
     }
 
     .whatsapp-float svg {
@@ -1040,100 +711,69 @@
       fill: white;
     }
 
-    /* Animations */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(25px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Responsive */
-    @media (max-width: 1200px) {
-      .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      
-      .portfolio-card:nth-child(1) {
-        grid-column: span 2;
-        grid-row: span 1;
-        aspect-ratio: 16/9;
-      }
-    }
-
+    /* RESPONSIVE */
     @media (max-width: 1024px) {
-      .hero-container {
+      .hero {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 3rem;
+        padding-top: 120px;
       }
-      
+
       .hero-content {
         order: 2;
       }
-      
+
       .hero-image {
         order: 1;
-        max-width: 400px;
-        margin: 0 auto;
+        margin-bottom: 2rem;
       }
-      
-      .hero-tag {
-        justify-content: center;
-      }
-      
-      .hero-description {
+
+      .hero-text {
         margin: 0 auto 2rem;
       }
-      
+
       .hero-buttons {
         justify-content: center;
       }
-      
-      .hero-badge {
+
+      .hero-float-badge {
         display: none;
       }
-      
-      .about-grid,
-      .contact-grid {
+
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+
+      .portfolio-item:first-child {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-      
-      .about-image {
-        max-width: 350px;
-        margin: 0 auto;
-      }
-      
-      .about-content .section-tag,
-      .contact-content .section-tag {
-        justify-content: center;
-      }
-      
-      .about-content,
-      .contact-content {
         text-align: center;
       }
-      
+
+      .about-image img {
+        margin: 0 auto;
+      }
+
+      .about-content .section-tag,
+      .about-content .section-title {
+        text-align: center;
+      }
+
       .about-stats {
         justify-content: center;
       }
-      
-      .contact-info {
-        align-items: center;
-      }
-      
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -1141,187 +781,143 @@
       .nav-links {
         display: none;
       }
-      
-      .cursor, .cursor-dot {
-        display: none;
-      }
-      
+
       .portfolio-grid {
         grid-template-columns: 1fr;
       }
-      
-      .portfolio-card:nth-child(1) {
+
+      .portfolio-item:first-child {
         grid-column: span 1;
-        aspect-ratio: 4/3;
       }
-      
+
       .services-grid {
         grid-template-columns: 1fr;
       }
-      
-      .about-stats {
-        flex-wrap: wrap;
-        gap: 1.5rem;
-      }
-      
-      .contact-form {
-        padding: 1.5rem;
-      }
-      
+
       .footer-main {
         flex-direction: column;
         gap: 1.5rem;
-        text-align: center;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Cursor -->
-  <div class="cursor"></div>
-  <div class="cursor-dot"></div>
 
-  <!-- Navigation -->
+  <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-logo">
       <img src="images/logo_principal.png" alt="Bianca Digital Marketing">
     </a>
     <ul class="nav-links">
-      <li><a href="#hero">Início</a></li>
-      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="portfolio.html">Portfólio</a></li>
       <li><a href="servicos.html">Serviços</a></li>
       <li><a href="#about">Sobre</a></li>
       <li><a href="#contact" class="nav-cta">Fale Connosco</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg-shape one"></div>
-    <div class="hero-bg-shape two"></div>
-    
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="hero-tag">
-          <div class="hero-tag-dot"></div>
-          <span>Marketing Digital • Vila Nova de Gaia</span>
-        </div>
-        <h1 class="hero-title">
-          Estratégia, Propósito & <em>Resultado</em>
-        </h1>
-        <p class="hero-description">
-          Estratégias digitais personalizadas que destacam sua marca e impulsionam seus resultados. Vamos criar algo incrível juntos?
-        </p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn-primary">
-            Solicitar Orçamento
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-          <a href="#portfolio" class="btn-secondary">
-            Ver Portfólio →
-          </a>
-        </div>
+    <div class="hero-content">
+      <div class="hero-badge">Marketing Digital • Vila Nova de Gaia</div>
+      <h1>
+        Estratégia, Propósito &
+        <span>Resultado</span>
+      </h1>
+      <p class="hero-text">
+        Estratégias digitais personalizadas que destacam sua marca e impulsionam seus resultados. Vamos criar algo incrível juntos?
+      </p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/351913916546" class="btn-primary" onclick="fbq('track','CliqueWhatsApp')">
+          Solicitar Orçamento →
+        </a>
+        <a href="portfolio.html" class="btn-secondary">
+          Ver Portfólio →
+        </a>
       </div>
-      
-      <div class="hero-image">
-        <div class="hero-badge top">
-          <strong>8+</strong>
-          <span>Anos Exp.</span>
+    </div>
+    <div class="hero-image">
+      <div class="hero-image-wrapper">
+        <img src="images/portfolio/bianca_site.png" alt="Bianca Pedrozo">
+        <div class="hero-float-badge top">
+          <div>
+            <div class="number">8+</div>
+            <div class="text">Anos Exp.</div>
+          </div>
         </div>
-        <div class="hero-image-wrapper">
-          <img src="images/portfolio/bianca_site.png" alt="Bianca Pedrozo">
-        </div>
-        <div class="hero-badge bottom">
-          <strong>100%</strong>
-          <span>Dedicação</span>
+        <div class="hero-float-badge bottom">
+          <div>
+            <div class="number">100%</div>
+            <div class="text">Dedicação</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Marquee -->
-  <div class="marquee-section">
-    <div class="marquee">
-      <div class="marquee-content">
-        <span>Branding</span>
-        <div class="dot"></div>
-        <span>Social Media</span>
-        <div class="dot"></div>
-        <span>Tráfego Pago</span>
-        <div class="dot"></div>
-        <span>Conteúdo Estratégico</span>
-        <div class="dot"></div>
-        <span>Consultoria</span>
-        <div class="dot"></div>
-        <span>Design Gráfico</span>
-        <div class="dot"></div>
+  <!-- MARQUEE -->
+  <section class="marquee-section">
+    <div class="marquee-content">
+      <div class="marquee-item">
+        Gestão de Redes Sociais <span>✦</span>
+        Branding <span>✦</span>
+        Tráfego Pago <span>✦</span>
+        Consultoria <span>✦</span>
+        Design Gráfico <span>✦</span>
+        Conteúdo Estratégico <span>✦</span>
       </div>
-      <div class="marquee-content">
-        <span>Branding</span>
-        <div class="dot"></div>
-        <span>Social Media</span>
-        <div class="dot"></div>
-        <span>Tráfego Pago</span>
-        <div class="dot"></div>
-        <span>Conteúdo Estratégico</span>
-        <div class="dot"></div>
-        <span>Consultoria</span>
-        <div class="dot"></div>
-        <span>Design Gráfico</span>
-        <div class="dot"></div>
+      <div class="marquee-item">
+        Gestão de Redes Sociais <span>✦</span>
+        Branding <span>✦</span>
+        Tráfego Pago <span>✦</span>
+        Consultoria <span>✦</span>
+        Design Gráfico <span>✦</span>
+        Conteúdo Estratégico <span>✦</span>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Portfolio Section -->
+  <!-- PORTFOLIO -->
   <section class="portfolio-section" id="portfolio">
     <div class="section-header">
-      <span class="section-tag">Nossos Trabalhos</span>
-      <h2 class="section-title">Portfólio <em>Recente</em></h2>
+      <span class="section-tag">Portfólio</span>
+      <h2 class="section-title">Projetos que <span>Inspiram</span></h2>
     </div>
     <div class="portfolio-grid">
-      <a href="portfolio/remax-station.html" class="portfolio-card">
+      <a href="portfolio/remax-station.html" class="portfolio-item">
         <img src="images/portfolio/remax_station_branding/IMG_6222.jpeg" alt="RE/MAX Station">
-        <div class="portfolio-card-overlay">
+        <div class="portfolio-overlay">
           <h3>RE/MAX Station</h3>
-          <span>Branding & Social Media</span>
+          <p>Branding & Social Media</p>
         </div>
       </a>
-      <a href="portfolio/fabricozi.html" class="portfolio-card">
+      <a href="portfolio/fabricozi.html" class="portfolio-item">
         <img src="images/portfolio/fabricozi/IMG_6197.jpeg" alt="Fabricozi">
-        <div class="portfolio-card-overlay">
+        <div class="portfolio-overlay">
           <h3>Fabricozi</h3>
-          <span>Identidade Visual</span>
+          <p>Branding</p>
         </div>
       </a>
-      <a href="portfolio/sensei.html" class="portfolio-card">
-  <img src="images/portfolio/sensei/IMG_6223.jpeg" alt="Gabriel Soares Sensei">
-  <div class="portfolio-card-overlay">
-    <h3>Gabriel Soares</h3>
-    <span>Branding</span>
-  </div>
-</a>
-      <a href="portfolio/safetools-branding-social.html" class="portfolio-card">
+      <a href="portfolio/safetools-branding-social.html" class="portfolio-item">
         <img src="images/portfolio/safetools_branding_social/IMG_6205.jpeg" alt="Safetools">
-        <div class="portfolio-card-overlay">
+        <div class="portfolio-overlay">
           <h3>Safetools</h3>
-          <span>Branding</span>
+          <p>Branding & Social</p>
         </div>
       </a>
-      <a href="portfolio/property-portfolio.html" class="portfolio-card">
+      <a href="portfolio/property-portfolio.html" class="portfolio-item">
         <img src="images/portfolio/property_portfolio/IMG_6233.jpeg" alt="Property Portfolio">
-        <div class="portfolio-card-overlay">
+        <div class="portfolio-overlay">
           <h3>Property Portfolio</h3>
-          <span>Design Editorial</span>
+          <p>Design Editorial</p>
         </div>
       </a>
-      <a href="portfolio/julia-monteiro-photo.html" class="portfolio-card">
+      <a href="portfolio/julia-monteiro-photo.html" class="portfolio-item">
         <img src="images/portfolio/julia_monteiro_photo/IMG_6239.jpeg" alt="Júlia Monteiro">
-        <div class="portfolio-card-overlay">
+        <div class="portfolio-overlay">
           <h3>Júlia Monteiro</h3>
-          <span>Fotografia</span>
+          <p>Fotografia</p>
         </div>
       </a>
     </div>
@@ -1330,123 +926,126 @@
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- SERVICES -->
   <section class="services-section" id="services">
     <div class="section-header">
-      <span class="section-tag">O Que Fazemos</span>
-      <h2 class="section-title">Nossos <em>Serviços</em></h2>
+      <span class="section-tag">Serviços</span>
+      <h2 class="section-title">O que <span>Fazemos</span></h2>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">📱</div>
         <h3>Gestão de Redes Sociais</h3>
-        <p>Planejamento e produção de conteúdo para Instagram e Facebook com foco em resultados.</p>
+        <p>Criação e gestão de conteúdo estratégico para Instagram, Facebook e LinkedIn. Planeamento, publicação e análise de resultados.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">✍️</div>
-        <h3>Criação de Conteúdo</h3>
-        <p>Textos, imagens e vídeos pensados para atrair e conectar com seu público.</p>
+        <h3>Conteúdo Estratégico</h3>
+        <p>Desenvolvimento de conteúdo que conecta com seu público-alvo e fortalece o posicionamento da sua marca.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">📈</div>
         <h3>Tráfego Pago</h3>
-        <p>Campanhas patrocinadas para aumentar alcance, visitas e conversões.</p>
+        <p>Campanhas de Meta Ads e Google Ads otimizadas para gerar leads qualificados e aumentar suas vendas.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">💡</div>
         <h3>Consultoria</h3>
-        <p>Atendimento individual com plano estratégico para o marketing da sua marca.</p>
+        <p>Análise completa da sua presença digital com estratégias personalizadas para alcançar seus objetivos.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🎨</div>
         <h3>Branding</h3>
-        <p>Criação de identidade visual única para sua marca se destacar no mercado.</p>
+        <p>Criação de identidade visual que transmite a essência da sua marca e a diferencia no mercado.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🖼️</div>
         <h3>Design Gráfico</h3>
-        <p>Designs criativos e alinhados com sua marca para redes sociais.</p>
+        <p>Materiais gráficos profissionais para redes sociais, impressos e apresentações corporativas.</p>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- ABOUT -->
   <section class="about-section" id="about">
     <div class="about-grid">
       <div class="about-image">
-        <div class="about-image-wrapper">
-          <img src="images/bianca_perfil.jpeg" alt="Bianca Pedrozo">
-        </div>
+        <img src="images/bianca_perfil.jpeg" alt="Bianca Pedrozo">
       </div>
       <div class="about-content">
-        <span class="section-tag">Quem Somos</span>
-        <h2>Olá! Sou <em>Bianca Pedrozo</em></h2>
-        <p>Especialista em Marketing Digital focada em conectar marcas aos seus públicos e converter interações em resultados concretos.</p>
-        <p>Com sede em Vila Nova de Gaia / Porto e atendimento online para todo o país, ofereço estratégias personalizadas que combinam criatividade, análise de dados e performance.</p>
-        <p>Minha paixão é transformar desafios em oportunidades, criando campanhas que não apenas engajam, mas impulsionam o crescimento do seu negócio.</p>
+        <span class="section-tag">Sobre Mim</span>
+        <h2 class="section-title">Bianca <span>Pedrozo</span></h2>
+        <p class="about-text">
+          Sou especialista em marketing digital com mais de 8 anos de experiência ajudando marcas a crescerem no ambiente digital. Minha abordagem combina estratégia, criatividade e análise de dados para entregar resultados reais.
+        </p>
+        <p class="about-text">
+          Com background em fisioterapia, trago uma perspectiva única de cuidado e atenção personalizada para cada cliente, especialmente nos setores de saúde, estética e imobiliário.
+        </p>
         <div class="about-stats">
           <div class="stat-item">
             <div class="stat-number">8+</div>
-            <div class="stat-label">Anos Exp.</div>
+            <div class="stat-label">Anos de Experiência</div>
           </div>
           <div class="stat-item">
             <div class="stat-number">50+</div>
-            <div class="stat-label">Projetos</div>
+            <div class="stat-label">Clientes Atendidos</div>
           </div>
           <div class="stat-item">
             <div class="stat-number">100%</div>
             <div class="stat-label">Dedicação</div>
           </div>
         </div>
+        <a href="https://wa.me/351913916546" class="btn-primary" onclick="fbq('track','CliqueWhatsApp')">
+          Vamos Conversar →
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- CONTACT -->
   <section class="contact-section" id="contact">
     <div class="contact-grid">
-      <div class="contact-content">
-        <span class="section-tag">Vamos Conversar</span>
-        <h2>Pronta para destacar <em>sua marca</em>?</h2>
-        <p>Entre em contato e vamos criar algo incrível juntos. Respondo em até 24 horas.</p>
-        <div class="contact-info">
+      <div class="contact-info">
+        <h3>Vamos trabalhar juntos?</h3>
+        <p>Entre em contacto para discutirmos como posso ajudar sua marca a crescer no digital.</p>
+        <div class="contact-details">
           <div class="contact-item">
-            <div class="contact-item-icon">✉</div>
-            <a href="mailto:biancapedrozo@biancadigitalmarketing.com">biancapedrozo@biancadigitalmarketing.com</a>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            biancapedrozo@biancadigitalmarketing.com
           </div>
           <div class="contact-item">
-            <div class="contact-item-icon">☎</div>
-            <a href="tel:+351913916546">+351 913 916 546</a>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            +351 913 916 546
           </div>
           <div class="contact-item">
-            <div class="contact-item-icon">📍</div>
-            <span>Vila Nova de Gaia, Porto</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Vila Nova de Gaia, Portugal
           </div>
         </div>
       </div>
       <form class="contact-form" action="https://formspree.io/f/mqaqevzz" method="POST">
         <div class="form-group">
-          <label>Nome</label>
-          <input type="text" name="name" placeholder="Seu nome completo" required>
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required>
         </div>
         <div class="form-group">
-          <label>E-mail</label>
-          <input type="email" name="email" placeholder="seu@email.com" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
         </div>
         <div class="form-group">
-          <label>Telefone</label>
-          <input type="tel" name="phone" placeholder="+351 900 000 000">
+          <label for="phone">Telefone</label>
+          <input type="tel" id="phone" name="phone">
         </div>
         <div class="form-group">
-          <label>Mensagem</label>
-          <textarea name="message" placeholder="Conte-me sobre o seu projeto..."></textarea>
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" required></textarea>
         </div>
-        <button type="submit" class="form-submit">Enviar Mensagem</button>
+        <button type="submit" class="btn-submit">Enviar Mensagem</button>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-main">
       <a href="index.html" class="footer-logo">
@@ -1460,33 +1059,13 @@
     </div>
     <div class="footer-bottom">
       <p>© 2025 Bianca Digital Marketing. Todos os direitos reservados.</p>
-      <p>Sede: Vila Nova de Gaia / Porto | Atendimento Online Nacional</p>
     </div>
   </footer>
 
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/351913916546" class="whatsapp-float" target="_blank" onclick="fbq('track', 'CliqueWhatsApp')">
-    <svg viewBox="0 0 24 24">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/351913916546" class="whatsapp-float" target="_blank" onclick="fbq('track','CliqueWhatsApp')">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <script>
-    // Cursor
-    const cursor = document.querySelector('.cursor');
-    const cursorDot = document.querySelector('.cursor-dot');
-
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-      cursorDot.style.left = e.clientX + 'px';
-      cursorDot.style.top = e.clientY + 'px';
-    });
-
-    document.querySelectorAll('a, button, .portfolio-card').forEach(el => {
-      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-    });
-
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+</body>
+</html>
