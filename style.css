@@ -202,3 +202,11 @@ nav {
     display: none;
   }
 }
+/* Força o texto branco dentro das listas de cards */
+.services-section .service-card ul li {
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
