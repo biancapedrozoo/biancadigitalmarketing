@@ -1184,6 +1184,48 @@
     .services-section .service-card h3 {
   color: var(--rosa) !important;
 }
+    /* Força o texto branco dentro das listas de cards */
+.services-section .service-card ul li {
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* ===== MARQUEE CORRIGIDA ===== */
+.marquee-section {
+  background: var(--rosa);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee {
+  display: flex;
+  animation: marqueeScroll 25s linear infinite;
+  width: max-content;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.marquee-content span {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
   </style>
 </head>
 <body>
