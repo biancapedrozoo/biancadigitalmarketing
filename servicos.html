@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serviços | Bianca Digital Marketing</title>
-  
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,7 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Poppins', sans-serif; background: var(--dark); color: var(--white); line-height: 1.7; }
     ::selection { background: var(--rosa); color: var(--white); }
-    
+
     .cursor { width: 35px; height: 35px; border: 1.5px solid var(--rosa); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: all 0.15s ease; transform: translate(-50%, -50%); }
     .cursor-dot { width: 6px; height: 6px; background: var(--rosa); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); }
     .cursor.hover { transform: translate(-50%, -50%) scale(1.4); background: var(--rosa-soft); }
@@ -76,8 +76,9 @@
     .service-card:hover { background: rgba(255,255,255,0.06); border-color: rgba(204, 52, 121, 0.3); transform: translateY(-5px); }
     .service-card:hover::before { transform: scaleX(1); }
     .service-icon { width: 50px; height: 50px; background: var(--rosa-soft); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem; }
-    .service-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
-    .service-card p { color: var(--gray-light); font-size: 0.85rem; font-weight: 300; line-height: 1.7; }
+    .service-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; text-transform: uppercase; }
+    .service-card ul { padding-left: 1rem; color: var(--gray-light); font-size: 0.85rem; font-weight: 300; }
+    .service-card ul li { margin-bottom: 0.5rem; }
 
     .cta-section { padding: 4rem 5%; background: var(--rosa); text-align: center; }
     .cta-section h2 { color: var(--white); font-size: 1.8rem; margin-bottom: 1rem; }
@@ -99,8 +100,8 @@
     .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
 
     @media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { 
-      .nav-links { display: none; } 
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
       .cursor, .cursor-dot { display: none; }
       .services-grid { grid-template-columns: 1fr; }
       .footer-main { flex-direction: column; gap: 1.5rem; }
@@ -129,36 +130,98 @@
 
   <section class="services-page">
     <div class="services-grid">
+
       <div class="service-card">
         <div class="service-icon">📱</div>
-        <h3>Gestão de Redes Sociais</h3>
-        <p>Planejamento e produção de conteúdo para Instagram e Facebook com foco em resultados. Criação de calendário editorial, posts estratégicos e gestão completa das suas redes.</p>
+        <h3>GESTÃO DE REDES SOCIAIS</h3>
+        <ul>
+          <li>Planejamento estratégico mensal</li>
+          <li>Criação e design de posts (feed)</li>
+          <li>Criação de stories</li>
+          <li>Redação & Copywriting</li>
+          <li>Agendamento e publicação</li>
+          <li>Análise de métricas</li>
+          <li>Relatórios mensais</li>
+          <li>Gestão de múltiplas plataformas (Instagram, Facebook, Google Meu Negócio)</li>
+          <li>Engajamento estratégico</li>
+          <li>Crescimento orgânico</li>
+        </ul>
       </div>
-      <div class="service-card">
-        <div class="service-icon">✍️</div>
-        <h3>Criação de Conteúdo</h3>
-        <p>Textos, imagens e vídeos pensados para atrair e conectar com seu público. Conteúdo autêntico e estratégico que comunica a essência da sua marca.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📈</div>
-        <h3>Tráfego Pago</h3>
-        <p>Campanhas patrocinadas no Meta Ads e Google Ads para aumentar alcance, visitas e conversões. Segmentação precisa e otimização contínua para máximo ROI.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">💡</div>
-        <h3>Consultoria</h3>
-        <p>Atendimento individual com plano estratégico personalizado para o marketing da sua marca. Análise completa e direcionamento para alcançar seus objetivos.</p>
-      </div>
+
       <div class="service-card">
         <div class="service-icon">🎨</div>
-        <h3>Branding</h3>
-        <p>Criação de identidade visual única para sua marca se destacar no mercado. Logo, paleta de cores, tipografia e manual de marca completo.</p>
+        <h3>IDENTIDADE VISUAL</h3>
+        <ul>
+          <li>Criação de logotipo (vertical, horizontal, negativo)</li>
+          <li>Desenvolvimento de paleta de cores</li>
+          <li>Definição tipográfica</li>
+          <li>Marca d’água</li>
+          <li>Manual de identidade visual</li>
+          <li>Templates personalizados para redes sociais</li>
+          <li>Aplicação da marca em materiais diversos</li>
+        </ul>
       </div>
+
       <div class="service-card">
-        <div class="service-icon">🖼️</div>
-        <h3>Design Gráfico</h3>
-        <p>Designs criativos e alinhados com sua marca para redes sociais, materiais impressos e digitais. Peças que comunicam profissionalismo e criatividade.</p>
+        <div class="service-icon">🖌️</div>
+        <h3>DESIGN GRÁFICO</h3>
+        <ul>
+          <li>Criativos para redes sociais (posts, stories, reels)</li>
+          <li>Cartão de visita</li>
+          <li>Cartão de visita Virtual</li>
+          <li>Flyers e folders</li>
+          <li>Banners e placas</li>
+          <li>Materiais impressos promocionais</li>
+          <li>Cardápios e menus digitais</li>
+          <li>Apresentações institucionais</li>
+          <li>Infográficos educativos</li>
+          <li>Revistas de marketing</li>
+        </ul>
       </div>
+
+      <div class="service-card">
+        <div class="service-icon">📷</div>
+        <h3>FOTOGRAFIA</h3>
+        <ul>
+          <li>Sessão fotográfica do espaço/instalações</li>
+          <li>Fotografia de equipe</li>
+          <li>Fotos de produtos/serviços</li>
+          <li>Fotoreportagem de eventos</li>
+          <li>Fotoreportagem de casas</li>
+          <li>Fotografia para redes sociais</li>
+          <li>Banco de imagens mensal</li>
+          <li>Edição e tratamento profissional</li>
+          <li>Fotos lifestyle para conteúdo</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎥</div>
+        <h3>VÍDEO & AUDIOVISUAL</h3>
+        <ul>
+          <li>Captação de vídeos para Reels</li>
+          <li>Captação de vídeos para TikTok</li>
+          <li>Gravação de depoimentos</li>
+          <li>Vídeos institucionais</li>
+          <li>Cobertura de eventos</li>
+          <li>Edição de vídeo (cortes, legendas, música)</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🚀</div>
+        <h3>TRÁFEGO PAGO (adicional)</h3>
+        <ul>
+          <li>Criação de campanhas Meta Ads</li>
+          <li>Gestão de anúncios Instagram/Facebook</li>
+          <li>Impulsionamento Instagram/Facebook</li>
+          <li>Criação de campanhas Tiktok Ads</li>
+          <li>Impulsionamento Tiktok</li>
+          <li>Análise de resultados</li>
+          <li>Relatórios de performance</li>
+        </ul>
+      </div>
+
     </div>
   </section>
 
