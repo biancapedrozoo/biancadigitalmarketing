@@ -1,70 +1,1122 @@
-<!-- DIA DAS MÃES — URGÊNCIA -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posicionamento Estratégico — Mylla Saldanha · BDM</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bdm-escuro: #35383f;
+    --bdm-escuro-2: #2c2f35;
+    --bdm-creme: #f0ead8;
+    --bdm-rosa: #d4387a;
+    --bdm-cinza-medio: #4a4d54;
+    --mylla-vinho: #7c060e;
+    --mylla-marrom: #855534;
+    --mylla-creme: #fbf4d9;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bdm-escuro);
+    color: var(--bdm-creme);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+
+  /* CAPA */
+  .capa {
+    min-height: 100vh;
+    background: var(--bdm-escuro-2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+  .capa-esq {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    border-right: 1px solid rgba(240,234,216,0.07);
+  }
+  .logo-wrap { display: flex; align-items: center; gap: 10px; }
+  .logo-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--bdm-rosa); }
+  .logo-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--bdm-creme); }
+  .logo-sub { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(240,234,216,0.35); }
+  .capa-main h1 {
+    font-size: clamp(44px, 5vw, 70px);
+    color: var(--bdm-creme);
+    line-height: 1.08;
+    margin-bottom: 28px;
+    font-weight: 600;
+  }
+  .capa-main h1 em { font-style: italic; font-weight: 300; color: rgba(240,234,216,0.45); }
+  .capa-main p { font-size: 14px; color: rgba(240,234,216,0.45); max-width: 320px; }
+  .capa-rodape { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(240,234,216,0.2); }
+  .capa-dir {
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 2;
+  }
+  .capa-bg-letter {
+    position: absolute;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 400px;
+    font-weight: 700;
+    color: rgba(240,234,216,0.025);
+    right: -40px;
+    bottom: -60px;
+    line-height: 1;
+    user-select: none;
+  }
+  .capa-lista { list-style: none; }
+  .capa-lista li {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(240,234,216,0.3);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(240,234,216,0.05);
+    padding-left: 18px;
+    position: relative;
+  }
+  .capa-lista li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    width: 7px; height: 1px;
+    background: var(--bdm-rosa);
+    opacity: 0.6;
+  }
+
+  /* ESTRUTURA */
+  .s { padding: 100px 80px; }
+  .s-escura { background: var(--bdm-escuro-2); }
+  .s-principal { background: var(--bdm-escuro); }
+  .divisor { height: 1px; background: rgba(240,234,216,0.06); margin: 0 80px; }
+
+  .s-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--bdm-rosa); margin-bottom: 14px; display: block; opacity: 0.9; }
+  .s-titulo { font-size: clamp(36px, 4vw, 58px); color: var(--bdm-creme); line-height: 1.1; margin-bottom: 56px; font-weight: 600; }
+  .s-titulo em { font-style: italic; font-weight: 300; color: rgba(240,234,216,0.4); }
+
+  p { font-size: 15px; line-height: 1.8; margin-bottom: 16px; color: rgba(240,234,216,0.7); }
+  strong { color: var(--bdm-creme); font-weight: 500; }
+
+  .dois-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .tres-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+
+  /* ÍNDICE */
+  .indice { padding: 100px 80px; background: var(--bdm-escuro); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+  .indice h2 { font-size: 52px; color: var(--bdm-creme); line-height: 1.1; margin-bottom: 48px; }
+  .indice h2 em { color: var(--bdm-rosa); font-style: italic; font-weight: 300; }
+  .i-item { display: flex; align-items: baseline; gap: 20px; padding: 13px 0; border-bottom: 1px solid rgba(240,234,216,0.06); }
+  .i-num { font-family: 'Cormorant Garamond', serif; font-size: 12px; color: var(--bdm-rosa); min-width: 22px; opacity: 0.7; }
+  .i-nome { font-size: 14px; color: rgba(240,234,216,0.6); }
+
+  /* LISTA */
+  ul.lista { list-style: none; }
+  ul.lista li { padding: 11px 0; border-bottom: 1px solid rgba(240,234,216,0.06); font-size: 14px; color: rgba(240,234,216,0.65); display: flex; gap: 14px; align-items: flex-start; }
+  ul.lista li .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--bdm-rosa); flex-shrink: 0; margin-top: 8px; opacity: 0.7; }
+
+  /* CARD */
+  .card { padding: 32px; border: 1px solid rgba(240,234,216,0.08); background: rgba(240,234,216,0.03); border-top: 2px solid var(--bdm-rosa); }
+  .card h3 { font-size: 20px; color: var(--bdm-creme); margin-bottom: 12px; }
+  .card p { font-size: 13px; margin: 0; }
+
+  /* MÉTRICAS */
+  .metrica-box { padding: 36px 32px; background: rgba(240,234,216,0.04); border: 1px solid rgba(240,234,216,0.07); border-top: 3px solid var(--bdm-rosa); }
+  .metrica-num { font-family: 'Cormorant Garamond', serif; font-size: 52px; color: var(--bdm-creme); line-height: 1; font-weight: 600; }
+  .metrica-label { font-size: 12px; color: rgba(240,234,216,0.35); margin-top: 6px; }
+  .metrica-obs { font-size: 13px; color: rgba(240,234,216,0.55); margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(240,234,216,0.07); line-height: 1.6; }
+
+  /* HIGHLIGHT BOX */
+  .hbox { padding: 28px 32px; border-left: 2px solid var(--bdm-rosa); background: rgba(212,56,122,0.06); margin-top: 24px; }
+  .hbox-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--bdm-rosa); margin-bottom: 10px; opacity: 0.8; }
+  .hbox p { font-size: 16px; color: var(--bdm-creme); font-style: italic; margin: 0; line-height: 1.7; }
+
+  /* FUNIL */
+  .funil-item { display: flex; align-items: center; gap: 32px; padding: 28px 36px; margin-bottom: 3px; }
+  .funil-tofu { background: rgba(212,56,122,0.18); border-left: 3px solid var(--bdm-rosa); }
+  .funil-mofu { background: rgba(212,56,122,0.1); border-left: 3px solid rgba(212,56,122,0.4); }
+  .funil-bofu { background: rgba(212,56,122,0.05); border-left: 3px solid rgba(212,56,122,0.2); }
+  .funil-pct { font-family: 'Cormorant Garamond', serif; font-size: 44px; color: var(--bdm-creme); min-width: 80px; font-weight: 600; }
+  .funil-info h4 { color: var(--bdm-creme); font-size: 17px; margin-bottom: 5px; }
+  .funil-info p { color: rgba(240,234,216,0.6); font-size: 13px; margin: 0; }
+
+  /* PILARES */
+  .pilar { padding: 36px 28px; background: rgba(240,234,216,0.03); border: 1px solid rgba(240,234,216,0.07); border-top: 2px solid var(--bdm-rosa); position: relative; }
+  .pilar-num { font-family: 'Cormorant Garamond', serif; font-size: 72px; color: rgba(240,234,216,0.04); position: absolute; top: 8px; right: 16px; line-height: 1; font-weight: 700; }
+  .pilar h3 { font-size: 22px; color: var(--bdm-creme); margin-bottom: 6px; }
+  .pilar-tag { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--bdm-rosa); display: block; margin-bottom: 14px; opacity: 0.8; }
+  .pilar p { font-size: 13px; color: rgba(240,234,216,0.55); margin: 0; line-height: 1.7; }
+
+  /* PLANOS */
+  .planos-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 64px;
+  }
+  .plano {
+    padding: 56px 48px;
+  }
+  .plano-forca {
+    background: rgba(240,234,216,0.04);
+    border: 1px solid rgba(240,234,216,0.08);
+    border-top: 3px solid rgba(240,234,216,0.3);
+  }
+  .plano-gourmet {
+    background: rgba(212,56,122,0.07);
+    border: 1px solid rgba(212,56,122,0.15);
+    border-top: 3px solid var(--bdm-rosa);
+  }
+  .plano-badge {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .badge-forca { background: rgba(240,234,216,0.08); color: rgba(240,234,216,0.5); }
+  .badge-gourmet { background: rgba(212,56,122,0.15); color: var(--bdm-rosa); }
+  .plano h3 { font-size: 36px; color: var(--bdm-creme); margin-bottom: 6px; }
+  .plano-periodo { font-size: 12px; color: rgba(240,234,216,0.35); letter-spacing: 1px; margin-bottom: 32px; }
+  .plano-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(240,234,216,0.06);
+    font-size: 13px;
+    color: rgba(240,234,216,0.65);
+  }
+  .plano-item .check {
+    color: var(--bdm-rosa);
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .plano-total {
+    margin-top: 28px;
+    padding: 20px 24px;
+    background: rgba(240,234,216,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .plano-total-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(240,234,216,0.35); }
+  .plano-total-num { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--bdm-creme); font-weight: 600; }
+  .plano-total-sub { font-size: 11px; color: rgba(240,234,216,0.35); }
+
+  /* TIMELINE */
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 3px;
+    margin-top: 48px;
+  }
+  .tl-mes {
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .tl-forca { background: rgba(240,234,216,0.05); border: 1px solid rgba(240,234,216,0.08); border-top: 2px solid rgba(240,234,216,0.2); }
+  .tl-gourmet { background: rgba(212,56,122,0.08); border: 1px solid rgba(212,56,122,0.15); border-top: 2px solid var(--bdm-rosa); }
+  .tl-mes-nome { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(240,234,216,0.4); margin-bottom: 8px; }
+  .tl-mes-plano { font-family: 'Cormorant Garamond', serif; font-size: 15px; color: var(--bdm-creme); font-weight: 600; }
+  .tl-mes-posts { font-size: 11px; color: rgba(240,234,216,0.3); margin-top: 4px; }
+
+  /* CALENDÁRIO */
+  .cal-wrap { border: 1px solid rgba(240,234,216,0.07); overflow: hidden; }
+  .cal-header {
+    display: grid;
+    grid-template-columns: 120px repeat(7, 1fr);
+    background: rgba(212,56,122,0.1);
+    border-bottom: 1px solid rgba(240,234,216,0.07);
+  }
+  .cal-header-cell {
+    padding: 14px 12px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bdm-rosa);
+    text-align: center;
+    border-right: 1px solid rgba(240,234,216,0.05);
+  }
+  .cal-row {
+    display: grid;
+    grid-template-columns: 120px repeat(7, 1fr);
+    border-bottom: 1px solid rgba(240,234,216,0.05);
+  }
+  .cal-row:last-child { border-bottom: none; }
+  .cal-plano-label {
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgba(240,234,216,0.05);
+  }
+  .cal-plano-label span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    color: rgba(240,234,216,0.3);
+  }
+  .cal-cell {
+    padding: 16px 12px;
+    border-right: 1px solid rgba(240,234,216,0.05);
+    text-align: center;
+  }
+  .cal-cell-tipo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--bdm-creme);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  .cal-cell-desc { font-size: 10px; color: rgba(240,234,216,0.35); line-height: 1.4; }
+  .cal-cell-tag {
+    display: inline-block;
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .tag-criativo { background: rgba(212,56,122,0.15); color: var(--bdm-rosa); }
+  .tag-foto { background: rgba(240,234,216,0.08); color: rgba(240,234,216,0.5); }
+  .tag-reel { background: rgba(132,73,0,0.3); color: #c8922a; }
+  .cal-cell-extra {
+    font-size: 9px;
+    color: rgba(212,56,122,0.5);
+    margin-top: 4px;
+  }
+
+  /* SÉRIE */
+  .ancora-exemplos { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-top: 24px; }
+  .ancora-ex { background: rgba(240,234,216,0.04); border: 1px solid rgba(240,234,216,0.07); padding: 22px 24px; }
+  .ancora-ex-titulo { font-size: 14px; color: var(--bdm-creme); font-weight: 500; margin-bottom: 6px; }
+  .ancora-ex-desc { font-size: 12px; color: rgba(240,234,216,0.5); line-height: 1.5; }
+
+  /* URGÊNCIA */
+  .urgencia { background: linear-gradient(135deg, var(--bdm-rosa) 0%, #a02060 100%); padding: 80px; display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: center; }
+  .urgencia-data { text-align: center; background: rgba(255,255,255,0.1); padding: 32px 44px; border: 1px solid rgba(255,255,255,0.2); }
+  .urgencia-dia { font-family: 'Cormorant Garamond', serif; font-size: 80px; color: #fff; line-height: 1; font-weight: 700; }
+  .urgencia-mes { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 6px; }
+  .urgencia-content h3 { font-size: 36px; color: #fff; margin-bottom: 16px; }
+  .urgencia-content p { color: rgba(255,255,255,0.75); margin-bottom: 0; }
+  .urgencia-fases { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 28px; }
+  .urgencia-fase { background: rgba(255,255,255,0.1); padding: 18px 20px; border: 1px solid rgba(255,255,255,0.15); }
+  .urgencia-fase-label { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 6px; }
+  .urgencia-fase-text { font-size: 13px; color: #fff; line-height: 1.5; }
+
+  /* METAS */
+  .meta-row { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(240,234,216,0.06); }
+  .meta-label { font-size: 14px; color: rgba(240,234,216,0.65); }
+  .meta-objetivo { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--bdm-rosa); font-weight: 600; text-align: right; white-space: nowrap; }
+  .meta-prazo { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(240,234,216,0.2); min-width: 70px; text-align: right; }
+
+  /* TOM */
+  .tom-ex { padding: 14px 20px; font-size: 14px; font-style: italic; margin-bottom: 8px; }
+  .tom-sim { background: rgba(212,56,122,0.08); color: rgba(240,234,216,0.75); border-left: 2px solid var(--bdm-rosa); }
+  .tom-nao { background: rgba(240,234,216,0.03); color: rgba(240,234,216,0.25); border-left: 2px solid rgba(240,234,216,0.08); text-decoration: line-through; }
+
+  .cor-box { height: 72px; display: flex; align-items: flex-end; padding: 8px; }
+
+  /* RODAPÉ */
+  .rodape { background: var(--bdm-escuro-2); padding: 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; border-top: 1px solid rgba(240,234,216,0.06); }
+  .rodape-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+  .rodape-logo-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bdm-rosa); }
+  .rodape-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--bdm-creme); }
+  .rodape p { font-size: 13px; color: rgba(240,234,216,0.3); margin: 0; }
+  .rodape-contatos { display: flex; flex-direction: column; gap: 16px; align-items: flex-end; }
+  .rodape-item { text-align: right; }
+  .rodape-item-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(240,234,216,0.2); margin-bottom: 4px; }
+  .rodape-item-val { font-size: 13px; color: rgba(240,234,216,0.5); }
+
+  .sub-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--bdm-rosa); display: block; margin-bottom: 20px; opacity: 0.8; }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<section class="capa">
+  <div class="capa-esq">
+    <div class="logo-wrap">
+      <div class="logo-dot"></div>
+      <div>
+        <div class="logo-name">Bianca</div>
+        <div class="logo-sub">Digital Marketing</div>
+      </div>
+    </div>
+    <div class="capa-main">
+      <h1>Posicionamento<br><em>Estratégico</em><br>de Marca</h1>
+      <p>Mylla Saldanha Patisserie e Bistrô<br>Versão Atualizada · Abril 2025</p>
+    </div>
+    <div class="capa-rodape">BDM · Estratégia Digital</div>
+  </div>
+  <div class="capa-dir">
+    <div class="capa-bg-letter">B</div>
+    <ul class="capa-lista">
+      <li>Enquadramento Estratégico</li>
+      <li>Cenário Atual e Métricas</li>
+      <li>Objetivos e KPIs</li>
+      <li>Público-Alvo e Persona</li>
+      <li>Posicionamento</li>
+      <li>Identidade Verbal</li>
+      <li>Análise de Mercado</li>
+      <li>Plano Força e Plano Gourmet</li>
+      <li>Funil de Conteúdo</li>
+      <li>Série Âncora</li>
+      <li>Campanha Dia das Mães</li>
+      <li>Plano de Ação</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ÍNDICE -->
+<section class="indice">
+  <div>
+    <h2>Pautas do<br><em>projeto</em></h2>
+    <div class="i-item"><span class="i-num">01</span><span class="i-nome">Enquadramento Estratégico</span></div>
+    <div class="i-item"><span class="i-num">02</span><span class="i-nome">Cenário Atual e Métricas Comentadas</span></div>
+    <div class="i-item"><span class="i-num">03</span><span class="i-nome">Objetivos Tangíveis e Intangíveis</span></div>
+    <div class="i-item"><span class="i-num">04</span><span class="i-nome">Público-Alvo e Persona</span></div>
+    <div class="i-item"><span class="i-num">05</span><span class="i-nome">Posicionamento e Proposta de Valor</span></div>
+    <div class="i-item"><span class="i-num">06</span><span class="i-nome">Identidade Visual e Verbal</span></div>
+  </div>
+  <div style="padding-top:136px">
+    <div class="i-item"><span class="i-num">07</span><span class="i-nome">Análise de Mercado e Concorrência</span></div>
+    <div class="i-item"><span class="i-num">08</span><span class="i-nome">Plano Força e Plano Gourmet</span></div>
+    <div class="i-item"><span class="i-num">09</span><span class="i-nome">Estratégia de Desejo e Conversão</span></div>
+    <div class="i-item"><span class="i-num">10</span><span class="i-nome">Linha Editorial e Calendário</span></div>
+    <div class="i-item"><span class="i-num">11</span><span class="i-nome">Formato Âncora: Perdido na Tradução</span></div>
+    <div class="i-item"><span class="i-num">12</span><span class="i-nome">Campanha Dia das Mães</span></div>
+    <div class="i-item"><span class="i-num">13</span><span class="i-nome">Plano de Ação por Fase</span></div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- 01 ENQUADRAMENTO -->
+<section class="s s-principal">
+  <span class="s-label">01 — Enquadramento</span>
+  <div class="s-titulo">Enquadramento<br><em>Estratégico</em></div>
+  <div class="dois-cols">
+    <div>
+      <p>O presente documento define a direção estratégica da presença digital da Mylla Saldanha Patisserie e Bistrô, com foco na construção de perceção de valor, aumento do ticket médio e posicionamento como a referência em gastronomia brasileira premium em Portugal.</p>
+      <p>A estratégia foi desenvolvida com base na análise do briefing, comportamento do consumidor, estrutura do menu e cenário competitivo de Vila Nova de Gaia.</p>
+    </div>
+    <div>
+      <p>Ao contrário de negócios puramente focados em confeitaria, a Mylla opera como um bistrô de experiência emocional, onde o valor não está apenas no produto, mas na combinação de gastronomia brasileira sofisticada, ingredientes premium, ambiente acolhedor e experiência completa de refeição, sobremesa e momento.</p>
+      <div class="hbox">
+        <div class="hbox-label">Desafio Central</div>
+        <p>O principal desafio estratégico não é o produto, que já é forte. É a perceção de valor e a clareza na comunicação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 CENÁRIO ATUAL -->
+<section class="s s-escura">
+  <span class="s-label">02 — Diagnóstico</span>
+  <div class="s-titulo">Cenário <em>Atual</em></div>
+  <div class="dois-cols" style="margin-bottom:56px">
+    <div>
+      <p>A Mylla já possui presença digital ativa com <strong>8.115 seguidores</strong> e <strong>42.265 visualizações</strong> nos últimos 30 dias. O perfil tem volume, mas ainda não tem estrutura estratégica clara e consistente.</p>
+      <p>O resultado visível é o efeito crítico: <strong>confusão na decisão e comparação por preço.</strong></p>
+    </div>
+    <div>
+      <ul class="lista">
+        <li><span class="dot"></span>Excesso de variedade sem produto âncora definido</li>
+        <li><span class="dot"></span>Baixa hierarquia de destaque nos posts</li>
+        <li><span class="dot"></span>Pouca condução do cliente até à decisão de compra</li>
+        <li><span class="dot"></span>Subaproveitamento da experiência como diferencial</li>
+        <li><span class="dot"></span>Falta de educação de valor: o cliente compara por preço</li>
+        <li><span class="dot"></span>Embalagem de take-away desalinhada com o nível do produto</li>
+      </ul>
+    </div>
+  </div>
+  <span class="sub-label">Métricas Atuais com Comentário Estratégico</span>
+  <div class="tres-cols">
+    <div class="metrica-box">
+      <div class="metrica-num">42,3k</div>
+      <div class="metrica-label">Visualizações nos últimos 30 dias</div>
+      <div class="metrica-obs">Bom volume de topo de funil. O conteúdo chega às pessoas. O desafio é fazer com que elas fiquem e ajam.</div>
+    </div>
+    <div class="metrica-box">
+      <div class="metrica-num">514</div>
+      <div class="metrica-label">Interações nos últimos 30 dias</div>
+      <div class="metrica-obs">Taxa atual próxima de 1,2%, abaixo do ideal para gastronomia. O conteúdo ainda não está a gerar conversa nem partilha ativa.</div>
+    </div>
+    <div class="metrica-box">
+      <div class="metrica-num">18,4%</div>
+      <div class="metrica-label">Alcance de não-seguidores</div>
+      <div class="metrica-obs">Potencial de crescimento real e concreto. Reels bem estruturados podem ampliar este número de forma consistente.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 OBJETIVOS -->
+<section class="s s-principal">
+  <span class="s-label">03 — Objetivos</span>
+  <div class="s-titulo">O que queremos<br><em>alcançar</em></div>
+  <div class="dois-cols">
+    <div>
+      <span class="sub-label">Objetivos Tangíveis</span>
+      <ul class="lista">
+        <li><span class="dot"></span>Mais seguidores qualificados: brasileiros e portugueses de 30 a 50 anos</li>
+        <li><span class="dot"></span>Mais visitas à loja física em Canidelo, Vila Nova de Gaia</li>
+        <li><span class="dot"></span>Aumento do ticket médio com consumo combinado de refeição e sobremesa</li>
+        <li><span class="dot"></span>Crescimento de encomendas de bolos via WhatsApp</li>
+        <li><span class="dot"></span>Crescimento progressivo das visualizações em Reels</li>
+        <li><span class="dot"></span>Melhoria contínua do engagement ao longo dos primeiros 90 dias</li>
+      </ul>
+    </div>
+    <div>
+      <span class="sub-label">Objetivos Intangíveis</span>
+      <ul class="lista">
+        <li><span class="dot"></span>Ser reconhecida como a referência em gastronomia brasileira sofisticada em Portugal</li>
+        <li><span class="dot"></span>Reduzir sensibilidade ao preço: o conteúdo justifica o valor antes do cliente perguntar</li>
+        <li><span class="dot"></span>Construir autoridade gastronómica no Instagram</li>
+        <li><span class="dot"></span>Criar ligação emocional com a marca e fazer o cliente pensar "vale cada cêntimo"</li>
+        <li><span class="dot"></span>Transformar o Instagram num canal de desejo, educação e conversão</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- 04 PÚBLICO -->
+<section class="s s-escura">
+  <span class="s-label">04 — Público-Alvo</span>
+  <div class="s-titulo">Público-Alvo<br><em>e Persona</em></div>
+  <div class="dois-cols">
+    <div>
+      <div class="card" style="margin-bottom:16px">
+        <h3>Core — Brasileiras em Portugal</h3>
+        <p>Mulheres de 30 a 50 anos, classe média e média-alta. Já conhecem os produtos e têm consumo emocional: nostalgia, indulgência e conforto. São elas que seguem, salvam, partilham e recomendam.</p>
+      </div>
+      <div class="card">
+        <h3>Expansão — Portuguesas Curiosas</h3>
+        <p>Não dominam referências da gastronomia brasileira e precisam de contexto e tradução cultural. Chegam por recomendação ou Reels. Convertem quando o conteúdo educa e encanta ao mesmo tempo.</p>
+      </div>
+    </div>
+    <div>
+      <span class="sub-label">Dúvidas que a persona tem</span>
+      <ul class="lista" style="margin-bottom:32px">
+        <li><span class="dot"></span>"O que exatamente é este prato?"</li>
+        <li><span class="dot"></span>"Vale o preço?"</li>
+        <li><span class="dot"></span>"É doce ou refeição?"</li>
+        <li><span class="dot"></span>"É para lanche ou almoço?"</li>
+        <li><span class="dot"></span>"Posso pedir para oferecer?"</li>
+      </ul>
+      <span class="sub-label">O que ela quer sentir</span>
+      <ul class="lista">
+        <li><span class="dot"></span>Experiência gastronómica completa num só espaço</li>
+        <li><span class="dot"></span>Momento de conforto emocional com a família</li>
+        <li><span class="dot"></span>Segurança de que escolheu bem e pagou pelo certo</li>
+        <li><span class="dot"></span>A mulher que come empadinho e pede espumante</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 05 POSICIONAMENTO -->
+<section class="s s-principal">
+  <span class="s-label">05 — Posicionamento</span>
+  <div class="s-titulo">Posicionamento<br><em>e Proposta de Valor</em></div>
+  <div class="dois-cols">
+    <div>
+      <p>A Mylla será posicionada como uma <strong>experiência gastronómica afetiva e sofisticada</strong> que combina sabores brasileiros autênticos com ingredientes premium, num ambiente acolhedor que faz o cliente sentir-se em casa numa versão melhor.</p>
+      <div class="hbox">
+        <div class="hbox-label">Proposta de Valor</div>
+        <p>"Para quem procura mais do que uma refeição, a Mylla oferece uma experiência completa que combina gastronomia brasileira sofisticada, ingredientes premium e um ambiente acolhedor. Vale cada cêntimo."</p>
+      </div>
+    </div>
+    <div>
+      <span class="sub-label">Pilares de Posicionamento</span>
+      <ul class="lista" style="margin-bottom:32px">
+        <li><span class="dot"></span>Experiência: não apenas comida, mas um momento completo</li>
+        <li><span class="dot"></span>Qualidade percebida: ingredientes premium visíveis e comunicados</li>
+        <li><span class="dot"></span>Afetividade: memória, nostalgia e conforto emocional</li>
+        <li><span class="dot"></span>Variedade estratégica: múltiplas ocasiões num só espaço</li>
+      </ul>
+      <span class="sub-label">Arquétipo de Marca</span>
+      <p><strong>Cuidador (principal)</strong> — acolhimento, família, conforto<br><strong>Criador (secundário)</strong> — sofisticação, originalidade, processo</p>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- 06 IDENTIDADE -->
+<section class="s s-escura">
+  <span class="s-label">06 — Identidade</span>
+  <div class="s-titulo">Identidade Visual<br><em>e Verbal</em></div>
+  <div class="dois-cols" style="margin-bottom:56px">
+    <div>
+      <span class="sub-label">Paleta de Cores da Mylla</span>
+      <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:16px;">
+        <div class="cor-box" style="background:#855534; width:80px;"><span style="color:white; font-size:9px;">#855534</span></div>
+        <div class="cor-box" style="background:#fbf4d9; border:1px solid rgba(240,234,216,0.15); width:80px;"><span style="color:#855534; font-size:9px;">#fbf4d9</span></div>
+        <div class="cor-box" style="background:#7c060e; width:80px;"><span style="color:white; font-size:9px;">#7c060e</span></div>
+        <div class="cor-box" style="background:#824900; width:80px;"><span style="color:white; font-size:9px;">#824900</span></div>
+        <div class="cor-box" style="background:#703d18; width:80px;"><span style="color:white; font-size:9px;">#703d18</span></div>
+      </div>
+      <p style="font-size:12px; color:rgba(240,234,216,0.3);">Fonte principal: Gotham — legendas, textos de corpo e comunicação digital</p>
+    </div>
+    <div>
+      <span class="sub-label">Tom de Voz</span>
+      <p>A comunicação será <strong>acolhedora, sensorial, levemente educativa e sofisticada sem ser elitista.</strong> O discurso encanta sem exagero, educa sem ser professoral e vende sem parecer agressivo.</p>
+      <p style="font-size:13px; color:rgba(240,234,216,0.35);">Caloroso · Sensorial · Educativo · Sofisticado · Humano · Nunca elitista</p>
+    </div>
+  </div>
+  <span class="sub-label">A marca fala assim</span>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:32px;">
+    <div class="tom-ex tom-sim">"A fraldinha que o português ainda não conhece, mas vai adorar."</div>
+    <div class="tom-ex tom-sim">"Chocolate belga. Frango fresquinho. Feito hoje de manhã."</div>
+    <div class="tom-ex tom-sim">"Para o teu momento. Com o cuidado que mereces."</div>
+    <div class="tom-ex tom-sim">"Sabor que atravessou o Atlântico e ficou por cá."</div>
+  </div>
+  <span style="font-size:10px; letter-spacing:3px; text-transform:uppercase; color:rgba(240,234,216,0.2); display:block; margin-bottom:16px;">A marca não fala assim</span>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+    <div class="tom-ex tom-nao">"Dicas incríveis para o teu dia!"</div>
+    <div class="tom-ex tom-nao">"Conteúdo exclusivo para os nossos fãs!"</div>
+  </div>
+</section>
+
+<!-- 07 MERCADO -->
+<section class="s s-principal">
+  <span class="s-label">07 — Mercado</span>
+  <div class="s-titulo">Análise de<br><em>Mercado</em></div>
+  <div class="dois-cols">
+    <div>
+      <span class="sub-label">Concorrência Low-Cost</span>
+      <div class="card" style="margin-bottom:32px">
+        <h3>Carlotta / Paula Adegas</h3>
+        <p>Foco em volume e preço baixo. Comunicação sem diferenciação emocional. Serve em forminhas de papel branco. Atrai pelo hype momentâneo, não pela qualidade ou experiência.</p>
+      </div>
+      <span class="sub-label">Falhas do Mercado</span>
+      <ul class="lista">
+        <li><span class="dot"></span>Falta de storytelling gastronómico autêntico</li>
+        <li><span class="dot"></span>Pouca educação cultural: ninguém explica os pratos brasileiros</li>
+        <li><span class="dot"></span>Comunicação focada apenas no produto sem narrativa</li>
+        <li><span class="dot"></span>Ausência de posicionamento emocional claro e consistente</li>
+      </ul>
+    </div>
+    <div>
+      <span class="sub-label">Oportunidade da Mylla</span>
+      <p>O espaço premium está <strong>pouco explorado e disponível</strong>. Faltam marcas que comuniquem experiência, origem e valor de forma consistente e com identidade forte.</p>
+      <div class="hbox">
+        <div class="hbox-label">Território a Dominar</div>
+        <p>"Experiência gastronómica brasileira premium em Portugal."</p>
+      </div>
+      <p style="margin-top:20px; font-size:13px;">A diferenciação será construída com base em valor percebido, experiência e narrativa emocional. Não em preço.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- 08 PLANOS -->
+<section class="s s-escura">
+  <span class="s-label">08 — Planos de Gestão</span>
+  <div class="s-titulo">Plano Força<br><em>e Plano Gourmet</em></div>
+
+  <div class="planos-wrapper">
+    <!-- FORÇA -->
+    <div class="plano plano-forca">
+      <span class="plano-badge badge-forca">Abril e Maio 2025</span>
+      <h3>Plano Força</h3>
+      <p class="plano-periodo">Fase de arranque e estruturação</p>
+      <div class="plano-item"><span class="check">✓</span>4 Reels por mês — direção, gravação e edição num dia</div>
+      <div class="plano-item"><span class="check">✓</span>Ensaio fotográfico trimestral com 16 fotos editadas</div>
+      <div class="plano-item"><span class="check">✓</span>8 Criativos gráficos por mês</div>
+      <div class="plano-item"><span class="check">✓</span>Estratégia personalizada com análise e planeamento</div>
+      <div class="plano-item"><span class="check">✓</span>Copy de todas as legendas</div>
+      <div class="plano-item"><span class="check">✓</span>Gestão completa do Instagram e Facebook</div>
+      <div class="plano-item"><span class="check">✓</span>Impulsionamento básico com budget pago pelo contratante</div>
+      <div class="plano-item"><span class="check">✓</span>Grupo WhatsApp exclusivo 24h com Bianca e Gabriel</div>
+      <div class="plano-total">
+        <div>
+          <div class="plano-total-label">Total Mensal</div>
+          <div class="plano-total-sub">Instagram e Facebook</div>
+        </div>
+        <div class="plano-total-num">16 posts</div>
+      </div>
+    </div>
+
+    <!-- GOURMET -->
+    <div class="plano plano-gourmet">
+      <span class="plano-badge badge-gourmet">Junho a Outubro 2025</span>
+      <h3>Plano Gourmet</h3>
+      <p class="plano-periodo">Fase de aceleração e escala</p>
+      <div class="plano-item"><span class="check">✓</span>8 Reels por mês — direção, gravação e edição num dia</div>
+      <div class="plano-item"><span class="check">✓</span>Ensaio fotográfico trimestral com 36 fotos editadas — realizado no dia da gravação</div>
+      <div class="plano-item"><span class="check">✓</span>8 Criativos gráficos por mês</div>
+      <div class="plano-item"><span class="check">✓</span>Estratégia personalizada com análise e planeamento</div>
+      <div class="plano-item"><span class="check">✓</span>Copy de todas as legendas</div>
+      <div class="plano-item"><span class="check">✓</span>Gestão completa do Instagram, Facebook e TikTok</div>
+      <div class="plano-item"><span class="check">✓</span>3 Impulsionamentos básicos com budget pago pelo contratante</div>
+      <div class="plano-item"><span class="check">✓</span>Grupo WhatsApp exclusivo 24h com Bianca e Gabriel</div>
+      <div class="plano-total" style="background:rgba(212,56,122,0.1);">
+        <div>
+          <div class="plano-total-label">Total Mensal</div>
+          <div class="plano-total-sub">Instagram, Facebook e TikTok</div>
+        </div>
+        <div class="plano-total-num">28 posts</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <span class="sub-label">Visão Geral do Calendário 2025</span>
+  <div class="timeline">
+    <div class="tl-mes tl-forca">
+      <div class="tl-mes-nome">Abril</div>
+      <div class="tl-mes-plano">Força</div>
+      <div class="tl-mes-posts">16 posts</div>
+    </div>
+    <div class="tl-mes tl-forca">
+      <div class="tl-mes-nome">Maio</div>
+      <div class="tl-mes-plano">Força</div>
+      <div class="tl-mes-posts">16 posts</div>
+    </div>
+    <div class="tl-mes tl-gourmet">
+      <div class="tl-mes-nome">Junho</div>
+      <div class="tl-mes-plano">Gourmet</div>
+      <div class="tl-mes-posts">28 posts</div>
+    </div>
+    <div class="tl-mes tl-gourmet">
+      <div class="tl-mes-nome">Julho</div>
+      <div class="tl-mes-plano">Gourmet</div>
+      <div class="tl-mes-posts">28 posts</div>
+    </div>
+    <div class="tl-mes tl-gourmet">
+      <div class="tl-mes-nome">Agosto</div>
+      <div class="tl-mes-plano">Gourmet</div>
+      <div class="tl-mes-posts">28 posts</div>
+    </div>
+    <div class="tl-mes tl-gourmet">
+      <div class="tl-mes-nome">Setembro</div>
+      <div class="tl-mes-plano">Gourmet</div>
+      <div class="tl-mes-posts">28 posts</div>
+    </div>
+    <div class="tl-mes tl-gourmet">
+      <div class="tl-mes-nome">Outubro</div>
+      <div class="tl-mes-plano">Gourmet</div>
+      <div class="tl-mes-posts">28 posts</div>
+    </div>
+    <div class="tl-mes" style="background:rgba(240,234,216,0.02); border:1px solid rgba(240,234,216,0.05);">
+      <div class="tl-mes-nome">Nov.</div>
+      <div class="tl-mes-plano" style="font-size:13px; color:rgba(240,234,216,0.3);">A definir</div>
+      <div class="tl-mes-posts">A definir</div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 ESTRATÉGIA -->
+<section class="s s-principal">
+  <span class="s-label">09 — Estratégia</span>
+  <div class="s-titulo">Estratégia de Desejo<br><em>e Conversão</em></div>
+  <p style="max-width:640px; margin-bottom:48px;">A estratégia assenta na condução psicológica do cliente pelo funil. O foco <strong>não é vender direto</strong>. É construir valor para justificar o preço antes mesmo de o cliente chegar à loja.</p>
+  <div class="funil-item funil-tofu">
+    <div class="funil-pct">40%</div>
+    <div class="funil-info">
+      <h4>TOFU — Atração</h4>
+      <p>Conteúdos visuais e emocionais para alcance e descoberta. Food porn, ambiente, momentos. O objetivo é gerar desejo antes da vontade consciente de comprar.</p>
+    </div>
+  </div>
+  <div class="funil-item funil-mofu">
+    <div class="funil-pct">40%</div>
+    <div class="funil-info">
+      <h4>MOFU — Confiança</h4>
+      <p>Explicação de valor, ingredientes, processo e contexto cultural. Responder às dúvidas antes de serem feitas. O objetivo é eliminar objeções e justificar o preço.</p>
+    </div>
+  </div>
+  <div class="funil-item funil-bofu">
+    <div class="funil-pct">20%</div>
+    <div class="funil-info">
+      <h4>BOFU — Conversão</h4>
+      <p>Combos, menus, encomendas via WhatsApp, chamadas diretas para visita. CTA claro no momento certo, com frequência calibrada para não parecer agressivo.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- 10 CALENDÁRIO -->
+<section class="s s-escura">
+  <span class="s-label">10 — Editorial</span>
+  <div class="s-titulo">Linha Editorial<br><em>e Calendário Semanal</em></div>
+
+  <p style="max-width:640px; margin-bottom:48px;">Os dois planos têm linhas editoriais diferentes em volume e canais, mas partilham os mesmos 4 pilares estratégicos. O calendário abaixo mostra como cada dia é ocupado em cada fase.</p>
+
+  <!-- CALENDÁRIO COMPARATIVO -->
+  <span class="sub-label" style="margin-bottom:16px;">Cronograma Semanal por Plano</span>
+  <div class="cal-wrap">
+    <div class="cal-header">
+      <div class="cal-header-cell" style="text-align:left;">Plano</div>
+      <div class="cal-header-cell">Segunda</div>
+      <div class="cal-header-cell">Terça</div>
+      <div class="cal-header-cell">Quarta</div>
+      <div class="cal-header-cell">Quinta</div>
+      <div class="cal-header-cell">Sexta</div>
+      <div class="cal-header-cell">Sábado</div>
+      <div class="cal-header-cell">Domingo</div>
+    </div>
+
+    <!-- PLANO FORÇA -->
+    <div class="cal-row">
+      <div class="cal-plano-label" style="background:rgba(240,234,216,0.03); border-right:1px solid rgba(240,234,216,0.05);">
+        <div style="writing-mode:vertical-rl; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(240,234,216,0.3); transform:rotate(180deg);">Força</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-cell-tag tag-criativo">Criativo</div>
+        <div class="cal-cell-tipo">Gráfico</div>
+        <div class="cal-cell-desc">Feed</div>
+      </div>
+      <div class="cal-cell" style="opacity:0.2;">
+        <div class="cal-cell-desc" style="font-size:12px; color:rgba(240,234,216,0.3);">—</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-cell-tag tag-reel">Reel</div>
+        <div class="cal-cell-tipo">Vídeo</div>
+        <div class="cal-cell-desc">Feed</div>
+      </div>
+      <div class="cal-cell" style="opacity:0.2;">
+        <div class="cal-cell-desc" style="font-size:12px; color:rgba(240,234,216,0.3);">—</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-cell-tag tag-criativo">Criativo</div>
+        <div class="cal-cell-tipo">Gráfico</div>
+        <div class="cal-cell-desc">Feed</div>
+      </div>
+      <div class="cal-cell" style="opacity:0.2;">
+        <div class="cal-cell-desc" style="font-size:12px; color:rgba(240,234,216,0.3);">—</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-cell-tag tag-foto">Foto</div>
+        <div class="cal-cell-tipo">Profissional</div>
+        <div class="cal-cell-desc">Feed</div>
+      </div>
+    </div>
+
+    <!-- PLANO GOURMET -->
+    <div class="cal-row" style="background:rgba(212,56,122,0.03);">
+      <div class="cal-plano-label" style="background:rgba(212,56,122,0.06); border-right:1px solid rgba(212,56,122,0.1);">
+        <div style="writing-mode:vertical-rl; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--bdm-rosa); transform:rotate(180deg); opacity:0.7;">Gourmet</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-cell-tag tag-criativo">Criativo</div>
+        <div class="cal-cell-tipo">Gráfico</div>
+        <div class="cal-cell-desc">Feed</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-cell-tag tag-foto">Foto</div>
+        <div class="cal-cell-tipo">Profissional</div>
+        <div class="cal-cell-desc">Feed</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-cell-tag tag-reel">Reel</div>
+        <div class="cal-cell-tipo">Vídeo</div>
+        <div class="cal-cell-desc">Feed</div>
+        <div class="cal-cell-extra">+ TikTok</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-cell-tag tag-foto">Foto</div>
+        <div class="cal-cell-tipo">Profissional</div>
+        <div class="cal-cell-desc">Feed</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-cell-tag tag-criativo">Criativo</div>
+        <div class="cal-cell-tipo">Gráfico</div>
+        <div class="cal-cell-desc">Feed</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-cell-tag tag-reel">Reel</div>
+        <div class="cal-cell-tipo">Vídeo</div>
+        <div class="cal-cell-desc">Feed</div>
+        <div class="cal-cell-extra">+ TikTok</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-cell-tag tag-foto">Foto</div>
+        <div class="cal-cell-tipo">Profissional</div>
+        <div class="cal-cell-desc">Feed</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:24px;">
+    <div style="padding:20px; background:rgba(212,56,122,0.08); border-left:2px solid var(--bdm-rosa);">
+      <div style="font-size:9px; letter-spacing:2px; text-transform:uppercase; color:var(--bdm-rosa); margin-bottom:8px; opacity:0.8;">Criativos Gráficos</div>
+      <div style="font-size:13px; color:rgba(240,234,216,0.65);">Força: 8/mês · Gourmet: 8/mês</div>
+    </div>
+    <div style="padding:20px; background:rgba(240,234,216,0.04); border-left:2px solid rgba(240,234,216,0.15);">
+      <div style="font-size:9px; letter-spacing:2px; text-transform:uppercase; color:rgba(240,234,216,0.4); margin-bottom:8px;">Fotos Profissionais</div>
+      <div style="font-size:13px; color:rgba(240,234,216,0.65);">Força: 4/mês · Gourmet: 12/mês</div>
+    </div>
+    <div style="padding:20px; background:rgba(132,73,0,0.15); border-left:2px solid #c8922a;">
+      <div style="font-size:9px; letter-spacing:2px; text-transform:uppercase; color:#c8922a; margin-bottom:8px;">Reels</div>
+      <div style="font-size:13px; color:rgba(240,234,216,0.65);">Força: 4/mês · Gourmet: 8/mês</div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 SÉRIE -->
+<section class="s s-principal">
+  <span class="s-label">11 — Formato Âncora</span>
+  <div class="s-titulo">"Perdido na<br><em>Tradução"</em></div>
+  <div class="dois-cols">
+    <div>
+      <p>A ideia mais diferenciadora e viral identificada no briefing. Dois jovens, um brasileiro e um português, descobrem juntos as diferenças gastronómicas entre os dois países.</p>
+      <p>Leve, engraçado, educativo e com potencial de partilha orgânica alta. O português adora comentar. O brasileiro adora explicar. A Mylla lucra com os dois.</p>
+      <div class="hbox">
+        <div class="hbox-label">Por que funciona</div>
+        <p>Educação disfarçada de entretenimento. O cliente português aprende o que é a fraldinha sem sentir que está a ser ensinado. O brasileiro partilha porque se identifica. Os dois chegam à loja.</p>
+      </div>
+    </div>
+    <div>
+      <span class="sub-label">Episódios Sugeridos</span>
+      <div class="ancora-exemplos">
+        <div class="ancora-ex">
+          <div class="ancora-ex-titulo">Ep. 1 — O Salpicão</div>
+          <div class="ancora-ex-desc">Brasil: salada de frango com batata palha. Portugal: linguiça. Reação do português ao receber o prato errado.</div>
+        </div>
+        <div class="ancora-ex">
+          <div class="ancora-ex-titulo">Ep. 2 — O Empadão</div>
+          <div class="ancora-ex-desc">Portugal pensa que é quiche. Não é. Descoberta ao vivo com humor natural e sem roteiro forçado.</div>
+        </div>
+        <div class="ancora-ex">
+          <div class="ancora-ex-titulo">Ep. 3 — O Estrogonofe</div>
+          <div class="ancora-ex-desc">Portugal: frango com natas branco. Brasil: molho vermelho. A cara do português ao ver o prato chegar à mesa.</div>
+        </div>
+        <div class="ancora-ex">
+          <div class="ancora-ex-titulo">Ep. 4 — A Fraldinha</div>
+          <div class="ancora-ex-desc">"Que carne é essa?" Corte que não existe no mercado português. Revelar ao vivo com reação genuína.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- 12 DIA DAS MÃES -->
 <div class="urgencia">
   <div class="urgencia-data">
     <div class="urgencia-dia">05</div>
     <div class="urgencia-mes">Maio · Domingo</div>
   </div>
   <div class="urgencia-content">
-    <div style="font-size:10px; letter-spacing:3px; text-transform:uppercase; color:rgba(251,244,217,0.4); margin-bottom:12px;">12 — Campanha Urgente</div>
-    <h3>Dia das Mães — 8 dias</h3>
-    <p>Data com alto potencial de encomendas de bolos, reservas e consumo familiar. É necessário comunicar <strong style="color:var(--creme)">a partir de hoje</strong> para maximizar o impacto.</p>
-    <div style="margin-top:24px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;">
-      <div style="background:rgba(251,244,217,0.1); padding:16px; border-radius:2px;">
-        <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(251,244,217,0.4); margin-bottom:6px;">Imediato</div>
-        <div style="font-size:13px; color:var(--creme);">Stories de contagem + CTA para encomendar bolo</div>
+    <span style="font-size:10px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.5); display:block; margin-bottom:12px;">12 — Campanha Urgente</span>
+    <h3>Dia das Mães</h3>
+    <p>Data com alto potencial de encomendas de bolos, reservas e consumo familiar. É necessário comunicar a partir de agora para maximizar o impacto nos próximos 8 dias.</p>
+    <div class="urgencia-fases">
+      <div class="urgencia-fase">
+        <div class="urgencia-fase-label">Imediato</div>
+        <div class="urgencia-fase-text">Stories de contagem e CTA para encomendar bolo</div>
       </div>
-      <div style="background:rgba(251,244,217,0.1); padding:16px; border-radius:2px;">
-        <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(251,244,217,0.4); margin-bottom:6px;">Esta semana</div>
-        <div style="font-size:13px; color:var(--creme);">Reel emocional + Criativo de oferta especial</div>
+      <div class="urgencia-fase">
+        <div class="urgencia-fase-label">Esta semana</div>
+        <div class="urgencia-fase-text">Reel emocional e criativo de oferta especial</div>
       </div>
-      <div style="background:rgba(251,244,217,0.1); padding:16px; border-radius:2px;">
-        <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(251,244,217,0.4); margin-bottom:6px;">Dia 5</div>
-        <div style="font-size:13px; color:var(--creme);">Post de celebração + stories ao vivo da loja</div>
+      <div class="urgencia-fase">
+        <div class="urgencia-fase-label">Dia 5 de Maio</div>
+        <div class="urgencia-fase-text">Post de celebração e stories ao vivo da loja</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- METAS 90 DIAS -->
-<section class="secao secao-branca">
-  <div class="secao-label">Plano de Ação</div>
-  <div class="secao-titulo">Metas a 90 Dias</div>
+<!-- 13 PLANO DE AÇÃO -->
+<section class="s s-principal">
+  <span class="s-label">13 — Plano de Ação</span>
+  <div class="s-titulo">Acompanhamento<br><em>por Fase</em></div>
+  <p style="max-width:620px; margin-bottom:48px;">Em vez de metas fixas que podem gerar pressão desnecessária, o acompanhamento será feito por fases com indicadores claros de evolução. O crescimento é progressivo e cada fase informa a próxima.</p>
   <div class="meta-row">
-    <span class="meta-label">Taxa de Engagement</span>
-    <span class="meta-atual">Atual: ~1,2%</span>
-    <span class="meta-objetivo">3,5%+</span>
-    <span class="meta-prazo">90 dias</span>
+    <span class="meta-label">Engagement — crescimento progressivo mês a mês</span>
+    <span class="meta-objetivo">Acompanhamento mensal</span>
+    <span class="meta-prazo">Contínuo</span>
   </div>
   <div class="meta-row">
-    <span class="meta-label">Visualizações mensais em Reels</span>
-    <span class="meta-atual">Atual: base inicial</span>
-    <span class="meta-objetivo">+50%</span>
-    <span class="meta-prazo">60 dias</span>
+    <span class="meta-label">Visualizações em Reels — tendência crescente</span>
+    <span class="meta-objetivo">Revisão a 30 dias</span>
+    <span class="meta-prazo">Fase 1</span>
   </div>
   <div class="meta-row">
-    <span class="meta-label">Alcance de não-seguidores</span>
-    <span class="meta-atual">Atual: 18,4%</span>
-    <span class="meta-objetivo">30%+</span>
-    <span class="meta-prazo">60 dias</span>
+    <span class="meta-label">Alcance de não-seguidores — tendência crescente</span>
+    <span class="meta-objetivo">Revisão a 60 dias</span>
+    <span class="meta-prazo">Fase 2</span>
   </div>
   <div class="meta-row">
-    <span class="meta-label">Conversões Instagram → WhatsApp</span>
-    <span class="meta-atual">Atual: não medido</span>
-    <span class="meta-objetivo">Medição ativa</span>
-    <span class="meta-prazo">30 dias</span>
+    <span class="meta-label">Conversões Instagram para WhatsApp — início da medição</span>
+    <span class="meta-objetivo">Implementar rastreio</span>
+    <span class="meta-prazo">Fase 1</span>
   </div>
   <div class="meta-row">
     <span class="meta-label">Série "Perdido na Tradução" — episódios publicados</span>
-    <span class="meta-atual">Atual: 0</span>
     <span class="meta-objetivo">4 episódios</span>
     <span class="meta-prazo">90 dias</span>
   </div>
+  <div class="meta-row">
+    <span class="meta-label">Transição para Plano Gourmet — preparação de conteúdo</span>
+    <span class="meta-objetivo">Início em Maio</span>
+    <span class="meta-prazo">Junho</span>
+  </div>
+  <div class="meta-row">
+    <span class="meta-label">Ajuste de estratégia com base em dados reais</span>
+    <span class="meta-objetivo">Relatório mensal</span>
+    <span class="meta-prazo">Todo mês</span>
+  </div>
 </section>
 
+
+<!-- CALENDÁRIO ANUAL -->
+<section class="s s-escura">
+  <span class="s-label">Bónus — Calendário Editorial</span>
+  <div class="s-titulo">Calendário Anual<br><em>de Datas Estratégicas</em></div>
+  <p style="max-width:640px; margin-bottom:48px;">Datas comemorativas com relevância para a Mylla Saldanha. Permite planear campanhas, criativos e Reels com antecedência, aproveitando os picos de interesse do público.</p>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:3px;">
+    <div style="background:rgba(240,234,216,0.03); border:1px solid rgba(240,234,216,0.07); padding:32px 28px;">
+      <div style="font-family:Cormorant Garamond,serif; font-size:28px; color:var(--bdm-creme); margin-bottom:20px; font-weight:600;">Janeiro</div>
+      <div class="cdr"><span class="cdr-d">1 jan</span><span class="cdr-n">Ano Novo</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">6 jan</span><span class="cdr-n">Dia dos Reis / Bolo Rei</span><span>🇵🇹</span></div>
+      <div class="cdr"><span class="cdr-d">8 jan</span><span class="cdr-n">Dia do Chocolate</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">14 jan</span><span class="cdr-n">Dia do Beijo</span><span>🌍</span></div>
+    </div>
+    <div style="background:rgba(240,234,216,0.03); border:1px solid rgba(240,234,216,0.07); padding:32px 28px;">
+      <div style="font-family:Cormorant Garamond,serif; font-size:28px; color:var(--bdm-creme); margin-bottom:20px; font-weight:600;">Fevereiro</div>
+      <div class="cdr"><span class="cdr-d">4 fev</span><span class="cdr-n">Carnaval / Terca Gorda</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">9 fev</span><span class="cdr-n">Dia do Chocolate</span><span>🇧🇷</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">14 fev</span><span class="cdr-n">Dia dos Namorados</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">28 fev</span><span class="cdr-n">Dia do Coco</span><span>🍓</span></div>
+    </div>
+    <div style="background:rgba(240,234,216,0.03); border:1px solid rgba(240,234,216,0.07); padding:32px 28px;">
+      <div style="font-family:Cormorant Garamond,serif; font-size:28px; color:var(--bdm-creme); margin-bottom:20px; font-weight:600;">Marco</div>
+      <div class="cdr"><span class="cdr-d">1 mar</span><span class="cdr-n">Dia do Morango</span><span>🍓</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">8 mar</span><span class="cdr-n">Dia da Mulher</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">14 mar</span><span class="cdr-n">Dia do Pi (tortas)</span><span>🌍</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">19 mar</span><span class="cdr-n">Dia do Pai</span><span>🇵🇹</span></div>
+      <div class="cdr"><span class="cdr-d">20 mar</span><span class="cdr-n">Inicio da Primavera</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">25 mar</span><span class="cdr-n">Dia do Waffle</span><span>🍓</span></div>
+    </div>
+    <div style="background:rgba(212,56,122,0.05); border:1px solid rgba(212,56,122,0.12); padding:32px 28px;">
+      <div style="font-family:Cormorant Garamond,serif; font-size:28px; color:var(--bdm-rosa); margin-bottom:4px; font-weight:600;">Abril</div>
+      <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(240,234,216,0.3); margin-bottom:16px;">Plano Forca</div>
+      <div class="cdr"><span class="cdr-d">1 abr</span><span class="cdr-n">Dia das Mentiras</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">5 abr</span><span class="cdr-n">Dia do Caramelo</span><span>🍓</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">18 abr</span><span class="cdr-n">Sexta-feira Santa</span><span>🌍</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">20 abr</span><span class="cdr-n">Pascoa</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">25 abr</span><span class="cdr-n">Dia da Liberdade</span><span>🇵🇹</span></div>
+      <div class="cdr"><span class="cdr-d">28 abr</span><span class="cdr-n">Dia do Brigadeiro</span><span>🇧🇷</span></div>
+    </div>
+    <div style="background:rgba(212,56,122,0.05); border:1px solid rgba(212,56,122,0.12); padding:32px 28px;">
+      <div style="font-family:Cormorant Garamond,serif; font-size:28px; color:var(--bdm-rosa); margin-bottom:4px; font-weight:600;">Maio</div>
+      <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(240,234,216,0.3); margin-bottom:16px;">Plano Forca</div>
+      <div class="cdr"><span class="cdr-d">1 mai</span><span class="cdr-n">Dia do Trabalhador</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">3 mai</span><span class="cdr-n">Dia do Pastel de Nata</span><span>🇵🇹</span></div>
+      <div class="cdr"><span class="cdr-d">4 mai</span><span class="cdr-n">Dia da Coxinha</span><span>🇧🇷</span></div>
+      <div class="cdr cdr-urgente"><span class="cdr-d">11 mai</span><span class="cdr-n">Dia da Mae !</span><span>🇵🇹</span></div>
+      <div class="cdr"><span class="cdr-d">18 mai</span><span class="cdr-n">Dia do Hamburguer</span><span>🍓</span></div>
+      <div class="cdr"><span class="cdr-d">29 mai</span><span class="cdr-n">Dia Mundial do Pao</span><span>🌍</span></div>
+    </div>
+    <div style="background:rgba(240,234,216,0.03); border:1px solid rgba(240,234,216,0.07); padding:32px 28px;">
+      <div style="font-family:Cormorant Garamond,serif; font-size:28px; color:var(--bdm-creme); margin-bottom:4px; font-weight:600;">Junho</div>
+      <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--bdm-rosa); margin-bottom:16px; opacity:0.7;">Inicio Plano Gourmet</div>
+      <div class="cdr"><span class="cdr-d">1 jun</span><span class="cdr-n">Dia da Crianca</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">7 jun</span><span class="cdr-n">Dia Mundial do Chocolate</span><span>🍓</span></div>
+      <div class="cdr"><span class="cdr-d">10 jun</span><span class="cdr-n">Dia de Portugal</span><span>🇵🇹</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">13 jun</span><span class="cdr-n">Santo Antonio sardinhass</span><span>🇵🇹</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">24 jun</span><span class="cdr-n">Sao Joao do Porto</span><span>🇵🇹</span></div>
+      <div class="cdr"><span class="cdr-d">29 jun</span><span class="cdr-n">Sao Pedro / Festas</span><span>🇵🇹</span></div>
+    </div>
+    <div style="background:rgba(240,234,216,0.03); border:1px solid rgba(240,234,216,0.07); padding:32px 28px;">
+      <div style="font-family:Cormorant Garamond,serif; font-size:28px; color:var(--bdm-creme); margin-bottom:20px; font-weight:600;">Julho</div>
+      <div class="cdr"><span class="cdr-d">2 jul</span><span class="cdr-n">Dia do Gelado</span><span>🍓</span></div>
+      <div class="cdr"><span class="cdr-d">6 jul</span><span class="cdr-n">Dia do Beijinho</span><span>🇧🇷</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">13 jul</span><span class="cdr-n">Dia do Bolo</span><span>🇧🇷</span></div>
+      <div class="cdr"><span class="cdr-d">28 jul</span><span class="cdr-n">Dia do Hamburguer</span><span>🇧🇷</span></div>
+    </div>
+    <div style="background:rgba(240,234,216,0.03); border:1px solid rgba(240,234,216,0.07); padding:32px 28px;">
+      <div style="font-family:Cormorant Garamond,serif; font-size:28px; color:var(--bdm-creme); margin-bottom:20px; font-weight:600;">Agosto</div>
+      <div class="cdr"><span class="cdr-d">19 ago</span><span class="cdr-n">Dia do Sorvete / Gelado</span><span>🍓</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">25 ago</span><span class="cdr-n">Dia Mundial do Vinho</span><span>🌍</span></div>
+    </div>
+    <div style="background:rgba(240,234,216,0.03); border:1px solid rgba(240,234,216,0.07); padding:32px 28px;">
+      <div style="font-family:Cormorant Garamond,serif; font-size:28px; color:var(--bdm-creme); margin-bottom:20px; font-weight:600;">Setembro</div>
+      <div class="cdr cdr-alt"><span class="cdr-d">7 set</span><span class="cdr-n">Independencia do Brasil</span><span>🇧🇷</span></div>
+      <div class="cdr"><span class="cdr-d">13 set</span><span class="cdr-n">Dia do Chocolate com Leite</span><span>🍓</span></div>
+      <div class="cdr"><span class="cdr-d">19 set</span><span class="cdr-n">Dia do Cheesecake</span><span>🍓</span></div>
+      <div class="cdr"><span class="cdr-d">20 set</span><span class="cdr-n">Dia do Cliente</span><span>🇧🇷</span></div>
+      <div class="cdr"><span class="cdr-d">22 set</span><span class="cdr-n">Inicio do Outono</span><span>🌍</span></div>
+    </div>
+    <div style="background:rgba(240,234,216,0.03); border:1px solid rgba(240,234,216,0.07); padding:32px 28px;">
+      <div style="font-family:Cormorant Garamond,serif; font-size:28px; color:var(--bdm-creme); margin-bottom:20px; font-weight:600;">Outubro</div>
+      <div class="cdr cdr-alt"><span class="cdr-d">1 out</span><span class="cdr-n">Dia Internacional do Cafe</span><span>🍓</span></div>
+      <div class="cdr"><span class="cdr-d">4 out</span><span class="cdr-n">Dia Mundial dos Animais</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">5 out</span><span class="cdr-n">Dia da Republica</span><span>🇵🇹</span></div>
+      <div class="cdr"><span class="cdr-d">16 out</span><span class="cdr-n">Dia Mundial da Alimentacao</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">25 out</span><span class="cdr-n">Dia da Pasta</span><span>🍓</span></div>
+      <div class="cdr"><span class="cdr-d">31 out</span><span class="cdr-n">Halloween</span><span>🌍</span></div>
+    </div>
+    <div style="background:rgba(240,234,216,0.03); border:1px solid rgba(240,234,216,0.07); padding:32px 28px;">
+      <div style="font-family:Cormorant Garamond,serif; font-size:28px; color:var(--bdm-creme); margin-bottom:20px; font-weight:600;">Novembro</div>
+      <div class="cdr"><span class="cdr-d">1 nov</span><span class="cdr-n">Todos os Santos</span><span>🇵🇹</span></div>
+      <div class="cdr"><span class="cdr-d">2 nov</span><span class="cdr-n">Dia dos Finados</span><span>🇧🇷</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">11 nov</span><span class="cdr-n">Sao Martinho castanhas</span><span>🇵🇹</span></div>
+      <div class="cdr"><span class="cdr-d">15 nov</span><span class="cdr-n">Proclamacao da Republica</span><span>🇧🇷</span></div>
+      <div class="cdr"><span class="cdr-d">28 nov</span><span class="cdr-n">Dia do Bolo de Chocolate</span><span>🍓</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">28 nov</span><span class="cdr-n">Black Friday</span><span>🌍</span></div>
+    </div>
+    <div style="background:rgba(240,234,216,0.03); border:1px solid rgba(240,234,216,0.07); padding:32px 28px;">
+      <div style="font-family:Cormorant Garamond,serif; font-size:28px; color:var(--bdm-creme); margin-bottom:20px; font-weight:600;">Dezembro</div>
+      <div class="cdr"><span class="cdr-d">1 dez</span><span class="cdr-n">Restauracao da Independencia</span><span>🇵🇹</span></div>
+      <div class="cdr"><span class="cdr-d">8 dez</span><span class="cdr-n">Imaculada Conceicao</span><span>🇵🇹</span></div>
+      <div class="cdr"><span class="cdr-d">13 dez</span><span class="cdr-n">Dia do Cacau</span><span>🍓</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">24 dez</span><span class="cdr-n">Vespera de Natal Ceia</span><span>🌍</span></div>
+      <div class="cdr cdr-alt"><span class="cdr-d">25 dez</span><span class="cdr-n">Natal</span><span>🌍</span></div>
+      <div class="cdr"><span class="cdr-d">31 dez</span><span class="cdr-n">Reveillon</span><span>🌍</span></div>
+    </div>
+  </div>
+  <div style="display:flex; gap:24px; flex-wrap:wrap; margin-top:24px; padding:20px 24px; background:rgba(240,234,216,0.03); border:1px solid rgba(240,234,216,0.07); font-size:12px; color:rgba(240,234,216,0.45);">
+    <span>Portugal</span><span>Brasil</span><span>Mundial</span><span>Dia Alimentar</span>
+    <span style="color:var(--bdm-rosa); opacity:0.8;">Destaque: alta prioridade para a Mylla</span>
+    <span>Campanha urgente ativa</span>
+  </div>
+</section>
+<style>
+  .cdr { display:flex; align-items:center; gap:10px; padding:8px 0; border-bottom:1px solid rgba(240,234,216,0.05); font-size:13px; }
+  .cdr-alt { background:rgba(212,56,122,0.06); margin:0 -8px; padding:8px 8px; border-bottom:1px solid rgba(212,56,122,0.08); }
+  .cdr-urgente { background:rgba(212,56,122,0.15); margin:0 -8px; padding:8px 8px; border-bottom:1px solid rgba(212,56,122,0.2); }
+  .cdr-d { font-size:11px; color:rgba(240,234,216,0.3); min-width:40px; }
+  .cdr-n { flex:1; color:rgba(240,234,216,0.7); }
+</style>
+
 <!-- RODAPÉ -->
-<div class="rodape">
-  <h2>Bianca Digital Marketing</h2>
-  <p>Estratégia pensada para fazer a Mylla crescer de forma sustentável e com posicionamento claro.</p>
+<footer class="rodape">
+  <div>
+    <div class="rodape-logo">
+      <div class="rodape-logo-dot"></div>
+      <div class="rodape-logo-text">Bianca Digital Marketing</div>
+    </div>
+    <p>Estratégia desenvolvida para posicionar a Mylla Saldanha como a referência em gastronomia brasileira premium em Portugal.</p>
+  </div>
   <div class="rodape-contatos">
     <div class="rodape-item">
       <div class="rodape-item-label">WhatsApp</div>
@@ -78,12 +1130,8 @@
       <div class="rodape-item-label">Instagram</div>
       <div class="rodape-item-val">@biancadigitalmarketing</div>
     </div>
-    <div class="rodape-item">
-      <div class="rodape-item-label">Site</div>
-      <div class="rodape-item-val">www.biancadigitalmarketing.com</div>
-    </div>
   </div>
-</div>
+</footer>
 
 </body>
 </html>
