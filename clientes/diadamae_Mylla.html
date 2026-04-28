@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campanha Dia das Mães 2026 Mylla Saldanha · BDM</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --vinho: #7c060e;
+    --vinho-escuro: #5a0409;
+    --creme: #fbf4d9;
+    --marrom: #855534;
+    --caramelo: #c8922a;
+    --bdm-escuro: #35383f;
+    --bdm-rosa: #d4387a;
+    --branco: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--creme);
+    color: var(--vinho-escuro);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; }
+
+  /* HEADER BDM */
+  .bdm-header {
+    background: var(--bdm-escuro);
+    padding: 20px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .bdm-logo { display: flex; align-items: center; gap: 10px; }
+  .bdm-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bdm-rosa); }
+  .bdm-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #f0ead8; }
+  .bdm-sub { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(240,234,216,0.35); }
+  .bdm-header-right { font-size: 11px; color: rgba(240,234,216,0.3); letter-spacing: 1px; }
+
+  /* CAPA */
+  .capa {
+    min-height: 100vh;
+    background: var(--vinho);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+  .capa::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 20% 80%, rgba(124,6,14,0.8) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(90,4,9,0.9) 0%, transparent 50%);
+  }
+  .capa-esq {
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    border-right: 1px solid rgba(251,244,217,0.08);
+  }
+  .capa-tag {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(251,244,217,0.5);
+  }
+  .capa-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 6vw, 88px);
+    color: var(--creme);
+    line-height: 1.0;
+    font-weight: 600;
+  }
+  .capa-titulo em {
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(251,244,217,0.55);
+    display: block;
+  }
+  .capa-subtitulo {
+    font-size: 15px;
+    color: rgba(251,244,217,0.6);
+    line-height: 1.8;
+    max-width: 400px;
+  }
+  .capa-data {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(251,244,217,0.3);
+  }
+  .capa-dir {
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+  }
+  .capa-bg-text {
+    position: absolute;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 280px;
+    color: rgba(251,244,217,0.03);
+    right: -20px;
+    bottom: -40px;
+    line-height: 1;
+    font-weight: 700;
+    user-select: none;
+  }
+  .capa-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: rgba(251,244,217,0.06);
+    border: 1px solid rgba(251,244,217,0.1);
+    border-left: 2px solid var(--caramelo);
+  }
+  .capa-item-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--caramelo);
+    font-weight: 600;
+    min-width: 32px;
+  }
+  .capa-item-texto { font-size: 13px; color: rgba(251,244,217,0.7); }
+  .capa-item-nome { font-weight: 500; color: var(--creme); font-size: 15px; }
+
+  /* SECÇÕES */
+  .s { padding: 80px 80px; }
+  .s-creme { background: var(--creme); }
+  .s-branca { background: var(--branco); }
+  .s-vinho { background: var(--vinho); color: var(--creme); }
+  .s-escura { background: var(--bdm-escuro); color: #f0ead8; }
+  .s-marrom { background: var(--marrom); color: var(--creme); }
+
+  .s-kicker {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+    opacity: 0.5;
+  }
+  .s-vinho .s-kicker { color: var(--caramelo); opacity: 1; }
+  .s-escura .s-kicker { color: var(--bdm-rosa); opacity: 1; }
+  .s-creme .s-kicker, .s-branca .s-kicker { color: var(--vinho); }
+  .s-marrom .s-kicker { color: rgba(251,244,217,0.6); }
+
+  .s-titulo {
+    font-size: clamp(36px, 4vw, 58px);
+    line-height: 1.1;
+    margin-bottom: 48px;
+    font-weight: 600;
+  }
+  .s-vinho .s-titulo, .s-marrom .s-titulo { color: var(--creme); }
+  .s-escura .s-titulo { color: #f0ead8; }
+  .s-creme .s-titulo, .s-branca .s-titulo { color: var(--vinho); }
+  .s-titulo em { font-style: italic; font-weight: 300; opacity: 0.5; }
+
+  p { font-size: 15px; line-height: 1.8; margin-bottom: 16px; }
+  .s-vinho p, .s-marrom p { color: rgba(251,244,217,0.75); }
+  .s-escura p { color: rgba(240,234,216,0.7); }
+  .s-creme p, .s-branca p { color: rgba(90,4,9,0.65); }
+  strong { font-weight: 500; }
+  .s-vinho strong, .s-marrom strong { color: var(--creme); }
+  .s-escura strong { color: #f0ead8; }
+  .s-creme strong, .s-branca strong { color: var(--vinho); }
+
+  .dois-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .tres-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+  .divisor { height: 1px; margin: 0 80px; }
+  .divisor-escuro { background: rgba(90,4,9,0.1); }
+  .divisor-claro { background: rgba(251,244,217,0.1); }
+
+  /* HIGHLIGHT */
+  .hbox {
+    padding: 28px 32px;
+    margin-top: 20px;
+  }
+  .hbox-vinho { background: rgba(124,6,14,0.06); border-left: 2px solid var(--vinho); }
+  .hbox-creme { background: rgba(251,244,217,0.1); border-left: 2px solid var(--caramelo); }
+  .hbox-rosa { background: rgba(212,56,122,0.08); border-left: 2px solid var(--bdm-rosa); }
+  .hbox-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; opacity: 0.6; }
+  .hbox-vinho .hbox-label { color: var(--vinho); }
+  .hbox-creme .hbox-label { color: var(--caramelo); }
+  .hbox-rosa .hbox-label { color: var(--bdm-rosa); }
+  .hbox p { font-size: 16px; font-style: italic; margin: 0; line-height: 1.7; }
+
+  /* CARD */
+  .card {
+    padding: 32px;
+    border-top: 2px solid;
+  }
+  .card-vinho { background: rgba(124,6,14,0.05); border-color: var(--vinho); border: 1px solid rgba(124,6,14,0.1); border-top: 2px solid var(--vinho); }
+  .card-creme { background: rgba(251,244,217,0.08); border-color: var(--caramelo); border: 1px solid rgba(251,244,217,0.1); border-top: 2px solid var(--caramelo); }
+  .card-rosa { background: rgba(212,56,122,0.06); border-color: var(--bdm-rosa); border: 1px solid rgba(212,56,122,0.1); border-top: 2px solid var(--bdm-rosa); }
+  .card h3 { font-size: 22px; margin-bottom: 12px; }
+  .s-creme .card h3, .s-branca .card h3 { color: var(--vinho); }
+  .s-vinho .card h3, .s-marrom .card h3 { color: var(--creme); }
+  .s-escura .card h3 { color: #f0ead8; }
+  .card p { font-size: 13px; margin: 0; line-height: 1.7; }
+
+  /* LISTA */
+  ul.lista { list-style: none; }
+  ul.lista li {
+    padding: 11px 0;
+    border-bottom: 1px solid;
+    font-size: 14px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .s-creme ul.lista li, .s-branca ul.lista li { border-color: rgba(90,4,9,0.08); color: rgba(90,4,9,0.65); }
+  .s-vinho ul.lista li, .s-marrom ul.lista li { border-color: rgba(251,244,217,0.08); color: rgba(251,244,217,0.7); }
+  .s-escura ul.lista li { border-color: rgba(240,234,216,0.07); color: rgba(240,234,216,0.65); }
+  ul.lista li .dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; margin-top: 8px; }
+  .s-creme .dot, .s-branca .dot { background: var(--vinho); }
+  .s-vinho .dot, .s-marrom .dot { background: var(--caramelo); }
+  .s-escura .dot { background: var(--bdm-rosa); }
+
+  /* MENU CARD */
+  .menu-box {
+    padding: 48px 40px;
+  }
+  .menu-alcool { background: var(--vinho); }
+  .menu-sem { background: var(--creme); border: 1px solid rgba(124,6,14,0.12); }
+  .menu-tag { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; display: block; }
+  .menu-alcool .menu-tag { color: rgba(251,244,217,0.5); }
+  .menu-sem .menu-tag { color: rgba(124,6,14,0.5); }
+  .menu-nome { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600; margin-bottom: 28px; line-height: 1.1; }
+  .menu-alcool .menu-nome { color: var(--creme); }
+  .menu-sem .menu-nome { color: var(--vinho); }
+  .menu-li { display: flex; gap: 12px; padding: 9px 0; border-bottom: 1px solid; font-size: 13px; }
+  .menu-alcool .menu-li { border-color: rgba(251,244,217,0.1); color: rgba(251,244,217,0.75); }
+  .menu-sem .menu-li { border-color: rgba(124,6,14,0.08); color: rgba(90,4,9,0.7); }
+  .menu-li strong { font-size: 13px; }
+  .menu-alcool .menu-li strong { color: var(--creme); }
+  .menu-sem .menu-li strong { color: var(--vinho); }
+  .menu-preco-box { margin-top: 28px; padding-top: 20px; border-top: 1px solid; display: flex; align-items: baseline; gap: 8px; }
+  .menu-alcool .menu-preco-box { border-color: rgba(251,244,217,0.15); }
+  .menu-sem .menu-preco-box { border-color: rgba(124,6,14,0.12); }
+  .menu-preco { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 700; line-height: 1; }
+  .menu-alcool .menu-preco { color: var(--creme); }
+  .menu-sem .menu-preco { color: var(--vinho); }
+  .menu-preco-label { font-size: 11px; opacity: 0.5; }
+
+  /* SLIDE PREVIEW */
+  .slide-preview {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  }
+  .slide-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .slide-caption {
+    padding: 16px 20px;
+    font-size: 12px;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  /* CALENDARIO */
+  .cal-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; }
+  .cal-dia { padding: 24px 18px; }
+  .cal-dia-nome { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; opacity: 0.4; }
+  .cal-dia-post { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+  .cal-dia-desc { font-size: 11px; opacity: 0.55; line-height: 1.5; }
+  .cal-urgente { background: var(--vinho); color: var(--creme); }
+  .cal-normal { background: rgba(124,6,14,0.05); border: 1px solid rgba(124,6,14,0.1); color: var(--vinho-escuro); }
+  .cal-medio { background: rgba(124,6,14,0.1); border: 1px solid rgba(124,6,14,0.15); color: var(--vinho-escuro); }
+
+  /* VALOR BDM */
+  .valor-bdm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+  }
+  .valor-col { padding: 48px 40px; }
+  .valor-col-mylla { background: rgba(240,234,216,0.05); border: 1px solid rgba(240,234,216,0.1); }
+  .valor-col-bdm { background: rgba(212,56,122,0.12); border: 1px solid rgba(212,56,122,0.2); }
+  .valor-col-titulo { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #f0ead8; margin-bottom: 8px; }
+  .valor-col-bdm .valor-col-titulo { color: var(--bdm-rosa); }
+  .valor-col-sub { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(240,234,216,0.4); margin-bottom: 28px; }
+  .valor-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(240,234,216,0.07); font-size: 14px; color: rgba(240,234,216,0.7); align-items: flex-start; }
+  .valor-item-check { flex-shrink: 0; font-size: 13px; margin-top: 2px; }
+
+  /* MIMOSA */
+  .mimosa-timeline { display: flex; flex-direction: column; gap: 0; }
+  .mimosa-item { display: flex; gap: 28px; padding: 20px 0; border-bottom: 1px solid rgba(251,244,217,0.08); align-items: flex-start; }
+  .mimosa-ano { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: var(--caramelo); font-weight: 600; min-width: 80px; }
+  .mimosa-texto { font-size: 14px; color: rgba(251,244,217,0.7); line-height: 1.7; }
+  .mimosa-texto strong { color: var(--creme); }
+
+  /* BUNDLING */
+  .bundling-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 0;
+    align-items: center;
+    margin-top: 48px;
+  }
+  .bundling-box {
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .bundling-origem { background: rgba(124,6,14,0.06); border: 1px solid rgba(124,6,14,0.1); }
+  .bundling-resultado { background: var(--vinho); }
+  .bundling-seta {
+    font-size: 24px;
+    color: var(--vinho);
+    opacity: 0.3;
+    padding: 0 8px;
+    font-weight: 300;
+  }
+  .bundling-box-titulo { font-family: 'Cormorant Garamond', serif; font-size: 18px; margin-bottom: 6px; }
+  .bundling-origem .bundling-box-titulo { color: var(--vinho); }
+  .bundling-resultado .bundling-box-titulo { color: var(--creme); }
+  .bundling-box-desc { font-size: 12px; opacity: 0.6; }
+  .bundling-origem .bundling-box-desc { color: var(--vinho-escuro); }
+  .bundling-resultado .bundling-box-desc { color: rgba(251,244,217,0.7); }
+  .bundling-tag { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+  .bundling-resultado .bundling-tag { color: var(--caramelo); }
+
+  /* LEGENDA BOX */
+  .legenda-box { padding: 32px 36px; }
+  .legenda-vinho { background: rgba(124,6,14,0.06); border-left: 2px solid var(--vinho); }
+  .legenda-escura { background: rgba(240,234,216,0.04); border-left: 2px solid var(--bdm-rosa); }
+  .legenda-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; display: block; opacity: 0.6; }
+  .legenda-vinho .legenda-label { color: var(--vinho); }
+  .legenda-escura .legenda-label { color: var(--bdm-rosa); }
+  .legenda-texto { font-size: 14px; line-height: 1.9; white-space: pre-line; }
+  .s-creme .legenda-texto, .s-branca .legenda-texto { color: rgba(90,4,9,0.75); }
+  .s-escura .legenda-texto { color: rgba(240,234,216,0.7); }
+  .hashtags { font-size: 12px; margin-top: 16px; opacity: 0.5; line-height: 1.8; }
+
+  /* PRÓXIMOS PASSOS */
+  .passo {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(240,234,216,0.08);
+  }
+  .passo-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    color: var(--bdm-rosa);
+    font-weight: 600;
+    line-height: 1;
+    min-width: 52px;
+  }
+  .passo-titulo { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #f0ead8; margin-bottom: 6px; }
+  .passo-desc { font-size: 14px; color: rgba(240,234,216,0.6); }
+
+  /* RODAPÉ */
+  .rodape { background: var(--vinho-escuro); padding: 60px 80px; display: flex; justify-content: space-between; align-items: center; }
+  .rodape-logo { display: flex; align-items: center; gap: 10px; }
+  .rodape-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bdm-rosa); }
+  .rodape-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--creme); }
+  .rodape p { font-size: 12px; color: rgba(251,244,217,0.3); margin: 0; }
+  .rodape-contatos { text-align: right; }
+  .rodape-contatos p { font-size: 12px; color: rgba(251,244,217,0.4); margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<!-- HEADER BDM -->
+<div class="bdm-header">
+  <div class="bdm-logo">
+    <div class="bdm-dot"></div>
+    <div>
+      <div class="bdm-name">Bianca Digital Marketing</div>
+      <div class="bdm-sub">BDM · Estratégia e Conteúdo</div>
+    </div>
+  </div>
+  <div class="bdm-header-right">Apresentação de Campanha · Confidencial</div>
+</div>
+
+<!-- CAPA -->
+<section class="capa">
+  <div class="capa-esq">
+    <span class="capa-tag">Campanha Especial · Dia das Mães 2026</span>
+    <div>
+      <h1 class="capa-titulo">Um Dia das<br>Mães<br><em>completo</em><br>na Mylla.</h1>
+      <p class="capa-subtitulo" style="margin-top:24px;">A estratégia que transformou o cardápio existente numa experiência completa do brunch ao almoço à prenda para levar.</p>
+    </div>
+    <span class="capa-data">3 de Maio · Domingo · Mylla Saldanha Patisserie e Bistrô</span>
+  </div>
+  <div class="capa-dir">
+    <div class="capa-bg-text">M</div>
+    <div class="capa-item">
+      <div class="capa-item-num">01</div>
+      <div><div class="capa-item-nome">Brunch das Mães</div><div class="capa-item-texto">Mimosa · Tosta · Bolo · Cappuccino €24,00</div></div>
+    </div>
+    <div class="capa-item">
+      <div class="capa-item-num">02</div>
+      <div><div class="capa-item-nome">Amor de Mãe</div><div class="capa-item-texto">Menu de almoço especial €24,00 / €18,00</div></div>
+    </div>
+    <div class="capa-item">
+      <div class="capa-item-num">03</div>
+      <div><div class="capa-item-nome">Caixa Presente</div><div class="capa-item-texto">Flores + Chocolate Belga Artesanal</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCEITO -->
+<section class="s s-creme">
+  <span class="s-kicker">01 Conceito</span>
+  <h2 class="s-titulo">O conceito<br><em>da campanha</em></h2>
+  <div class="dois-cols">
+    <div>
+      <p>A Mylla Saldanha também é mãe. Por isso, a nossa ideia não foi criar nada do zero foi olhar para o que a loja já tem e <strong>transformar em algo único e especial</strong> para o Dia das Mães.</p>
+      <p>A estratégia assenta num princípio simples: a loja iria abrir da mesma forma. O que fizemos foi pegar nos produtos já existentes no cardápio, combiná-los de forma inteligente e criar <strong>experiências completas com valor percebido muito superior</strong>.</p>
+      <div class="hbox hbox-vinho">
+        <div class="hbox-label">O resultado</div>
+        <p>"Um Dia das Mães completo na Mylla do brunch da manhã ao almoço especial à prenda para levar. Sem criar nada do zero."</p>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--vinho); opacity:0.6; margin-bottom:20px;">A estratégia em 3 momentos</p>
+      <div class="card card-vinho" style="margin-bottom:12px;">
+        <h3>🌸 Manhã Brunch das Mães</h3>
+        <p>Uma mesa posta só para ela, com Mimosa, Mini Tosta, Memória em fatia de Nido com Morango e Cappuccino com Nutella. Disponível até às 13h.</p>
+      </div>
+      <div class="card card-vinho" style="margin-bottom:12px;">
+        <h3>🍽️ Almoço Amor de Mãe</h3>
+        <p>Menu completo de 4 momentos com Gouda Crocante, Empadão de Frango, Espumante ou Refrigerante e sobremesa especial. Com e sem álcool.</p>
+      </div>
+      <div class="card card-vinho">
+        <h3>🎁 Para Levar Caixa Presente</h3>
+        <p>Flores secas que duram meses + Coração de Chocolate Belga Artesanal recheado. Em parceria com @ameninadochapeu.decor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divisor divisor-escuro"></div>
+
+<!-- BUNDLING -->
+<section class="s s-branca">
+  <span class="s-kicker">02 Estratégia de Marketing</span>
+  <h2 class="s-titulo">A técnica por<br><em>detrás da magia</em></h2>
+  <div class="dois-cols">
+    <div>
+      <p>O que fizemos tem nome no marketing: chama-se <strong>Bundling</strong> uma das estratégias mais poderosas para aumentar o ticket médio sem criar novos produtos.</p>
+      <p>O Bundling consiste em combinar produtos já existentes numa oferta única com valor percebido superior. O cliente sente que está a receber mais. O negócio vende mais. E não precisou de investir em novos ingredientes ou nova estrutura.</p>
+      <div class="hbox hbox-vinho">
+        <div class="hbox-label">O resultado do Bundling na Mylla</div>
+        <p>"Produtos que valeriam €30 se comprados separadamente, apresentados como uma experiência única de €24. O cliente percebe valor. A Mylla ganha margem."</p>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--vinho); opacity:0.6; margin-bottom:20px;">Como aplicámos no Amor de Mãe</p>
+      <div class="bundling-flow">
+        <div class="bundling-box bundling-origem">
+          <span class="bundling-tag" style="color:rgba(90,4,9,0.4);">Cardápio</span>
+          <div class="bundling-box-titulo">Gouda Crocante</div>
+          <div class="bundling-box-desc">€3,20 já existia</div>
+        </div>
+        <div class="bundling-seta">+</div>
+        <div class="bundling-box bundling-origem">
+          <span class="bundling-tag" style="color:rgba(90,4,9,0.4);">Cardápio</span>
+          <div class="bundling-box-titulo">Empadão + Bolo + Espumante ou Refrigerante</div>
+          <div class="bundling-box-desc">Itens já existentes no cardápio</div>
+        </div>
+        <div class="bundling-seta">→</div>
+        <div class="bundling-box bundling-resultado">
+          <span class="bundling-tag">Novo Produto</span>
+          <div class="bundling-box-titulo">Amor de Mãe</div>
+          <div class="bundling-box-desc">€24,00 com espumante ou €18,00 sem álcool</div>
+        </div>
+      </div>
+      <p style="font-size:12px; margin-top:20px; opacity:0.5; color:var(--vinho-escuro);">O mesmo princípio foi aplicado no Brunch das Mães: Mimosa + Tosta + Bolo + Cappuccino = €24,00 por uma experiência memorável.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divisor divisor-escuro"></div>
+
+<!-- O QUE VEIO DA MYLLA VS BDM -->
+<section class="s s-escura">
+  <span class="s-kicker">03 Valor Criado</span>
+  <h2 class="s-titulo">O que a Mylla trouxe<br><em>vs o que a BDM criou</em></h2>
+  <div class="valor-bdm">
+    <div class="valor-col valor-col-mylla">
+      <div class="valor-col-titulo">Mylla Saldanha</div>
+      <div class="valor-col-sub">O que já existia</div>
+      <div class="valor-item"><span class="valor-item-check" style="color:rgba(240,234,216,0.4);">○</span>O cardápio completo da loja</div>
+      <div class="valor-item"><span class="valor-item-check" style="color:rgba(240,234,216,0.4);">○</span>A Caixa Presente com flores e chocolate (já vendida)</div>
+      <div class="valor-item"><span class="valor-item-check" style="color:rgba(240,234,216,0.4);">○</span>Os ingredientes e produtos de qualidade premium</div>
+      <div class="valor-item"><span class="valor-item-check" style="color:rgba(240,234,216,0.4);">○</span>O espaço e a equipa</div>
+    </div>
+    <div class="valor-col valor-col-bdm">
+      <div class="valor-col-titulo" style="color:var(--bdm-rosa);">Bianca Digital Marketing</div>
+      <div class="valor-col-sub">O que criámos do zero</div>
+      <div class="valor-item"><span class="valor-item-check" style="color:var(--bdm-rosa);">✓</span>O conceito "Um Dia das Mães completo na Mylla"</div>
+      <div class="valor-item"><span class="valor-item-check" style="color:var(--bdm-rosa);">✓</span>O nome <strong>Amor de Mãe</strong> e o menu de almoço especial</div>
+      <div class="valor-item"><span class="valor-item-check" style="color:var(--bdm-rosa);">✓</span>O nome <strong>Memória em fatia de Nido com Morango</strong></div>
+      <div class="valor-item"><span class="valor-item-check" style="color:var(--bdm-rosa);">✓</span>O <strong>Brunch das Mães</strong> completo com os 4 momentos</div>
+      <div class="valor-item"><span class="valor-item-check" style="color:var(--bdm-rosa);">✓</span>A <strong>Mimosa</strong> como produto novo combinando espumante + sumo</div>
+      <div class="valor-item"><span class="valor-item-check" style="color:var(--bdm-rosa);">✓</span>As duas versões com e sem álcool para atingir todos os públicos</div>
+      <div class="valor-item"><span class="valor-item-check" style="color:var(--bdm-rosa);">✓</span>Todos os copies, legendas, carrosséis e roteiro do Reel</div>
+      <div class="valor-item"><span class="valor-item-check" style="color:var(--bdm-rosa);">✓</span>A estratégia de preços com Bundling aplicado</div>
+    </div>
+  </div>
+</section>
+
+<!-- MIMOSA -->
+<section class="s s-vinho">
+  <span class="s-kicker">04 A Mimosa</span>
+  <h2 class="s-titulo">Porquê a Mimosa<br><em>é sofisticada</em></h2>
+  <div class="dois-cols">
+    <div>
+      <p>A Mimosa não estava no cardápio da Mylla. Mas o espumante Freixenet e o sumo de laranja natural já estavam separados. A BDM identificou esta oportunidade e criou a Mimosa como produto novo, sem custo adicional de ingredientes.</p>
+      <p>A escolha não foi acidental. A Mimosa tem uma história de mais de 100 anos associada à <strong>elegância, sofisticação e celebração feminina</strong> exatamente o posicionamento que queremos para a Mylla.</p>
+      <div class="hbox hbox-creme">
+        <div class="hbox-label">A escolha estratégica</div>
+        <p>"A Mimosa é o drink que posiciona a Mylla acima da concorrência. Não é uma cerveja, não é um sumo. É uma experiência de brunch sofisticado, pensado para a mulher que merece o melhor."</p>
+      </div>
+    </div>
+    <div>
+      <div class="mimosa-timeline">
+        <div class="mimosa-item">
+          <div class="mimosa-ano">1921</div>
+          <div class="mimosa-texto"><strong>Londres, Buck's Club</strong> nasce o Buck's Fizz, o antepassado da Mimosa, misturando champagne com sumo de laranja pela primeira vez.</div>
+        </div>
+        <div class="mimosa-item">
+          <div class="mimosa-ano">1925</div>
+          <div class="mimosa-texto"><strong>Paris, Hotel Ritz</strong> o bartender Frank Meier cria a Mimosa com proporções iguais de champagne e sumo de laranja, tornando-a mais leve e elegante. Nasce no local mais sofisticado do mundo.</div>
+        </div>
+        <div class="mimosa-item">
+          <div class="mimosa-ano">Hoje</div>
+          <div class="mimosa-texto"><strong>O símbolo do brunch refinado</strong> a Mimosa é universalmente reconhecida como o drink das celebrações matinais elegantes. A sua cor dourada e leveza são sinónimo de feminilidade e sofisticação.</div>
+        </div>
+        <div class="mimosa-item">
+          <div class="mimosa-ano">3 Mai</div>
+          <div class="mimosa-texto"><strong>Mylla Saldanha, Canidelo</strong> a Mimosa chega ao brunch mais especial do ano. Espumante Freixenet Nevada + sumo de laranja natural. Um gesto de elegância para a mãe que merece tudo.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divisor divisor-claro"></div>
+
+<!-- BRUNCH -->
+<section class="s s-creme">
+  <span class="s-kicker">05 Produto 1</span>
+  <h2 class="s-titulo">Brunch das Mães<br><em>o primeiro momento</em></h2>
+  <div class="dois-cols" style="margin-bottom:48px;">
+    <div>
+      <div class="menu-box menu-alcool" style="border-radius:2px;">
+        <span class="menu-tag">🥂 Menu único · €24,00 por pessoa</span>
+        <div class="menu-nome">Brunch<br>das Mães</div>
+        <div class="menu-li"><span>🍊</span><div><strong>Mimosa</strong><div style="font-size:12px; opacity:0.6;">Espumante Freixenet Nevada + Sumo de laranja natural</div></div></div>
+        <div class="menu-li"><span>🥐</span><div><strong>Mini Tosta à escolha</strong><div style="font-size:12px; opacity:0.6;">Brie · Caprese · Presunto com Philadelphia trufado</div></div></div>
+        <div class="menu-li"><span>🍰</span><div><strong>Memória em fatia de Nido com Morango</strong><div style="font-size:12px; opacity:0.6;">A sobremesa delicada que fecha o brunch</div></div></div>
+        <div class="menu-li"><span>☕</span><div><strong>Cappuccino com Nutella e Chantilly</strong><div style="font-size:12px; opacity:0.6;">O final perfeito para um momento especial</div></div></div>
+        <div class="menu-preco-box">
+          <span class="menu-preco">€24</span>
+          <span class="menu-preco-label">,00 · por pessoa · até às 13h</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="slide-preview">
+        <img src="brunch_mylla.png" alt="Brunch das Mães" style="width:100%; border-radius:2px;">
+      </div>
+      <p class="slide-caption" style="color:rgba(90,4,9,0.4);">Slide 1 do carrossel · Feed Instagram</p>
+    </div>
+  </div>
+
+  <div class="legenda-box legenda-vinho">
+    <span class="legenda-label">Legenda completa · Post Brunch das Mães</span>
+    <div class="legenda-texto">Ela acorda cedo, cuida de todos, esquece-se de si mesma.
+
+No Dia das Mães, é a vez dela. 🌸
+
+Preparámos um Brunch especial para celebrar o momento mais bonito do ano Mimosa · Mini Tosta · Memória em fatia de Nido com Morango · Cappuccino com Nutella e Chantilly.
+
+Porque ela merece sentar, respirar e ser tratada como a rainha que é.
+
+🥂 Brunch das Mães €24,00 por pessoa
+
+📅 3 de Maio · Domingo · Disponível até às 13h
+📍 Rua da Bélgica 2221, Canidelo Vila Nova de Gaia
+
+Reservas pelo WhatsApp ou link na bio. Não deixes para a última hora os lugares são limitados. 💛</div>
+    <div class="hashtags">#DiaDasMães #MyllaPatisserie #BrunchDiaDasMães #Mimosa #VilaNovadeGaia #Canidelo #GastronomiaPortugal #BrasilEmPortugal #BoloArtesanal #BrunchEspecial #MomentosMyllaPatisserie</div>
+  </div>
+</section>
+
+<div class="divisor divisor-escuro"></div>
+
+<!-- AMOR DE MÃE -->
+<section class="s s-branca">
+  <span class="s-kicker">06 Produto 2</span>
+  <h2 class="s-titulo">Amor de Mãe<br><em>o almoço especial</em></h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:3px; margin-bottom:48px;">
+    <div class="menu-box menu-alcool" style="border-radius:0;">
+      <span class="menu-tag">🥂 Com espumante · €24,00</span>
+      <div class="menu-nome">Amor<br>de Mãe</div>
+      <div class="menu-li"><span>🧀</span><div><strong>Cubos de Queijo Gouda Crocante</strong><div style="font-size:12px; opacity:0.6;">Com geleia de laranja, maçã e pimenta · 7 unid.</div></div></div>
+      <div class="menu-li"><span>🫕</span><div><strong>Empadão de Frango</strong><div style="font-size:12px; opacity:0.6;">Massa amanteigada · frango cremoso · salada ibérica · tomate cherry · mostarda Dijon</div></div></div>
+      <div class="menu-li"><span>🥂</span><div><strong>Taça de Espumante Freixenet Nevada</strong><div style="font-size:12px; opacity:0.6;">Semi Seco · o brinde perfeito</div></div></div>
+      <div class="menu-li"><span>🍓</span><div><strong>Memória em fatia de Nido com Morango</strong><div style="font-size:12px; opacity:0.6;">O final doce que ela nunca vai esquecer</div></div></div>
+      <div class="menu-preco-box"><span class="menu-preco">€24</span><span class="menu-preco-label">,00 · por pessoa</span></div>
+    </div>
+    <div class="menu-box menu-sem" style="border-radius:0;">
+      <span class="menu-tag" style="color:rgba(124,6,14,0.5);">🍊 Sem álcool · €18,00</span>
+      <div class="menu-nome" style="color:var(--vinho);">Amor<br>de Mãe</div>
+      <div class="menu-li"><span>🧀</span><div><strong style="color:var(--vinho);">Cubos de Queijo Gouda Crocante</strong><div style="font-size:12px; opacity:0.6; color:rgba(90,4,9,0.6);">Com geleia de laranja, maçã e pimenta · 7 unid.</div></div></div>
+      <div class="menu-li"><span>🫕</span><div><strong style="color:var(--vinho);">Empadão de Frango</strong><div style="font-size:12px; opacity:0.6; color:rgba(90,4,9,0.6);">Massa amanteigada · frango cremoso · salada ibérica · tomate cherry · mostarda Dijon</div></div></div>
+      <div class="menu-li"><span>🥤</span><div><strong style="color:var(--vinho);">Refrigerante à escolha</strong><div style="font-size:12px; opacity:0.6; color:rgba(90,4,9,0.6);">Coca-Cola · Guaraná · Sprite · Compal</div></div></div>
+      <div class="menu-li"><span>🍓</span><div><strong style="color:var(--vinho);">Memória em fatia de Nido com Morango</strong><div style="font-size:12px; opacity:0.6; color:rgba(90,4,9,0.6);">O final doce que ela nunca vai esquecer</div></div></div>
+      <div class="menu-preco-box" style="border-color:rgba(124,6,14,0.12);"><span class="menu-preco" style="color:var(--vinho);">€18</span><span class="menu-preco-label" style="color:rgba(90,4,9,0.5);">,00 · por pessoa</span></div>
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:48px;">
+    <div class="slide-preview"><img src="almoco_mylla_01.png" alt="Slide 1" style="width:100%; border-radius:2px;"></div>
+    <div class="slide-preview"><img src="almoco_mylla_02.png" alt="Slide 2" style="width:100%; border-radius:2px;"></div>
+    <div class="slide-preview"><img src="almoco_mylla_03.png" alt="Slide 3" style="width:100%; border-radius:2px;"></div>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:48px;">
+    <div class="slide-preview"><img src="almoco_mylla_04.png" alt="Slide 4" style="width:100%; border-radius:2px;"></div>
+    <div class="slide-preview"><img src="almoco_mylla_05.png" alt="Slide 5" style="width:100%; border-radius:2px;"></div>
+    <div class="slide-preview"><img src="almoco_mylla_06.png" alt="Slide 6" style="width:100%; border-radius:2px;"></div>
+  </div>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:48px;">
+    <div class="slide-preview"><img src="almoco_mylla_07.png" alt="Slide 7" style="width:100%; border-radius:2px;"></div>
+    <div class="slide-preview"><img src="almoco_mylla_08.png" alt="Slide 8" style="width:100%; border-radius:2px;"></div>
+    <div style="padding:32px; background:rgba(124,6,14,0.05); border:1px solid rgba(124,6,14,0.08); display:flex; flex-direction:column; justify-content:center; border-radius:2px;">
+      <p style="font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--vinho); opacity:0.6; margin-bottom:12px;">Carrossel completo</p>
+      <p style="font-size:28px; font-family:'Cormorant Garamond',serif; color:var(--vinho); font-weight:600; line-height:1.2; margin:0;">8 slides · 1 legenda · pronto a publicar</p>
+    </div>
+  </div>
+
+  <div class="legenda-box legenda-vinho">
+    <span class="legenda-label">Legenda completa · Post Amor de Mãe</span>
+    <div class="legenda-texto">Criámos um almoço à altura dela. 🌸
+
+Apresentamos o Amor de Mãe o menu especial de Dia das Mães da Mylla, com 4 momentos pensados para fazer ela sentir-se a pessoa mais especial do mundo.
+
+Começa com o nosso Queijo Gouda Crocante com geleia de laranja, maçã e pimenta. Depois, o Empadão de Frango massa amanteigada com recheio cremoso de frango, salada ibérica, tomate cherry e mostarda de Dijon. Para terminar como aquele abraço de mãe: Memória em fatia de Nido com Morango. 🍓
+
+🥂 Com espumante Freixenet Nevada €24,00
+🍊 Sem álcool €18,00
+
+Faz já a tua reserva. 💛
+
+📅 3 de Maio · Domingo · Almoço
+📍 Rua da Bélgica 2221, Canidelo Vila Nova de Gaia
+
+Os lugares são limitados. Reserva pelo WhatsApp ou link na bio.</div>
+    <div class="hashtags">#AmorDeMae #DiaDasMães #MyllaPatisserie #EmpadaoBrasileiro #GastronomiaPortugal #BrasilEmPortugal #VilaNovadeGaia #Canidelo #RestauranteBrasileiro #MomentosMyllaPatisserie</div>
+  </div>
+</section>
+
+<div class="divisor divisor-escuro"></div>
+
+<!-- CAIXA PRESENTE -->
+<section class="s s-creme">
+  <span class="s-kicker">07 Produto 3</span>
+  <h2 class="s-titulo">Caixa Presente<br><em>a prenda para levar</em></h2>
+  <div class="dois-cols" style="margin-bottom:48px;">
+    <div>
+      <p>O único produto que já existia antes da campanha. Em parceria com a <strong>@ameninadochapeu.decor</strong>, a Mylla oferece uma caixa com flores secas que duram meses e um coração de Chocolate Belga Artesanal recheado à escolha.</p>
+      <p style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--vinho); opacity:0.6; margin-top:24px; margin-bottom:16px;">5 recheios disponíveis</p>
+      <ul class="lista">
+        <li><span class="dot"></span>Franui Brigadeiro de Nido com Compota de Framboesa</li>
+        <li><span class="dot"></span>Pistácio com Compota de Frutos Vermelhos</li>
+        <li><span class="dot"></span>Nido com Nutella</li>
+        <li><span class="dot"></span>Brigadeiro de Nido com Compota de Morango</li>
+        <li><span class="dot"></span>Brigadeiro Meio Amargo com Caramelo Flor de Sal</li>
+      </ul>
+      <div class="hbox hbox-vinho" style="margin-top:24px;">
+        <div class="hbox-label">Tagline da campanha</div>
+        <p>"Flores que ficam. Chocolate que derrete. Dois presentes num só gesto."</p>
+      </div>
+    </div>
+    <div>
+      <div class="slide-preview">
+        <img src="caixa_mylla.png" alt="Caixa Presente" style="width:100%; border-radius:2px;">
+      </div>
+      <p class="slide-caption" style="color:rgba(90,4,9,0.4);">Post feed · Feed Instagram · Caixa Presente</p>
+    </div>
+  </div>
+
+  <div class="legenda-box legenda-vinho">
+    <span class="legenda-label">Legenda completa · Post Caixa Presente</span>
+    <div class="legenda-texto">Há presentes que se abrem e há presentes que se guardam para sempre. 🌸🍫
+
+Esta caixa é as duas coisas.
+
+Em parceria com a @ameninadochapeu.decor, criámos algo verdadeiramente especial para o Dia das Mães flores secas perfumadas que duram meses e um coração de Chocolate Belga Artesanal feito aqui na Mylla, com o recheio que ela mais ama.
+
+✨ Escolhe o recheio dela:
+Franui: Brigadeiro de Nido com Framboesa
+Pistácio com Frutos Vermelhos
+Nido com Nutella
+Brigadeiro de Nido com Morango
+Meio Amargo com Caramelo Flor de Sal
+
+Porque mãe merece sentir-se amada em cada detalhe. 💝
+
+Encomendas abertas fala connosco pelo WhatsApp ou link na bio.</div>
+    <div class="hashtags">#DiaDasMães #MyllaPatisserie #CaixaPresente #ChocolateArtesanal #FloresSecas #AmeninaDoChapeu #PresenteDiaDasMães #VilaNovadeGaia #Canidelo</div>
+  </div>
+</section>
+
+<!-- CALENDÁRIO -->
+<section class="s s-vinho">
+  <span class="s-kicker">08 Publicação</span>
+  <h2 class="s-titulo">Calendário<br><em>da semana</em></h2>
+  <div class="cal-grid">
+    <div class="cal-dia cal-urgente">
+      <div class="cal-dia-nome" style="color:rgba(251,244,217,0.5);">Hoje · Urgente</div>
+      <div class="cal-dia-post" style="color:var(--creme);">Post Caixa Presente</div>
+      <div class="cal-dia-desc" style="color:rgba(251,244,217,0.6);">Começar já a gerar interesse. A caixa é o produto mais emocional.</div>
+    </div>
+    <div class="cal-dia cal-medio" style="background:rgba(251,244,217,0.08); border:1px solid rgba(251,244,217,0.12);">
+      <div class="cal-dia-nome" style="color:rgba(251,244,217,0.4);">2ª feira</div>
+      <div class="cal-dia-post" style="color:var(--creme);">Carrossel Brunch</div>
+      <div class="cal-dia-desc" style="color:rgba(251,244,217,0.55);">Post de feed com o menu do Brunch + legenda completa</div>
+    </div>
+    <div class="cal-dia" style="background:rgba(251,244,217,0.05); border:1px solid rgba(251,244,217,0.08);">
+      <div class="cal-dia-nome" style="color:rgba(251,244,217,0.4);">3ª feira</div>
+      <div class="cal-dia-post" style="color:var(--creme);">Carrossel Amor de Mãe</div>
+      <div class="cal-dia-desc" style="color:rgba(251,244,217,0.5);">Os 8 slides do menu de almoço + legenda completa</div>
+    </div>
+    <div class="cal-dia" style="background:rgba(251,244,217,0.05); border:1px solid rgba(251,244,217,0.08);">
+      <div class="cal-dia-nome" style="color:rgba(251,244,217,0.4);">4ª feira</div>
+      <div class="cal-dia-post" style="color:var(--creme);">Reel da campanha</div>
+      <div class="cal-dia-desc" style="color:rgba(251,244,217,0.5);">Vídeo com todos os 3 momentos da campanha + legenda</div>
+    </div>
+    <div class="cal-dia cal-urgente">
+      <div class="cal-dia-nome" style="color:rgba(251,244,217,0.5);">3 Mai · Domingo 🌸</div>
+      <div class="cal-dia-post" style="color:var(--creme);">Dia das Mães</div>
+      <div class="cal-dia-desc" style="color:rgba(251,244,217,0.6);">Posts ao vivo da loja. Mostrar tudo brunch, almoço, caixas.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRÓXIMOS PASSOS -->
+<section class="s s-escura">
+  <span class="s-kicker">09 Próximos Passos</span>
+  <h2 class="s-titulo">O que falta<br><em>fazer</em></h2>
+  <div class="dois-cols">
+    <div>
+      <div class="passo">
+        <div class="passo-num">1</div>
+        <div>
+          <div class="passo-titulo">Aprovação da Mylla</div>
+          <div class="passo-desc">Confirmar os menus, preços e conceito da campanha com a Mylla Saldanha antes de publicar.</div>
+        </div>
+      </div>
+      <div class="passo">
+        <div class="passo-num">2</div>
+        <div>
+          <div class="passo-titulo">Publicar a Caixa Presente hoje</div>
+          <div class="passo-desc">O post da caixa já existe no Instagram precisamos de impulsionar ou fazer um novo post com a legenda criada pela BDM.</div>
+        </div>
+      </div>
+      <div class="passo">
+        <div class="passo-num">3</div>
+        <div>
+          <div class="passo-titulo">Slides restantes do Brunch</div>
+          <div class="passo-desc">Criar os slides individuais de cada item do Brunch no Canva para completar o carrossel de segunda-feira.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="passo">
+        <div class="passo-num">4</div>
+        <div>
+          <div class="passo-titulo">Gravar o Reel</div>
+          <div class="passo-desc">Usar o roteiro criado pela BDM. Gravar na loja os 3 momentos: brunch, almoço e caixa. Publicar na quarta-feira.</div>
+        </div>
+      </div>
+      <div class="passo">
+        <div class="passo-num">5</div>
+        <div>
+          <div class="passo-titulo">Confirmar reservas</div>
+          <div class="passo-desc">Ativar o WhatsApp para receber reservas assim que os primeiros posts saírem. Os lugares são limitados.</div>
+        </div>
+      </div>
+      <div class="passo">
+        <div class="passo-num">6</div>
+        <div>
+          <div class="passo-titulo">Dia 3 ao vivo</div>
+          <div class="passo-desc">Cobrir o dia em stories e posts. Mostrar a loja cheia, as mesas, as caixas e os pratos. É o conteúdo mais poderoso de toda a campanha.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<div class="rodape">
+  <div>
+    <div class="rodape-logo">
+      <div class="rodape-dot"></div>
+      <div class="rodape-name">Bianca Digital Marketing</div>
+    </div>
+    <p style="margin-top:8px;">Campanha Dia das Mães 2026 · Mylla Saldanha Patisserie e Bistrô</p>
+  </div>
+  <div class="rodape-contatos">
+    <p>@biancadigitalmarketing</p>
+    <p>+351 913 916 546</p>
+    <p>biancapedrozo@biancadigitalmarketing.com</p>
+  </div>
+</div>
+
+</body>
+</html>
